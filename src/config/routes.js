@@ -1,7 +1,7 @@
-import PageNotFound from '../components/404-page/index.vue';
-import Home from '../components/home-page/index.vue';
-import User from '../components/user-page/index.vue';
-import Contributor from '../components/contributor-page/index.vue';
+const Home = r => require.ensure([], () => r(require('../components/home-page/index.vue')));
+const User = r => require.ensure([], () => r(require('../components/user-page/index.vue')));
+const Contributor = r => require.ensure([], () => r(require('../components/contributor-page/index.vue')));
+const PageNotFound = r => require.ensure([], () => r(require('../components/404-page/index.vue')));
 
 const routes = [
     { path: '/', component: Home},
