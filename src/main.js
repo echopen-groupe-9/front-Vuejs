@@ -1,9 +1,19 @@
 import Vue from 'vue'
+
+/* Import Router */
+import VueRouter from 'vue-router';
+import router from './core/router';
+Vue.use(VueRouter);
+
+/* Import Components */
 import App from './App.vue'
 import store from './store/index'
 
-new Vue({
-  el: '#app',
+const app = new Vue({
   store,
-  render: h => h(App)
-})
+  router,
+  template: '<app></app>',
+  components: {
+    'app': App
+  }
+}).$mount('#app')
