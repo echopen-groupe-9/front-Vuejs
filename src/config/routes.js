@@ -4,9 +4,9 @@ const Contributor = r => require.ensure([], () => r(require('../components/contr
 const PageNotFound = r => require.ensure([], () => r(require('../components/404-page/index.vue')));
 
 const routes = [
-    { path: '/', component: Home},
-    { path: '/:contributor', component: Contributor },
-    { path: '/user/:user', component: User },
+    { name: 'Home', path: '/', component: Home},
+    { name: 'Contributor', path: '/contributor/:contributor', component: Contributor },
+    { name: 'User', path: '/user/:user', component: User },
     { path: '*', component: PageNotFound }
 ];
 
