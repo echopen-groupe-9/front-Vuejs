@@ -36,6 +36,7 @@ export default class githubApi {
           .then((response) => {
             let issueObj = {
               repoName: repo.name,
+              repoUrl: repo.url,
               issue: response.data
             };
 
