@@ -10,4 +10,4 @@ const routes = [
     { path: '*', component: PageNotFound }
 ];
 
-export default routes;
+export default routes
