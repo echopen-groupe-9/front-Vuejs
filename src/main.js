@@ -8,6 +8,9 @@ Vue.use(VueRouter);
 /* Import Components */
 import App from './App.vue'
 import store from './store/index'
+import VeeValidate from 'vee-validate'
+
+Vue.use(VeeValidate)
 
 const app = new Vue({
   store,

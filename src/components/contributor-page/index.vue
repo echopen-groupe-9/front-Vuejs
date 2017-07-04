@@ -1,15 +1,15 @@
 <template>
     <div id="contributor">
-        <h1>{{msg}}</h1>
+        <h1>You are a {{contributorType}}</h1>
     </div>
 </template>
 
 <script>
     export default {
         name: 'contributor',
-        data () {
-            return {
-                msg: 'Je suis une page contributor'
+        computed: {
+            contributorType () {
+                return this.$route.params.contributor
             }
         }
     }

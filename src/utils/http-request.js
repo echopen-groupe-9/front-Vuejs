@@ -1,9 +1,12 @@
 import axios from 'axios'
+import {getToken} from './authentication'
 
-export const HTTP = axios.create({
-  baseURL: `http://localhost:8000/api/`,
+const HTTP = axios.create({
+  baseURL: 'http://localhost:8000/',
   headers: {
-    'Authorization': 'Bearer {token}',
-    'Access-Control-Allow-Origin': 'http://localhost:8080'
+    'Access-Control-Allow-Origin': 'http://localhost:8080/',
+    'Authorization': 'Bearer ${getToken}'
   }
 })
+
+export default HTTP
