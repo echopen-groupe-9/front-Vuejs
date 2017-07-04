@@ -53,4 +53,17 @@
     a {
         color: #42b983;
     }
+
+    .js-isShown {
+        animation: reveal 1s alternate;
+    }
+
+    @keyframes reveal {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
 </style>
