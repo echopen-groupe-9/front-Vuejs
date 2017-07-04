@@ -9,7 +9,8 @@
 
 <script>
 /* Import components*/
-import navigationList from './components/navigation/list.vue';
+import navigationList from './components/navigation/list.vue'
+import Vuex from 'vuex'
 
 export default {
   name: 'app',
@@ -21,6 +22,11 @@ export default {
   components: {
     'navigation': navigationList,
   },
+  computed: {
+    ...Vuex.mapGetters({
+      'isLoggedIn': ''
+    })
+  }
 }
 </script>
 

@@ -1,3 +1,4 @@
+import * as authentication from '../../utils/authentication'
 import * as types from './mutation-types'
 
 const mutations = {
@@ -5,12 +6,7 @@ const mutations = {
     state.pending = true
   },
   [types.LOGIN_SUCCESS] (state) {
-    let user = {
-      firstname: 'renan',
-      lastname: 'bronchart',
-      email: 'renan.bronchart@gmail.com',
-      role: 'contributor'
-    }
+    let user = decode(authentication.getToken())._doc
 
     state.pending = false
     state.isLoggedIn = true
@@ -22,3 +18,5 @@ const mutations = {
     state.user = {}
   }
 }
+
+export default mutations

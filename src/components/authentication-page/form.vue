@@ -72,9 +72,9 @@
         }
 
         this.signUpStore(userInfos).then(response => {
-          this.$router.push({name: 'Home', params: {flashMessage: response}})
+          this.$router.push({name: 'Dashboard', params: {flashMessage: response}})
         }).catch(response => {
-          this.$router.push({name: 'Home'})
+          this.$router.push({name: 'Dashboard'})
         })
       },
       submitForm () {

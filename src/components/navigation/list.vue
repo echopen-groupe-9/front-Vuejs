@@ -10,9 +10,6 @@
             <li>
                 <router-link :to="{name: 'Contributor', params: {contributor: 'linker'}}">Linkers</router-link>
             </li>
-            <li>
-                <router-link :to="{name: 'User', params: {user: 'renan'}}">User</router-link>
-            </li>
         </ul>
     </nav>
 </template>

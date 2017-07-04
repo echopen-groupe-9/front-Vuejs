@@ -8,9 +8,13 @@ export const signIn = ({commit}, userInfos) => {
   return new Promise((resolve, reject) => {
     let message;
 
-    HTTP.post('authenticate', {email: userInfos.email, password: userInfos.password})
+    HTTP.post('login_check', {_username: userInfos.email, _password: userInfos.password})
     .then(response => {
       let token = response.token
+
+      console.log('****************************')
+      console.log(response)
+      console.log('****************************')
 
       if (token) {
         message = 'Congratulation, You are connected'

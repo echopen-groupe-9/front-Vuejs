@@ -16,6 +16,7 @@ export function logout () {
 export function requireAuth (to, from, next) {
   if (!isLoggedIn()) {
     next({
+      path: '/connexion',
       params: {message: `You can't access this page`}
     })
   } else {

@@ -1,18 +1,18 @@
 <template>
-  <div id="user">
-    <h1>{{msg}}</h1>
+  <div>
+    <h1>Authentication page</h1>
     <formAuthentication></formAuthentication>
   </div>
 </template>
 
 <script>
-  import formAuthentication from '../shared/form.vue'
+  import formAuthentication from './form.vue'
 
   export default {
-    name: 'user',
+    name: 'Dashboard',
     data () {
       return {
-        msg: 'Je suis une page User'
+        msg: 'pilou'
       }
     },
     components: {
@@ -21,6 +21,6 @@
   }
 </script>
 
-<style lang="scss">
+<style>
 
 </style>
