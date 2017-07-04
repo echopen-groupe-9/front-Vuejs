@@ -12,6 +12,7 @@ import VeeValidate from 'vee-validate'
 
 Vue.use(VeeValidate)
 
+
 const app = new Vue({
   store,
   router,
@@ -20,3 +21,5 @@ const app = new Vue({
     'app': App
   }
 }).$mount('#app')
+
+
