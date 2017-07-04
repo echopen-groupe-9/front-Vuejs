@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <navigation></navigation>
-    <transition name="fade">
+    <transition name="transition-page">
       <router-view></router-view>
     </transition>
   </div>
@@ -51,11 +51,16 @@ li {
 a {
   color: #42b983;
 }
-
-.fade-enter-active, .fade-leave-active {
-  transition: opacity .3s
+.transition-page-enter-active {
+  transition: all .3s ease .4s;
 }
-.fade-enter, .fade-leave-to /* .fade-leave-active in <2.1.8 */ {
-  opacity: 0
+.transition-page-leave-active {
+  transition: all .4s ease;
+}
+.transition-page-enter {
+  opacity: 0;
+}
+.transition-page-leave-to{
+  opacity: 0;
 }
 </style>
