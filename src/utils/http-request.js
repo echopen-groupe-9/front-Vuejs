@@ -9,5 +9,4 @@ const HTTP = axios.create({
   }
 })
 
-
 export default HTTP

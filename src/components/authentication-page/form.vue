@@ -26,6 +26,7 @@
     </div>
     <p v-show="errors.has('password')" class="form-group__help">{{ errors.first('password') }}</p>
 
+    <button @click.prevent="switchView">{{signUp ? 'signIn' : 'signUp'}}</button>
     <button type="submit" @click.prevent="submitForm" :disabled='errors.any()'>Validate</button>
   </form>
 </template>
@@ -87,6 +88,9 @@
         }).catch(() => {
           console.log('errors in form')
         })
+      },
+      switchView () {
+        this.signUp = !this.signUp
       }
     }
   }

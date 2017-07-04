@@ -12,10 +12,6 @@ export const signIn = ({commit}, userInfos) => {
     .then(response => {
       let token = response.token
 
-      console.log('****************************')
-      console.log(response)
-      console.log('****************************')
-
       if (token) {
         message = 'Congratulation, You are connected'
 
