@@ -1,7 +1,9 @@
 <template>
   <div id="app">
     <navigation></navigation>
-    <router-view></router-view>
+    <transition name="transition-page">
+      <router-view></router-view>
+    </transition>
   </div>
 </template>
 
@@ -48,5 +50,17 @@ li {
 
 a {
   color: #42b983;
+}
+.transition-page-enter-active {
+  transition: all .3s ease .4s;
+}
+.transition-page-leave-active {
+  transition: all .4s ease;
+}
+.transition-page-enter {
+  opacity: 0;
+}
+.transition-page-leave-to{
+  opacity: 0;
 }
 </style>
