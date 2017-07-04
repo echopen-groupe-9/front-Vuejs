@@ -7,8 +7,7 @@ Vue.use(Vuex)
 let store = new Vuex.Store({
   modules: {
     accessAuthentication
-  },
-  strict: true
+  }
 })
 
 global.store = store

@@ -5,27 +5,28 @@
         <label for="firstname">First name</label>
         <input v-validate.initial="'required'" type="text" name="firstname" v-model="user.firstname">
       </div>
+      <p v-show="errors.has('firstname')" class="form-group__help">{{ errors.first('firstname') }}</p>
+
       <div class="form-group" :class='{"has-error": errors.has("lastname")}'>
         <label for="lastname">Last Name</label>
         <input v-validate.initial="'required'" type="text" name="lastname" v-model="user.lastname">
       </div>
+      <p v-show="errors.has('lastname')" class="form-group__help">{{ errors.first('lastname') }}</p>
     </template>
+
     <div class="form-group" :class='{"has-error": errors.has("email")}'>
       <label for="email">Email</label>
       <input v-validate.initial="'required|email'" type="email" name="email" v-model="user.email">
     </div>
+    <p v-show="errors.has('email')" class="form-group__help">{{ errors.first('email') }}</p>
+
     <div class="form-group" :class='{"has-error": errors.has("password")}'>
       <label for="password">Password</label>
       <input v-validate.initial="'required|min:8'" type="password" name="password" id="password" v-model="user.password"/>
     </div>
-    <transition name='fade' mode='out-in'>
-      <p v-show="errors.has('firstname')" class="form-group__help">{{ errors.first('firstname') }}</p>
-      <p v-show="errors.has('lastname')" class="form-group__help">{{ errors.first('lastname') }}</p>
-      <p v-show="errors.has('email')" class="form-group__help">{{ errors.first('email') }}</p>
-      <p v-show="errors.has('password')" class="form-group__help">{{ errors.first('password') }}</p>
-    </transition>
+    <p v-show="errors.has('password')" class="form-group__help">{{ errors.first('password') }}</p>
 
-    <button type="submit" @click.prevent="submitForm">Validate</button>
+    <button type="submit" @click.prevent="submitForm" :disabled='errors.any()'>Validate</button>
   </form>
 </template>
 
@@ -79,7 +80,9 @@
       submitForm () {
         this.$validator.validateAll().then(() => {
           if (this.signUp) {
-            this.
+            this.registration()
+          } else {
+            this.login()
           }
         }).catch(() => {
           console.log('errors in form')
@@ -88,3 +91,6 @@
     }
   }
 </script>
+
+<style lang='scss' scoped>
+</style>
