@@ -31,6 +31,11 @@
                     <router-link :to="{name: 'News'}">Actualités</router-link>
                 </li>
             </div>
+            <div class="nav-link">
+                <li>
+                    <router-link :to="{name: 'Demo'}">Demo</router-link>
+                </li>
+            </div>
             <div class="select_box">
                 <a class="select-button" href="#" @click="toggle">Je suis :</a>
                 <div class="hidden-box" v-show="active">
