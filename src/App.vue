@@ -34,41 +34,42 @@
 </script>
 
 <style lang="scss">
- @import 'core.scss';
+#app {
+  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+  margin-top: 60px;
+}
 
-  #app {
-    text-align: center;
-    color: #2c3e50;
-    margin-top: 60px;
-  }
+h1, h2 {
+  font-weight: normal;
+}
 
-  ul {
-    list-style-type: none;
-    padding: 0;
-  }
+ul {
+  list-style-type: none;
+  padding: 0;
+}
 
-  li {
-    display: inline-block;
-    margin: 0 10px;
-  }
+li {
+  display: inline-block;
+  margin: 0 10px;
+}
 
-  a {
-    color: $turquoise;
-  }
-
-  .transition-page-enter-active {
-    transition: all .3s ease .4s;
-  }
-
-  .transition-page-leave-active {
-    transition: all .4s ease;
-  }
-
-  .transition-page-enter {
-    opacity: 0;
-  }
-
-  .transition-page-leave-to {
-    opacity: 0;
-  }
+a {
+  color: #42b983;
+}
+.transition-page-enter-active {
+  transition: all .3s ease .4s;
+}
+.transition-page-leave-active {
+  transition: all .4s ease;
+}
+.transition-page-enter {
+  opacity: 0;
+}
+.transition-page-leave-to{
+  opacity: 0;
+}
 </style>
