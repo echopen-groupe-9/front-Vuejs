@@ -18,29 +18,22 @@
     export default {
         name: 'Home',
         data () {
-            return {
-                msg: 'Je suis la Home',
-                title: 'Let’s make something good',
-            }
+            return {}
         },
         components: {
             'landing': landingSection,
             'review': reviewSection,
             'result': resultSection,
             'contribution': contributionSection,
-            'trust': trustSection
+            'trust': trustSection,
         }
     }
 </script>
 
 <style lang="scss">
- .Home-presentation_title {
-     position: relative;
-     color: #32325D;
-     &:after {
-         content: attr(title);
-         display: block;
-         font-weight: bold;
-     }
- }
+
+
+    .Home-title {
+        font-size: 64px;
+    }
 </style>

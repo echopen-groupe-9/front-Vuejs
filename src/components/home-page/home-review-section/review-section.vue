@@ -42,6 +42,4 @@
     .Home-review_holder {
         margin: 0 5vw;
     }
-
-
 </style>
