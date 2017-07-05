@@ -4,12 +4,14 @@
     <transition name="transition-page">
       <router-view></router-view>
     </transition>
+    <footer-block></footer-block>
   </div>
 </template>
 
 <script>
   /* Import components*/
   import navigationList from './components/navigation/list.vue'
+  import footer from './components/footer/index.vue'
   import Vuex from 'vuex'
 
   export default {
@@ -21,6 +23,7 @@
     },
     components: {
       'navigation': navigationList,
+      'footer-block': footer,
     },
     computed: {
       ...Vuex.mapGetters({
@@ -31,10 +34,7 @@
 </script>
 
 <style lang="scss">
-  @import 'assets/stylesheet/generics/fonts.scss';
-  @import 'assets/stylesheet/generics/variable.scss';
-  @import 'assets/stylesheet/generics/mixin.scss';
-  @import 'assets/stylesheet/generics/text.scss';
+ @import 'core.scss';
 
   #app {
     text-align: center;
