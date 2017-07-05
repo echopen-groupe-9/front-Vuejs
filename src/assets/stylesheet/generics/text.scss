@@ -1,0 +1,65 @@
+//// TITLES /////
+
+.title {
+  @include font('Lato', 400);
+  font-size: 64px;
+  line-height: 68px;
+  color: $purple;
+  letter-spacing: 1.5;
+  .bold {
+    @include font('Lato', 700);
+  }
+}
+
+.title-contributor {
+  @include font('Lato', 700);
+  font-size: 18px;
+  line-height: 30px;
+  color: $white;
+  letter-spacing: 2;
+}
+
+//// TEXTS /////
+.text {
+  @include font('Lato', 400);
+  font-size: 20px;
+  line-height: 30px;
+
+  &.purple {
+    color: $purple;
+  }
+
+  &.grey {
+    color: $grey;
+  }
+}
+
+.text-2 {
+  @include font('Lato', 400);
+  font-size: 16px;
+  line-height: 26px;
+  &.purple {
+    color: $purple;
+  }
+  &.grey {
+    color: $grey;
+  }
+}
+
+.text-small {
+  @include font('Lato', 400);
+  font-size: 14px;
+  line-height: 20px;
+  color: $white;
+  &.grey {
+    color: $grey;
+  }
+}
+
+.text-contributor {
+  @include font('Lato', 300);
+  font-size: 36px;
+  line-height: 46px;
+  letter-spacing: 2;
+  color: $white;
+}
