@@ -44,6 +44,8 @@
 </script>
 
 <style lang="scss">
+    @import '../../core.scss';
+
     .cards-list{
         position: relative;
         display: block;
@@ -62,6 +64,7 @@
         padding: 40px 30px;
         margin: 0;
         z-index: 0;
+
 
         &:before{
             content: "";
