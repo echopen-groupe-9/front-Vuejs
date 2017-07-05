@@ -1,26 +1,24 @@
 <template>
   <div>
-    <nav>
-      <ul>
-        <li></li>
-      </ul>
-    </nav>
-    <section>
-      <div>{{msg}}</div>
-      <div></div>
-      <div></div>
-      <div></div>
-    </section>
+    <Header></Header>
+    <Navside></Navside>
+    <router-view></router-view>
   </div>
 </template>
 
 <script>
+  import Header from './header.vue'
+  import Navside from './navside.vue'
+
   export default {
     name: 'Dashboard',
     data () {
       return {
-        msg: 'plopplopplopplopplop plopplopplop plop plopplop'
       }
+    },
+    components: {
+      Header,
+      Navside
     }
   }
 </script>
