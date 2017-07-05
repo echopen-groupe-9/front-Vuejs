@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div id="app" class='app-vue'>
     <navigation></navigation>
     <transition name="transition-page">
       <router-view></router-view>

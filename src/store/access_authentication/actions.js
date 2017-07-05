@@ -8,9 +8,15 @@ export const signIn = ({commit}, userInfos) => {
   return new Promise((resolve, reject) => {
     let message;
 
-    HTTP.post('login_check', {_username: userInfos.email, _password: userInfos.password})
+    console.log('signIn')
+
+    HTTP.post('users', {email: userInfos.email, password: userInfos.password})
     .then(response => {
       let token = response.token
+
+      console.log('*********************************$')
+      console.log(response)
+      console.log('*********************************$')
 
       if (token) {
         message = 'Congratulation, You are connected'
@@ -39,7 +45,7 @@ export const signUp = ({commit}, userInfos) => {
   return new Promise((resolve, reject) => {
     let message;
 
-    HTTP.post('route', {email: userInfos.email, password: userInfos.password})
+    HTTP.post('users', {email: userInfos.email, password: userInfos.password})
     .then(response => {
       let token = response.token
 
