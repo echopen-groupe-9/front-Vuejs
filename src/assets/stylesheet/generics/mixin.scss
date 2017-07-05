@@ -1,0 +1,7 @@
+@mixin font($name, $weight) {
+  // regular weight= 400 / light weight= 300 / bold weight= 700
+    font-family: $name;
+    font-weight: $weight;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
