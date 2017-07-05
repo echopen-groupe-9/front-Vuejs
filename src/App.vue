@@ -1,6 +1,5 @@
 <template>
   <div id="app">
-    <navigation></navigation>
     <transition name="transition-page">
       <router-view></router-view>
     </transition>
@@ -10,7 +9,6 @@
 
 <script>
   /* Import components*/
-  import navigationList from './components/navigation/list.vue'
   import footer from './components/footer/index.vue'
   import Vuex from 'vuex'
 
@@ -22,7 +20,6 @@
       }
     },
     components: {
-      'navigation': navigationList,
       'footer-block': footer,
     },
     computed: {
