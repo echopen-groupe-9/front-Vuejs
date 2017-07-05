@@ -1,40 +1,43 @@
 <template>
-    <section>
-        <h1>Let’s make something good <span>together</span></h1>
-        <ul class="cards-list">
-            <li class="cards-list-item">
-                <router-link class="cards-list-link" :to="{name: 'Contributor.Details', params: {contributor: 'brainer'}}">
-                    <h2>Brainer</h2>
-                    <p>Risus Vulputate</p>
-                    <p class="cards-content">Nulla vitae elit libero, a pharetra augue. Nullam id dolor id nibh ultricies ut id elit. Nullam id dolor id nibh.</p>
-                    <span class="cards-background">&nbsp;</span>
-                </router-link>
-            </li>
-            <li class="cards-list-item">
-                <router-link class="cards-list-link" :to="{name: 'Contributor.Details', params: {contributor: 'builder'}}">
-                    <h2>Builder</h2>
-                    <p>Risus Vulputate</p>
-                    <p class="cards-content">Nulla vitae elit libero, a pharetra augue. Nullam id dolor id nibh ultricies ut id elit. Nullam id dolor id nibh.</p>
-                    <span class="cards-background">&nbsp;</span>
-                </router-link>
-            </li>
-            <li class="cards-list-item">
-                <router-link class="cards-list-link" :to="{name: 'Contributor.Details', params: {contributor: 'maker'}}">
-                    <h2>Maker</h2>
-                    <p>Risus Vulputate</p>
-                    <p class="cards-content">Nulla vitae elit libero, a pharetra augue. Nullam id dolor id nibh ultricies ut id elit. Nullam id dolor id nibh.</p>
-                    <span class="cards-background">&nbsp;</span>
-                </router-link>
-            </li>
-            <li class="cards-list-item">
-                <router-link class="cards-list-link" :to="{name: 'Contributor.Details', params: {contributor: 'linker'}}">
-                    <h2>Linker</h2>
-                    <p>Risus Vulputate</p>
-                    <p class="cards-content">Nulla vitae elit libero, a pharetra augue. Nullam id dolor id nibh ultricies ut id elit. Nullam id dolor id nibh.</p>
-                    <span class="cards-background">&nbsp;</span>
-                </router-link>
-            </li>
-        </ul>
+    <section class="section">
+        <div class="main-wrapper">
+            <h1 class="section-title title">Let’s make <br>something good <span class="section-title-alt">together</span></h1>
+            <p class="section-introduction text">Nulla vitae elit libero, a pharetra augue. Nullam id dolor id nibh ultricies ut id elit.</p>
+            <ul class="cards-list">
+                <li class="cards-list-item">
+                    <router-link class="cards-list-link" :to="{name: 'Contributor.Details', params: {contributor: 'brainer'}}">
+                        <h2 class="title-contributor">Brainer</h2>
+                        <p class="text-contributor">Risus Vulputate</p>
+                        <p class="cards-content">Nulla vitae elit libero, a pharetra augue. Nullam id dolor id nibh ultricies ut id elit. Nullam id dolor id nibh.</p>
+                        <span class="cards-background">&nbsp;</span>
+                    </router-link>
+                </li>
+                <li class="cards-list-item">
+                    <router-link class="cards-list-link" :to="{name: 'Contributor.Details', params: {contributor: 'builder'}}">
+                        <h2 class="title-contributor">Builder</h2>
+                        <p class="text-contributor">Risus Vulputate</p>
+                        <p class="cards-content">Nulla vitae elit libero, a pharetra augue. Nullam id dolor id nibh ultricies ut id elit. Nullam id dolor id nibh.</p>
+                        <span class="cards-background">&nbsp;</span>
+                    </router-link>
+                </li>
+                <li class="cards-list-item">
+                    <router-link class="cards-list-link" :to="{name: 'Contributor.Details', params: {contributor: 'maker'}}">
+                        <h2 class="title-contributor">Maker</h2>
+                        <p class="text-contributor">Risus Vulputate</p>
+                        <p class="cards-content">Nulla vitae elit libero, a pharetra augue. Nullam id dolor id nibh ultricies ut id elit. Nullam id dolor id nibh.</p>
+                        <span class="cards-background">&nbsp;</span>
+                    </router-link>
+                </li>
+                <li class="cards-list-item">
+                    <router-link class="cards-list-link" :to="{name: 'Contributor.Details', params: {contributor: 'linker'}}">
+                        <h2 class="title-contributor">Linker</h2>
+                        <p class="text-contributor">Risus Vulputate</p>
+                        <p class="cards-content">Nulla vitae elit libero, a pharetra augue. Nullam id dolor id nibh ultricies ut id elit. Nullam id dolor id nibh.</p>
+                        <span class="cards-background">&nbsp;</span>
+                    </router-link>
+                </li>
+            </ul>
+        </div>
     </section>
 </template>
 
@@ -55,6 +58,7 @@
     }
 
     .cards-list-item{
+
         position: absolute;
         top: 0;
         display: inline-block;
@@ -64,7 +68,6 @@
         padding: 40px 30px;
         margin: 0;
         z-index: 0;
-
 
         &:before{
             content: "";

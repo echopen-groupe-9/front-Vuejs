@@ -1,10 +1,10 @@
 //// TITLES /////
 
 .title {
-  @include font('Lato', 400);
+  @include font('Lato', 300);
   font-size: 64px;
   line-height: 68px;
-  color: $purple;
+  color: $grey-dark;
   letter-spacing: 1.5;
   &.white {
     color: $white;

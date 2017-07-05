@@ -1,0 +1,27 @@
+.section{
+  text-align: left;
+  &-title {
+    margin-bottom: 45px;
+    &-alt{
+      position: relative;
+      display: block;
+      padding-left: 100px;
+      &:before{
+        content:"";
+        position: absolute;
+        left: 5px;
+        bottom: 10px;
+        width: 70px;
+        height: 3px;
+        background-color: $grey-dark;
+      }
+    }
+  }
+
+  &-introduction{
+    width: 100%;
+    max-width: 435px;
+    margin-bottom: 50px;
+    text-align: left;
+  }
+}
