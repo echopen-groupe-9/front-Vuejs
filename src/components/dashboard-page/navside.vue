@@ -9,22 +9,22 @@
     name: 'Navside',
     data () {
       return {
-        items: [
+        links: [
           {
             title: 'Overview',
-            linkPath: 'dashboard.overview'
+            linkPath: 'Dashboard.Overview'
           },
           {
             title: 'Create an article',
-            linkPath: 'dashboard.article'
+            linkPath: 'Dashboard.Article'
           },
           {
             title: 'Articles list',
-            linkPath: 'dashboard.articles'
+            linkPath: 'Dashboard.Articles'
           },
           {
             title: 'Presets list',
-            linkPath: 'dashboard.presets'
+            linkPath: 'Dashboard.Preset'
           }
         ]
       }
