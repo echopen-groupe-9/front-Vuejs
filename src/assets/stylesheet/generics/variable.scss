@@ -6,19 +6,22 @@ $purple : #32325D;
 $purple-2 : #444CB2;
 $purple-3 : #3740B0;
 $grey : #6A7C94;
+$grey-light : #BDBDBD;
 $grey-dark : #374657;
-$blue : #386EB7;
+$blue : #2E4064;
+$blue-dark : #1E2B45;
 $blue-2 : #4E76F2;
+$blue-3 : #465C86;
 
 //MEDIA QUERIES
 
 /* https://github.com/sass-mq/sass-mq */
 
 $mq-breakpoints: (
-        mobile: 640px,
-        tablet: 768px,
-        desktop: 1024px,
-        wide: 1366px,
-        xlarge: 1440px
+  mobile: 640px,
+  tablet: 768px,
+  desktop: 1024px,
+  wide: 1366px,
+  xlarge: 1440px
 );
 
