@@ -12,24 +12,6 @@
     name: 'Navside',
     data () {
       return {
-        links: [
-          {
-            title: 'Overview',
-            linkPath: 'Dashboard.Overview'
-          },
-          {
-            title: 'Create an article',
-            linkPath: 'Dashboard.Article'
-          },
-          {
-            title: 'Articles list',
-            linkPath: 'Dashboard.Articles'
-          },
-          {
-            title: 'Presets list',
-            linkPath: 'Dashboard.Preset'
-          }
-        ]
       }
     }
   }
