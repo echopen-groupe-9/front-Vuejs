@@ -1,12 +1,14 @@
 <template>
   <div>
     <div class="demo__section" v-for='(section, index) in sections' :data-position='index' >
-      <div class="demo__content" v-show='section.visible'>
-        <div class="demo__thumbnail">
-          <img :src="section.img" alt="" class='img-responsive'>
+      <transition name="fade" mode="out-in">
+        <div class="demo__content" v-show='section.visible'>
+          <div class="demo__thumbnail">
+            <img :src="section.img" alt="" class='img-responsive'>
+          </div>
+          <Description :description='section.description'></Description>
         </div>
-        <Description :description='section.description'></Description>
-      </div>
+      </transition>
     </div>
   </div>
 </template>
@@ -26,7 +28,7 @@
               content: 'description first section description first section description first section '
             },
             img: viewme,
-            visible: true
+            visible: false
           },
           {
             description: {
@@ -34,7 +36,7 @@
               content: 'description second section description second section description second section '
             },
             img: viewme,
-            visible: true
+            visible: false
           },
           {
             description: {
@@ -42,7 +44,7 @@
               content: 'description third section description third section description third section '
             },
             img: viewme,
-            visible: true
+            visible: false
           }
         ]
       }
@@ -57,19 +59,17 @@
       triggerClass (el, offset, ref) {
         let container = document.querySelectorAll(el)
 
-        container.forEach((element) => {
-          console.log(element)
-
+        container.forEach((element, index) => {
           let posElement = element.offsetTop
           let heightContainer = element.offsetHeight
           let active = false
           let condition = (ref > (posElement - (offset)) && ref < (posElement + heightContainer))
 
           if (condition && active == false) {
-            element.classList.add('active')
+            this.sections[index].visible = true
             active = true
           } else {
-            element.classList.remove('active')
+            this.sections[index].visible = false
           }
         })
       }
@@ -89,10 +89,6 @@
 <style lang='scss'>
   .demo__section {
     height: 400vh;
-    opacity: 0;
-    &.active {
-      opacity: 1;
-    }
   }
 
   .demo__content {
@@ -109,4 +105,26 @@
     width: 50%;
     margin: auto;
   }
+
+  .demo__description {
+    opacity: 1;
+    transition: all 0.5 ease 2s;
+  }
+
+  .fade-enter-active {
+    transition: all 4s ease 5s;
+  }
+
+  .fade-leave-active {
+    transition: all 5s ease;
+  }
+
+  .fade-enter {
+    opacity: 0;
+  }
+
+  .fade-leave-to {
+    opacity: 0;
+  }
+
 </style>
