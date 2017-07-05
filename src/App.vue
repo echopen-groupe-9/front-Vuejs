@@ -37,19 +37,16 @@
 </script>
 
 <style lang="scss">
-  @import 'core.scss';
+
+  @import 'assets/stylesheet/generics/fonts.scss';
+  @import 'assets/stylesheet/generics/variable.scss';
+  @import 'assets/stylesheet/generics/mixin.scss';
+  @import 'assets/stylesheet/generics/text.scss';
 
   #app {
-    position: relative;
     text-align: center;
     color: #2c3e50;
-  }
-
-  .app, .app .Home-presentation {
-    padding: 65px 0 0 0;
-    &.Home {
-      padding: 0;
-    }
+    margin-top: 60px;
   }
 
   ul {
@@ -60,6 +57,10 @@
   li {
     display: inline-block;
     margin: 0 10px;
+  }
+
+  a {
+    color: $turquoise;
   }
 
   .transition-page-enter-active {
@@ -77,6 +78,7 @@
   .transition-page-leave-to {
     opacity: 0;
   }
+<<<<<<< HEAD
   .Home {
     .nav {
       background-color: transparent;
@@ -100,4 +102,6 @@
       }
     }
   }
+=======
+>>>>>>> [ADD] Generics styles
 </style>
