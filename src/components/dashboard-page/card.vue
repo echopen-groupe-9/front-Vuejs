@@ -11,10 +11,9 @@
 <script>
   export default {
     name: 'Card',
-    props: {
-      'img',
-      'title'
-    },
+    props: [
+      'img', 'title'
+    ],
     data () {
       return {
       }

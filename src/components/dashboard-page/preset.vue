@@ -1,16 +1,14 @@
 <template>
   <div>
-    <h3>Dashboard Admin {{msg}}</h3>
-    <div class='menu-burger'></div>
+    Presets
   </div>
 </template>
 
 <script>
   export default {
-    name: 'Header',
+    name: 'Preset',
     data () {
       return {
-        msg: 'pilou'
       }
     }
   }

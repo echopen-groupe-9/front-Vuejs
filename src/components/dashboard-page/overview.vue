@@ -2,12 +2,12 @@
   <div>
     <section>
       <h2>Overview</h2>
-      <Card :title='Presets' :img=''>
+      <Card title='Presets' img=''>
         <p slot='description'>
           Description presets
         </p>
       </Card>
-      <Card :title='Presets' :img=''>
+      <Card title='Articles' img=''>
         <p slot='description'>
           Description Articles
         </p>
