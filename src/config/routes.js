@@ -19,7 +19,7 @@ const routes = [
       name: 'Dashboard',
       path: '/dashboard',
       component: Dashboard,
-      // beforeEnter: requireAuth,
+      beforeEnter: requireAuth,
       children: [
         {
           name: 'Dashboard.Overview',

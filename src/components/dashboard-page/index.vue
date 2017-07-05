@@ -1,8 +1,10 @@
 <template>
-  <div>
+  <div class='dashboard'>
     <Header></Header>
-    <Navside></Navside>
-    <router-view></router-view>
+    <div class="dashboard__container">
+      <Navside></Navside>
+      <router-view></router-view>
+    </div>
   </div>
 </template>
 
@@ -23,6 +25,32 @@
   }
 </script>
 
-<style>
+<style lang='scss'>
+  @import '~bulma/bulma.sass';
+
+  .nav {
+    display: none;
+  }
+
+  .dashboard {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    align-content: stretch;
+
+    .dashboard__container {
+      display: flex;
+      align-self: stretch;
+      flex: 1;
+    }
+
+    .is-dark {
+      background-color: $black-ter;
+    }
+  }
 
 </style>
+
+
+@mixin
