@@ -5,10 +5,7 @@
                 <router-link :to="{name: 'Home'}">Home</router-link>
             </li>
             <li>
-                <router-link :to="{name: 'Contributor', params: {contributor: 'maker'}}">Makers</router-link>
-            </li>
-            <li>
-                <router-link :to="{name: 'Contributor', params: {contributor: 'linker'}}">Linkers</router-link>
+                <router-link :to="{name: 'Contributor'}">Contributeurs</router-link>
             </li>
         </ul>
     </nav>
@@ -16,7 +13,6 @@
 
 <script>
     export default {
-        name: 'navigationList',
         data () {
             return {}
         }

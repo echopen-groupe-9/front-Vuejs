@@ -16,7 +16,7 @@
     import trustSection from './home-trust-section/trustSection.vue'
 
     export default {
-        name: 'home',
+        name: 'Home',
         data () {
             return {
                 msg: 'Je suis la Home',
