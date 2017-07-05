@@ -6,6 +6,9 @@
   line-height: 68px;
   color: $purple;
   letter-spacing: 1.5;
+  &.white {
+    color: $white;
+  }
   .bold {
     @include font('Lato', 700);
   }
@@ -31,6 +34,9 @@
 
   &.grey {
     color: $grey;
+  }
+  &.white {
+    color: $white;
   }
 }
 
