@@ -5,6 +5,7 @@ const Contributor = r => require.ensure([], () => r(require('../components/contr
 const ContributorDetails = r => require.ensure([], () => r(require('../components/contributor-page/contributorDetails.vue')));
 const Authentication = r => require.ensure([], () => r(require('../components/authentication-page/index.vue')));
 const PageNotFound = r => require.ensure([], () => r(require('../components/404-page/index.vue')));
+const ActualityItem = r => require.ensure([], () => r(require('../components/actuality-page/list-article.vue')));
 
 const Dashboard = r => require.ensure([], () => r(require('../components/dashboard-page/index.vue')));
 const Overview = r => require.ensure([], () => r(require('../components/dashboard-page/overview.vue')));
@@ -51,7 +52,7 @@ const routes = [
       },
     ]
   },
-  { path: '*', component: PageNotFound }
+  { path: '/actualites', component : ActualityItem}
 ];
 
 export default routes
