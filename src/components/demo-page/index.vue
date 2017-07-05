@@ -1,7 +1,7 @@
 <template>
   <div>
-    <div class="demo__section" v-for='(section, index) in sections'>
-      <div class="demo__content" :data-position='index' v-show='section.visible'>
+    <div class="demo__section" v-for='(section, index) in sections' :data-position='index' >
+      <div class="demo__content" v-show='section.visible'>
         <div class="demo__thumbnail">
           <img :src="section.img" alt="" class='img-responsive'>
         </div>
@@ -47,15 +47,52 @@
         ]
       }
     },
+    methods: {
+      handleScroll () {
+        let posScrollWindow = window.scrollY
+
+        this.triggerClass('.demo__section', 0, posScrollWindow)
+        // console.log(posScrollWindow)
+      },
+      triggerClass (el, offset, ref) {
+        let container = document.querySelectorAll(el)
+
+        container.forEach((element) => {
+          console.log(element)
+
+          let posElement = element.offsetTop
+          let heightContainer = element.offsetHeight
+          let active = false
+          let condition = (ref > (posElement - (offset)) && ref < (posElement + heightContainer))
+
+          if (condition && active == false) {
+            element.classList.add('active')
+            active = true
+          } else {
+            element.classList.remove('active')
+          }
+        })
+      }
+    },
+    created () {
+      window.addEventListener('scroll', this.handleScroll)
+    },
+    destroyed () {
+      window.removeEventListener('scroll', this.handleScroll)
+    },
     components: {
       Description
     }
   }
 </script>
 
-<style>
+<style lang='scss'>
   .demo__section {
     height: 400vh;
+    opacity: 0;
+    &.active {
+      opacity: 1;
+    }
   }
 
   .demo__content {
