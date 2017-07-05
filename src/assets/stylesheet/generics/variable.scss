@@ -9,3 +9,16 @@ $grey : #6A7C94;
 $grey-dark : #374657;
 $blue : #386EB7;
 $blue-2 : #4E76F2;
+
+//MEDIA QUERIES
+
+/* https://github.com/sass-mq/sass-mq */
+
+$mq-breakpoints: (
+        mobile: 640px,
+        tablet: 768px,
+        desktop: 1024px,
+        wide: 1366px,
+        xlarge: 1440px
+);
+
