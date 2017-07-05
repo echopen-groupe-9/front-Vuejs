@@ -1,14 +1,16 @@
 <template>
   <div>
     <div class="demo__section" v-for='(section, index) in sections' :data-position='index' >
-      <transition name="fade" mode="out-in">
-        <div class="demo__content" v-show='section.visible'>
-          <div class="demo__thumbnail">
-            <img :src="section.img" alt="" class='img-responsive'>
-          </div>
-          <Description :description='section.description'></Description>
+        <div class="demo__content">
+          <transition name="fade" mode="out-in">
+            <div class="demo__thumbnail" v-show='section.img.visible'>
+              <img :src="section.img.source" alt="" class='img-responsive'>
+            </div>
+          </transition>
+          <transition name="fade" mode="out-in">
+            <Description :description='section.description' v-show='section.description.visible'></Description>
+          </transition>
         </div>
-      </transition>
     </div>
   </div>
 </template>
@@ -25,26 +27,35 @@
           {
             description: {
               title: 'First section',
-              content: 'description first section description first section description first section '
+              content: 'description first section description first section description first section ',
+              visible: false
             },
-            img: viewme,
-            visible: false
+            img: {
+              source: viewme,
+              visible: false
+            }
           },
           {
             description: {
               title: 'Second section',
-              content: 'description second section description second section description second section '
+              content: 'description second section description second section description second section ',
+              visible: false
             },
-            img: viewme,
-            visible: false
+            img: {
+              source: viewme,
+              visible: false
+            }
           },
           {
             description: {
               title: 'Third section',
-              content: 'description third section description third section description third section '
+              content: 'description third section description third section description third section ',
+              visible: false
             },
-            img: viewme,
-            visible: false
+            img: {
+              source: viewme,
+              visible: false
+            }
           }
         ]
       }
@@ -53,23 +64,30 @@
       handleScroll () {
         let posScrollWindow = window.scrollY
 
-        this.triggerClass('.demo__section', 0, posScrollWindow)
+        this.triggerVisibility('.demo__section', 0, posScrollWindow)
         // console.log(posScrollWindow)
       },
-      triggerClass (el, offset, ref) {
+      triggerVisibility (el, offset, ref) {
         let container = document.querySelectorAll(el)
 
         container.forEach((element, index) => {
           let posElement = element.offsetTop
           let heightContainer = element.offsetHeight
           let active = false
-          let condition = (ref > (posElement - (offset)) && ref < (posElement + heightContainer))
+          let conditionImg = (ref > (posElement - (offset)) && ref < (posElement + heightContainer))
+          let conditionDescription = (ref > (posElement - (offset) + (heightContainer / 4)))
 
-          if (condition && active == false) {
-            this.sections[index].visible = true
+          if (conditionImg && active == false) {
+            this.sections[index].img.visible = true
+            if (conditionDescription) {
+              this.sections[index].description.visible = true
+            } else {
+              this.sections[index].description.visible = false
+            }
             active = true
           } else {
-            this.sections[index].visible = false
+            this.sections[index].img.visible = false
+            this.sections[index].description.visible = false
           }
         })
       }
@@ -106,17 +124,12 @@
     margin: auto;
   }
 
-  .demo__description {
-    opacity: 1;
-    transition: all 0.5 ease 2s;
-  }
-
   .fade-enter-active {
-    transition: all 4s ease 5s;
+    transition: all 0.3s ease 0.4s;
   }
 
   .fade-leave-active {
-    transition: all 5s ease;
+    transition: all 0.4s ease;
   }
 
   .fade-enter {
