@@ -76,6 +76,19 @@
             transition: opacity .4s ease-out;
          }
 
+         &:after{
+            content:'';
+              position: absolute;
+              bottom: 0;
+              left: 0;
+              width: 100%;
+              height: 100%;
+              background-size: contain;
+            background-repeat: no-repeat;
+              background-position: bottom;
+              z-index: -2;
+          }
+
         &:hover{
             &:before{
                  opacity: 1;
@@ -92,90 +105,36 @@
         &:nth-child(1){
              left: 0;
              background-color: #00ADFE;
-            .cards-background{
-                background-image: linear-gradient(to right, #3f8bef, rgba(62, 149, 237, 0.52));
-                &:before{
-                     background-image: url("../../assets/brainer_card_bg.png")
-                 }
-                &:after{
-                     background-color: #29BEF0;
-                 }
-            }
+            &:after{
+                 background-image: url("../../assets/brainer_card_bg.png")
+             }
         }
 
         &:nth-child(2){
              left: 24%;
              margin-top: 30px;
              background-color: #4E76F2;
-            .cards-background{
-                background-image: linear-gradient(to right, #3f8bef, rgba(62, 149, 237, 0.52));
-                &:before{
-                     background-image: url("../../assets/builder_card_bg.png")
-                 }
-                &:after{
-                     background-color: #81E4D1;
-                 }
-            }
+            &:after{
+                 background-image: url("../../assets/builder_card_bg.png")
+             }
         }
 
         &:nth-child(3){
              right: 24%;
              margin-top: 60px;
              background-color: #444CB2;
-            .cards-background{
-                background-image: linear-gradient(to right, #4b76eb, rgba(82, 169, 229, 0.68));
-                &:before{
-                     background-image: url("../../assets/maker_card_bg.png")
-                 }
-                 &:after{
-                    background-color: #6288FF;
-                  }
-            }
+            &:after{
+                 background-image: url("../../assets/maker_card_bg.png")
+             }
         }
 
         &:nth-child(4){
              right: 0;
              margin-top: 90px;
              background-color: #3740B0;
-            .cards-background{
-                background-image: linear-gradient(to right, #444cb2, #4978e5);
-                &:before{
-                     background-image: url("../../assets/linker_card_bg.png");
-                     background-position: left bottom;
-                     background-size: 75%;
-                 }
-                &:after{
-                    background-color: #819DEE;
-                 }
-            }
-        }
-    }
-
-    .cards-background{
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        height: 110px;
-        z-index: -2;
-        &:before{
-             content:'';
-             position: absolute;
-             bottom: 110px;
-             left:0;
-             width: 100%;
-             height: 100%;
-             background-size: contain;
-             background-repeat: no-repeat;
-             background-position: bottom;
-         }
-        &:after{
-            content: '';
-            position: absolute;
-             bottom: 0;
-             right: 0;
-             width: 25%;
-             height: 100%;
+            &:after{
+                 background-image: url("../../assets/linker_card_bg.png");
+             }
         }
     }
 
