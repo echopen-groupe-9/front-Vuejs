@@ -18,9 +18,13 @@
     export default {
         name: 'Home',
         data () {
+<<<<<<< HEAD
             return {
 
             }
+=======
+            return {}
+>>>>>>> [ADD:components/homepage] css for components
         },
         components: {
             'landing': landingSection,
