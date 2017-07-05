@@ -31,6 +31,8 @@
                     }
                 ]
             }
+        },
+        methods: {
         }
     }
 </script>
