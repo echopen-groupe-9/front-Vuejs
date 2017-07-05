@@ -37,15 +37,11 @@
 </script>
 
 <style lang="scss">
-<<<<<<< HEAD
 
   @import 'assets/stylesheet/generics/fonts.scss';
   @import 'assets/stylesheet/generics/variable.scss';
   @import 'assets/stylesheet/generics/mixin.scss';
   @import 'assets/stylesheet/generics/text.scss';
-=======
- @import 'core.scss';
->>>>>>> [ADD] Generics styles
 
   #app {
     text-align: center;
