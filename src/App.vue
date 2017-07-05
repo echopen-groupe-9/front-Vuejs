@@ -35,12 +35,7 @@
 
 <style lang="scss">
 
-  @import 'assets/stylesheet/generics/fonts.scss';
-  @import 'assets/stylesheet/generics/variable.scss';
-  @import 'assets/stylesheet/generics/mixin.scss';
-  @import 'assets/stylesheet/generics/text.scss';
-
-  #app {
+    #app {
     text-align: center;
     color: #2c3e50;
   }

@@ -41,9 +41,8 @@
         }
     }
 </script>
-
 <style lang="scss">
-    @import '../../assets/stylesheet/generics/variable.scss';
+    @import '../../core.scss';
 
     .nav {
         position: relative;
