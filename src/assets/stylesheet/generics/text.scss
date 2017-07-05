@@ -55,10 +55,13 @@
 .text-small {
   @include font('Lato', 400);
   font-size: 14px;
-  line-height: 20px;
+  line-height: 25px;
   color: $white;
   &.grey {
     color: $grey;
+  }
+  &.bold {
+    @include font('Lato', 700);
   }
 }
 
