@@ -1,22 +1,31 @@
 <template>
-  <div>
-    <div class="demo__section" v-for='(section, index) in sections' :data-position='index' >
-        <div class="demo__content">
-          <transition name="fade" mode="out-in">
-            <div class="demo__thumbnail" v-show='section.img.visible'>
-              <img :src="section.img.source" alt="" class='img-responsive'>
-            </div>
-          </transition>
-          <transition name="fade" mode="out-in">
-            <Description :description='section.description' v-show='section.description.visible'></Description>
-          </transition>
+  <div class='section'>
+    <div class="main-wrapper">
+      <div class="section-header">
+        <h1 class="section-title title section-title-underline">How <br>it works?</h1>
+        <Navigation :sections='sections'></Navigation>
+      </div>
+      <div class="section-content">
+        <div class="demo__section" v-for='(section, index) in sections' :data-position='index' >
+          <div class="demo__content">
+            <transition name="fade" mode="out-in">
+              <div class="demo__thumbnail" v-show='section.img.visible'>
+                <img :src="section.img.source" alt="" class='img-responsive'>
+              </div>
+            </transition>
+            <transition name="fade" mode="out-in">
+              <Description :description='section.description' v-show='section.description.visible'></Description>
+            </transition>
+          </div>
         </div>
+      </div>
     </div>
   </div>
 </template>
 
 <script>
   import Description from './description.vue'
+  import Navigation from './navigation.vue'
   import viewme from '../../assets/images/viewme.jpg'
 
   export default {
@@ -99,28 +108,39 @@
       window.removeEventListener('scroll', this.handleScroll)
     },
     components: {
-      Description
+      Description,
+      Navigation
     }
   }
 </script>
 
 <style lang='scss'>
+  .section-header {
+    width: 100%;
+    position: fixed;
+    top: 10vh;
+    bottom: 0;
+  }
+
+  .section-content {
+    position: relative;
+  }
+
   .demo__section {
     height: 400vh;
   }
 
   .demo__content {
-    height: 100vh;
     max-height: 100vh;
     width: 100%;
     position: fixed;
-    top: 0;
+    top: 25vh;
     bottom: 0;
     left: 0;
   }
 
   .demo__thumbnail {
-    width: 50%;
+    width: 30%;
     margin: auto;
   }
 
