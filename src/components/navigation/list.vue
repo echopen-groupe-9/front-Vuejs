@@ -46,6 +46,11 @@
 
     .nav {
         position: relative;
+        background-color: $blue-2;
+        padding: 1% 2%;
+    }
+    a {
+        color: $white;
     }
     .navigation {
         position: relative;
