@@ -55,6 +55,7 @@
 <style lang="scss">
     @import '../../../core.scss';
 
+<<<<<<< HEAD
     .Home-review_carousel {
         width:100%;
         margin: 0 auto;
@@ -139,5 +140,9 @@
                 }
             }
         }
+=======
+    .Home-review_holder {
+        margin: 0 5vw;
+>>>>>>> [ADD:components/homepage] css for components
     }
 </style>

@@ -32,9 +32,13 @@
 
 <style lang="scss">
 
+<<<<<<< HEAD
     section {
         margin-bottom: 70px;
     }
+=======
+
+>>>>>>> [ADD:components/homepage] css for components
     .Home-title {
         font-size: 64px;
     }

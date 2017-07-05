@@ -4,7 +4,11 @@
         <div class="Home-presentation_holder .main-wrapper">
             <h1 class="Home-presentation_title section-title title">{{title}}</h1>
             <p class="Home-presentation_desc .section-introduction"> {{desc}}</p>
+<<<<<<< HEAD
             <a href="/#" class="link Home-presentation_link">Voir la demo</a>
+=======
+            <a href="/#" class="app-link Home-presentation_link"></a>
+>>>>>>> [ADD:components/homepage] css for components
         </div>
     </section>
 </template>
@@ -55,6 +59,7 @@
         }
         .Home-presentation_link {
             background: #FFFFFF;
+<<<<<<< HEAD
             padding: 10px 30px;
             font-size: 14px;
             color: $grey;
@@ -64,6 +69,11 @@
         }
         .Home-presentation_desc {
             margin-bottom: 45px;
+=======
+            padding: 10px 20px;
+            font-size: 14px;
+            color: #000;
+>>>>>>> [ADD:components/homepage] css for components
         }
     }
 </style>
