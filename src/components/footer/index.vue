@@ -2,58 +2,39 @@
   <div class="footer">
     <ul class="footer-nav">
       <li class="footer-element">
-        <h3 class="text-small white bold">
+        <h3 class="text-small white">
           Developers
         </h3>
         <ul class="links">
-          <li class="text-small white">
-            <span class="link">
-              Documentation
-            </span>
-          </li>
-          <li class="text-small white">
-            <span class="link">
-              Open Source
-            </span>
-          </li>
+          <li class="link text-small white">Documentation</li>
+          <li class="link text-small white">Open Source</li>
         </ul>
       </li>
       <li class="footer-element">
-        <h3 class="text-small white bold">
+        <h3 class="text-small white">
           EchoPen
         </h3>
         <ul class="links">
-          <li class="text-small white">
-            <span class="link">
-              Histoire
-            </span>
-          </li>
-          <li class="text-small white">
-            <span class="link">
-              Presse
-            </span>
-          </li>
+          <li class="link text-small white">Documentation</li>
+          <li class="link text-small white">Open Source</li>
         </ul>
       </li>
       <li class="footer-element">
-        <h3 class="text-small white bold">
+        <h3 class="text-small white">
           Ressources
         </h3>
         <ul class="links">
-          <li class="text-small white">
-            <span class="link">
-              Contact
-            </span>
-          </li>
+          <li class="link text-small white">Documentation</li>
+          <li class="link text-small white">Open Source</li>
         </ul>
       </li>
       <li class="footer-element">
-        <h3 class="text-small white bold">
-          Newsletter
+        <h3 class="text-small white">
+          Stay in touch
         </h3>
-        <ul class="links newsletter">
-          <input type="email" placeholder="Your email adress" class="input">
-          <button class="btn">Subscribe</button>
+        <ul class="links">
+          <li class="link text-small white">Documentation</li>
+          <li class="link text-small white">Open Source</li>
         </ul>
       </li>
     </ul>
@@ -75,102 +56,37 @@
   @import '../../core.scss';
 
   .footer {
-    padding-top: 60px;
-    padding-bottom: 130px;
-    background-color: $blue;
-
+    padding-top: 125px;
+    background-color: $purple;
+    position: relative;
+    &:before {
+      content: '';
+      width: 100%;
+      height:125px;
+      background: url('../../assets/images/footer-shape.png') no-repeat right center;
+      background-size: cover;
+    }
 
     .footer-nav {
       display: flex;
-      max-width: 800px;
+      max-width: 660px;
       margin: 0 auto;
       justify-content: space-around;
       .footer-element {
+        min-width: 145px;
         text-align: left;
         h3 {
           text-transform: uppercase;
           padding: 5px 0;
+          border-bottom: 1px solid $white;
         }
         .links {
           display: flex;
           flex-wrap: wrap;
           flex-direction: column;
           padding-top: 25px;
-          &.newsletter {
-            flex-direction: row;
-            .input {
-              @include font('Lato', 400);
-              font-size: 14px;
-              display: inline-block;
-              border: none;
-              height: 38px;
-              line-height: 38px;
-              width: 260px;
-              background-color: $blue-3;
-              border-radius: 4px;
-              padding-left: 20px;
-              outline: none;
-              color: $white;
-
-              &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
-                color: $grey-light;
-              }
-              &::-moz-placeholder { /* Firefox 19+ */
-                color: $grey-light;
-              }
-              &:-ms-input-placeholder { /* IE 10+ */
-                color: $grey-light;
-              }
-              &:-moz-placeholder { /* Firefox 18- */
-                color: $grey-light;
-              }
-            }
-            .btn {
-              display: inline-block;
-              @include font('Lato', 700);
-              font-size: 14px;
-              margin-left: 20px;
-              width: 127px;
-              height: 40px;
-              color: $grey;
-              background-color: $blue-dark;
-              border: none;
-              border-radius: 20px;
-              outline: none;
-              cursor: pointer;
-              transition: color 500ms ease;
-              transition: background 500ms ease;
-
-              &:hover {
-                color: $blue-dark;
-                background-color: $grey;
-                transition: color 500ms ease;
-                transition: background 500ms ease;
-              }
-            }
-          }
           .link{
-            position: relative;
-            display: inline-block;
-            cursor: pointer;
-            &:before {
-              content: "";
-              position: absolute;
-              display: block;
-              bottom: 2px;
-              width: 100%;
-              height: 1px;
-              background-color: $white;
-              transform: scaleX(0);
-              transform-origin: 100% 50%;
-              transition: transform .3s cubic-bezier(.39,.575,.565,1);
-            }
-            &:hover {
-              &:before {
-                transform-origin: 0 50%;
-                transform: scaleX(1);
-              }
-            }
+
           }
         }
       }

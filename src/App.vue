@@ -37,11 +37,15 @@
 </script>
 
 <style lang="scss">
+<<<<<<< HEAD
 
   @import 'assets/stylesheet/generics/fonts.scss';
   @import 'assets/stylesheet/generics/variable.scss';
   @import 'assets/stylesheet/generics/mixin.scss';
   @import 'assets/stylesheet/generics/text.scss';
+=======
+ @import 'core.scss';
+>>>>>>> [ADD] Generics styles
 
   #app {
     text-align: center;
@@ -78,30 +82,4 @@
   .transition-page-leave-to {
     opacity: 0;
   }
-<<<<<<< HEAD
-  .Home {
-    .nav {
-      background-color: transparent;
-      a {
-        color: $white;
-      }
-      // .logo {
-      //   background-image: url("assets/Logo-Echopen.svg");
-      // }
-      .hidden-box {
-        background-color: $white;
-      }
-      .hidden-box a {
-        color: $blue-2;
-      }
-      .select-button:after {
-         border-top: 4px solid $white;
-       }
-      .nav-link:before {
-        background-color: $white;
-      }
-    }
-  }
-=======
->>>>>>> [ADD] Generics styles
 </style>
