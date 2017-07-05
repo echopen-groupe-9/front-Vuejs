@@ -106,7 +106,7 @@
              left: 0;
              background-color: #00ADFE;
             &:after{
-                 background-image: url("../../assets/brainer_card_bg.png")
+                 background-image: url("../../assets/images/brainer_card_bg.png")
              }
         }
 
@@ -115,7 +115,7 @@
              margin-top: 30px;
              background-color: #4E76F2;
             &:after{
-                 background-image: url("../../assets/builder_card_bg.png")
+                 background-image: url("../../assets/images/builder_card_bg.png")
              }
         }
 
@@ -124,7 +124,7 @@
              margin-top: 60px;
              background-color: #444CB2;
             &:after{
-                 background-image: url("../../assets/maker_card_bg.png")
+                 background-image: url("../../assets/images/maker_card_bg.png")
              }
         }
 
@@ -133,7 +133,7 @@
              margin-top: 90px;
              background-color: #3740B0;
             &:after{
-                 background-image: url("../../assets/linker_card_bg.png");
+                 background-image: url("../../assets/images/linker_card_bg.png");
              }
         }
     }
