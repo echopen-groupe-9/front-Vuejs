@@ -8,7 +8,7 @@
                 <router-link :to="{name: 'Contributor'}">Contributeurs</router-link>
             </li>
             <li>
-                <router-link to="/actualites">Actualités</router-link>
+                <router-link :to="{name: 'News'}">Actualités</router-link>
             </li>
         </ul>
     </nav>

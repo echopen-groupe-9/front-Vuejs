@@ -52,7 +52,7 @@ const routes = [
       },
     ]
   },
-  { name: 'Actualite', path: '/actualites', component : ActualityItem}
+  { name: 'News', path: '/news', component : ActualityItem}
 ];
 
 export default routes
