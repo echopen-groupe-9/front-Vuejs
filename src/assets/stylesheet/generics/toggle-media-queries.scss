@@ -4,12 +4,6 @@
   }
 }
 
-.visible-desktop {
-  @include mq($from: 'desktop') {
-    display: block;
-  }
-}
-
 .hidden-mobile {
   @include mq($from: 'mobile') {
     display: none;
@@ -23,5 +17,10 @@
 }
 
 .hidden {
-  display: none
+  display: none;
+  &.visible-desktop {
+    @include mq($from: 'desktop') {
+      display: block;
+    }
+  }
 }
