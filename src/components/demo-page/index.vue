@@ -132,16 +132,19 @@
 </script>
 
 <style lang='scss'>
-  .footer {
+  @import '../../core.scss';
+
+  .section {
     position: relative;
-    z-index: 2;
   }
 
   .section-header {
-    width: 100%;
-    position: fixed;
-    top: 10vh;
-    bottom: 0;
+    @include mq($from: 'desktop') {
+      width: 100%;
+      position: fixed;
+      top: 10vh;
+      bottom: 0;
+    }
   }
 
   .section-content {
@@ -149,21 +152,30 @@
   }
 
   .demo__section {
-    height: 400vh;
+    height: 200vh;
+    @include mq($from: 'desktop') {
+      height: 400vh;
+    }
   }
 
   .demo__content {
-    max-height: 100vh;
-    width: 100%;
-    position: fixed;
-    top: 25vh;
-    bottom: 0;
-    left: 0;
+    @include mq($from: 'desktop') {
+      max-height: 100vh;
+      width: 100%;
+      position: fixed;
+      top: 30vh;
+      bottom: 0;
+      left: 0;
+    }
   }
 
   .demo__thumbnail {
     width: 30%;
     margin: auto;
+  }
+
+  .footer {
+    display: none;
   }
 
   .fade-enter-active {

@@ -9,7 +9,8 @@
       </li>
     </ul>
     <div class="progress">
-      <div class="progress-bar bg-blue-2" :style='{height: percent + "%"}'></div>
+      <div class="progress-bar bg-blue-2 hidden visible-desktop" :style='{height: percent + "%"}'></div>
+      <div class="progress-bar bg-blue-2 hidden-desktop" :style='{width: (percent * 1.15) + "%"}'></div>
     </div>
   </div>
 </template>
@@ -27,12 +28,30 @@
 </script>
 
 <style lang='scss'>
-  @import '../../assets/stylesheet/generics/variable.scss';
+  @import '../../core.scss';
 
-  .progress-bar {
-    width: 1px;
-    height: 50px;
+  .progress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    @include mq($from: 'desktop') {
+      position: static;
+      width: auto;
+      height: auto;
+    }
+
+    .progress-bar {
+      width: 0%;
+      height: 2px;
+      @include mq($from: 'desktop') {
+        width: 1px;
+        height: 0%;
+      }
+    }
   }
+
 
   .navigation__list {
     width: 200px;

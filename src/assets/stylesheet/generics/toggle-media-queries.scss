@@ -1,0 +1,27 @@
+.hidden-desktop {
+  @include mq($from: 'desktop') {
+    display: none;
+  }
+}
+
+.visible-desktop {
+  @include mq($from: 'desktop') {
+    display: block;
+  }
+}
+
+.hidden-mobile {
+  @include mq($from: 'mobile') {
+    display: none;
+  }
+}
+
+.visible-mobile {
+  @include mq($from: 'mobile') {
+    display: block;
+  }
+}
+
+.hidden {
+  display: none
+}
