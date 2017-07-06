@@ -11,6 +11,9 @@
                 <router-link :to="{name: 'Contributor'}">Contributeurs</router-link>
             </li>
             <li>
+                <router-link :to="{name: 'Home'}">Echopen et vous</router-link>
+            </li>
+            <li>
                 <router-link :to="{name: 'News'}">Actualités</router-link>
             </li>
             <li>
