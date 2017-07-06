@@ -1,15 +1,10 @@
 <template>
     <section class="Home-contribution">
-        <ul class="Home-contribution_list">
-            <li class="Home-contribution_item" v-for="contribution in contributions">
-                <a href="#" class="Home-contribution_link">
-                    <div class="Home-contribution_item--text">
-                        <h2 class="Home-contribution_item--title title">{{contribution.title}}</h2>
-                        <p class="Home-contribution_item--desc text">{{contribution.desc}}</p>
-                    </div>
-                </a>
-            </li>
-        </ul>
+        <h2 class="Home-contribution_title section-subtitle white title">
+            Devenez <span class="section-white section-subtitleWhite-span">donateurs</span><br>
+            <p class="text">{{desc}}</p><br>
+            <button class="Home-contribution-button">Participez</button>
+        </h2>
     </section>
 </template>
 
@@ -18,16 +13,7 @@
         name: 'home',
         data () {
             return {
-                contributions: [
-                    {
-                        title: 'Contributeur',
-                        desc: 'Nulla vitae elit libero, a pharetra augue. '
-                    },
-                    {
-                        title: 'Contributeur',
-                        desc: 'Nulla vitae elit libero, a pharetra augue. '
-                    }
-                ]
+                desc: 'Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Donec ullamcorper nulla non metus auctor fringilla. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio semnec elit. Nulla vitae elit libero, a pharetra augue.'
             }
         },
         methods: {}
@@ -35,38 +21,29 @@
 </script>
 
 <style lang="scss">
-    @import '../../../core';
+    @import '../../../core.scss';
 
     .Home-contribution {
         width: 100%;
-
-        &_list {
-            display: flex;
-            flex-flow: row nowrap;
-            height: 800px;
-
-            & .Home-contribution_item {
-                background: url(../../../assets/images/bg-contributor-1.png) no-repeat;
-                background-size: cover;
-                margin-left: 20px;
-                flex: 1;
-                position: relative;
-
-                &:last-child {
-                    background: url(../../../assets/images/bg-contributor-2.png) no-repeat;
-                    background-size: cover;
-                }
-
-                .Home-contribution_item--text {
-                    position: absolute;
-                    left: 10%;
-                    bottom: 10%;
-                }
-            }
-        }
-        .Home-contribution_link {
-            text-decoration: none;
-            color: $grey-dark;
-        }
+        background-image: url("../../../assets/images/bg_donateur.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        padding: 100px 180px;
+    }
+    .Home-contribution_title {
+        color: $white;
+    }
+    .Home-contribution-button {
+        background: $white;
+        padding: 10px 30px;
+        font-size: 14px;
+        color: $blue-2;
+        border-radius: 100px;
+        border-color: white;
+        border-bottom: white;
+        border-right: white;
+        text-transform: uppercase;
+        outline: none;
+        cursor: pointer;
     }
 </style>

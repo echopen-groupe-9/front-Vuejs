@@ -55,6 +55,24 @@
     }
   }
 
+  &-subtitleWhite{
+    text-align: left;
+    padding-bottom: 60px;
+    &-span{
+      position: relative;
+      display: block;
+      &:before{
+        content:"";
+        position: absolute;
+        left: 10px;
+        bottom: -10px;
+        width: 60px;
+        height: 3px;
+        background-color: $white;
+      }
+    }
+  }
+
   &-introduction{
     width: 100%;
     max-width: 435px;
