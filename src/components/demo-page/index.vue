@@ -1,6 +1,6 @@
 <template>
   <div class='section'>
-    <div class="main-wrapper">
+    <div class="main-wrapper main-wrapper__xl">
       <div class="section-header">
         <h1 class="section-title title section-title-underline">How <br>it works?</h1>
         <Navigation :sections='sections' :percent='percent'></Navigation>
