@@ -1,17 +1,18 @@
 <template>
     <section class="Home-review">
-        <div class="Home-review_carousel">
-            <div class="Home-review_holder"  v-for="review in reviews">
+        <ul class="Home-review_carousel">
+            <li class="Home-review_holder" v-for="review in reviews">
                 <div class="Home-review_text">
-                    <h2 class="Home-review_title">{{review.title}}</h2>
-                    <p class="Home-review_desc">{{review.desc}}<span class="Home-review_desc--tiny"></span></p>
+                    <h2 class="Home-review_title title">{{review.title}}</h2>
+                    <p class="Home-review_desc text">{{review.desc}}<span class="Home-review_desc--tiny"></span></p>
                     <div class="Home-review--author"></div>
                 </div>
                 <div class="Home-review_holder--image">
-                    <img src="http://lorempixel.com/400/200/technics" alt="" class="Home-review_image">
+                    <img src="../../../assets/images/phone-graph.png" alt="" class="Home-review_image phone--image">
+                    <img src="../../../assets/images/echograpg-graph.png" alt="" class="Home-review_image echo--image">
                 </div>
-            </div>
-        </div>
+            </li>
+        </ul>
     </section>
 </template>
 
@@ -32,14 +33,43 @@
                 ]
             }
         },
-        methods: {
-        }
+        methods: {}
     }
 </script>
 
 <style lang="scss">
+    .Home-review_carousel {
+        width:100%;
+        margin: 0 auto;
+        .Home-review_holder {
+            width: 90%;
+            height: 800px;
+            background: #FAFAFA;
+            border-radius: 25px;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            padding: 10px 5%;
 
-    .Home-review_holder {
-        margin: 0 5vw;
+
+            .Home-review_text {
+                display: flex;
+                flex-flow: column wrap;
+                flex: 1;
+                text-align: left;
+            }
+            .Home-review_holder--image {
+                flex: 1;
+                position: relative;
+
+                .echo--image {
+                    max-height: 180px;
+                    max-width: 200px;
+                    position: absolute;
+                    bottom: -20%;
+                    right: 0;
+                }
+            }
+        }
     }
 </style>
