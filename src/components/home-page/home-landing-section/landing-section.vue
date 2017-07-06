@@ -1,19 +1,11 @@
 <template>
     <section class="Home-presentation">
-<<<<<<< HEAD
         <div class="Home-presentation_wrapper main-wrapper">
             <div class="Home-presentation_holder section-introduction">
                 <h1 class="Home-presentation_title section-title title">Let’s make something good <span class="section-title-alt section-title-alt-span">together</span></h1>
                 <p class="Home-presentation_desc section-introduction text"> {{desc}}</p>
                 <a href="/#" class="link Home-presentation_link">Voir la demo</a>
             </div>
-=======
-        <navigation></navigation>
-        <div class="Home-presentation_holder .main-wrapper">
-            <h1 class="Home-presentation_title section-title title">{{title}}</h1>
-            <p class="Home-presentation_desc .section-introduction"> {{desc}}</p>
-            <a href="/#" class="app-link Home-presentation_link"></a>
->>>>>>> [ADD:components/homepage] css for components
         </div>
     </section>
 </template>
@@ -47,55 +39,31 @@
         .Home-presentation_title {
             color: #FFF;
             font-weight: lighter;
-<<<<<<< HEAD
             text-align: left;
-=======
->>>>>>> [ADD:components/homepage] css for components
-
-            &:after {
-                content: attr(title);
-                display: block;
-                letter-spacing: 0;
+            .Home-presentation_wrapper {
+                position: relative;
+                min-height: 100vh;
             }
-        }
 
-<<<<<<< HEAD
-        .Home-presentation_wrapper{
-            position: relative;
-            min-height: 100vh;
-        }
-
-        .Home-presentation_holder {
-            position: absolute;
-            left: 0;
-            top: 50%;
-            text-align: left;
-            transform: translateY(-50%);
-        }
-        .Home-presentation_link {
-            background: #FFFFFF;
-            padding: 10px 30px;
-            font-size: 14px;
-            color: $grey;
-            font-weight: bold;
-            border-radius: 100px;
-            text-transform: uppercase;
-        }
-        .Home-presentation_desc {
-            margin-bottom: 45px;
-=======
-        .Home-presentation_holder {
-            position: absolute;
-            width: 40vw;
-            left: 10vw;
-            top: 30%;
-        }
-        .Home-presentation_link {
-            background: #FFFFFF;
-            padding: 10px 20px;
-            font-size: 14px;
-            color: #000;
->>>>>>> [ADD:components/homepage] css for components
+            .Home-presentation_holder {
+                position: absolute;
+                left: 0;
+                top: 50%;
+                text-align: left;
+                transform: translateY(-50%);
+            }
+            .Home-presentation_link {
+                background: #FFFFFF;
+                padding: 10px 30px;
+                font-size: 14px;
+                color: $grey;
+                font-weight: bold;
+                border-radius: 100px;
+                text-transform: uppercase;
+            }
+            .Home-presentation_desc {
+                margin-bottom: 45px;
+            }
         }
     }
 </style>

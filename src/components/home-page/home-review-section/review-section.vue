@@ -7,8 +7,8 @@
     <section class="Home-review">
         <div class="Home-review_carousel">
             <ul class="Home-review_carousel--list_tabs">
-                <li class="Home-review_carousel--tabs" v-for="(review, index) in reviews"
-                    v-on:click="checkIndex(tabsIndex =  index)" :class="tabsIndex === index ? 'is-active' : ''">
+
+                <li class="Home-review_carousel--tabs text-2" v-for="(review, index) in reviews" v-on:click="checkIndex(tabsIndex =  index)" :class="tabsIndex === index ? 'is-active' : ''">
                     {{review.tab}}
                 </li>
             </ul>
@@ -141,6 +141,14 @@
                     height: 6px;
                     opacity: 1;
                 }
+            }
+        }
+        .Home-review_carousel--list_tabs {
+            display: flex;
+            justify-content: center;
+
+            .Home-review_carousel--tabs {
+                position: relative;
             }
         }
     }

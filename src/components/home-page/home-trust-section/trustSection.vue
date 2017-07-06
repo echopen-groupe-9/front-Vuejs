@@ -5,7 +5,7 @@
         </h1>
         <ul class="Home-trust_list">
             <li class="Home-trust_item" v-for="trust in trusts">
-                <!-- <img src="../../../assets/logo.png"  alt=""> -->
+                 <img src="../../../assets/Logo.svg"  alt="">
             </li>
         </ul>
     </section>
