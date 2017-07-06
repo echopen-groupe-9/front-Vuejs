@@ -137,29 +137,38 @@
     .navigation li {
         text-transform: uppercase;
     }
+
     .nav-link {
         position: relative;
         display: inline-block;
         cursor: pointer;
         margin-right: 30px;
       a {
+          color: white;
           display: inline-block;
-          color: $grey;
           text-transform: uppercase;
           padding: 20px 0;
+          @include mq($from: 'desktop') {
+            color: $grey;
+          }
+      }
+
+      &:before {
+        content: "";
+        position: absolute;
+        display: block;
+        bottom: 15px;
+        width: 100%;
+        height: 1px;
+        transform: scaleX(0);
+        transform-origin: 0 50%;
+        transition: transform .3s cubic-bezier(.39,.575,.565,1);
+        @include mq($from: 'desktop') {
+          background-color: $grey;
+        }
       }
     }
     .nav-link:before {
-      content: "";
-      position: absolute;
-      display: block;
-      bottom: 15px;
-      width: 100%;
-      height: 1px;
-      background-color: $grey;
-      transform: scaleX(0);
-      transform-origin: 0 50%;
-      transition: transform .3s cubic-bezier(.39,.575,.565,1);
      }
 
     .nav-link:hover {
@@ -217,18 +226,6 @@
 
     .select_box {
       padding: 0 15px 0 0;
-      // &:after {
-      //   width: 0;
-      //   height: 0;
-      //   border-left: 4px solid transparent;
-      //   border-right: 4px solid transparent;
-      //   border-top: 4px solid $grey;
-      //   position: absolute;
-      //   top: 40%;
-      //   right: 0;
-      //   content: "";
-      //   // z-index: 98;
-      // }
     }
 
     .select-button:after{
@@ -248,43 +245,54 @@
     /////////////
     // menu burger
     ////////////
-    .navMenuIcon{
+    .navMenuIcon {
         position: relative;
         width: 54px;
         height: 54px;
-
         transition: transform 0.5s;
+        span {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translateX(-50%) translateY(-50%);
+          display: block;
+          width: 22px;
+          height: 2px;
+          background-color: $grey;
+          transition: all 0.5s;
+        }
+        &.is-opened {
+          span {
+            background-color: white;
+            &:before,
+            &:after {
+              background-color: white;
+            }
+          }
+        }
     }
-    .navMenuIcon span {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translateX(-50%) translateY(-50%);
 
-        display: block;
-        width: 22px;
-        height: 2px;
-
-        background-color: #FFF;
-
-        transition: background 0.5s;
+    .Home .navMenuIcon span {
+      background-color: white;
+      &:before,
+      &:after {
+        background-color: white;
+      }
     }
 
     .navMenuIcon span::before, .navMenuIcon span::after {
         content: '';
+        width: 22px;
+        height: 2px;
         position: absolute;
         top: 0;
         left: 0;
         transform: translateY(-6px);
-
         display: block;
-        width: 22px;
-        height: 2px;
-
-        background-color: #FFF;
-
+        background-color: $grey;
         transition: transform 0.5s;
     }
+
     .navMenuIcon span::after {
         transform: translateY(6px);
     }
