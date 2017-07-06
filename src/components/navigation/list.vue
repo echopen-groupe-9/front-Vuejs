@@ -44,13 +44,13 @@
         },
         methods: {
             toggle: function () {
-                this.active = true;
+                this.active = !this.active;
                 this.show = true;
             },
             close: function () {
               this.active = false;
               this.show = false;
-            }
+            },
         }
     }
 </script>
@@ -87,7 +87,7 @@
         display: flex;
         flex-direction: column;
         position: absolute;
-        top: 33px;
+        top: 32px;
         right: -26px;
         padding: 0 20px 10px 20px;
         text-align: center;
