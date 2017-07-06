@@ -19,31 +19,36 @@
         </header>
 
         <section class="participate-section">
-            <div class="main-wrapper participate-wrapper">
-                <div class="participate-content">
-                    <h2 class="section-subtitle title">Comment <span class="section-subtitle-span">participer ?</span></h2>
-                    <p class="text">Avec son application universelle, la sonde S1 d'échopen offre un support simple pour plus de précision et pour un diagnostic plus rapide.</p>
-                </div>
-                <div class="slack-block">
-                    <div class="slack-block-content">
-                        <h3 class="slack-title title-small">Rejoignez la communauté sur slack.</h3>
-                        <p class="slack-paragraph text-2">Nous voulons aussi entendre votre avis. Communiquez autour d’idées et de concepts avec les autres contributeurs. </p>
-                        <a href="http://slack.echopen.org/" target="_blank">Rejoindre le slack</a>
+            <div class="main-wrapper">
+                <div class="participate-wrapper">
+                    <div class="participate-content">
+                        <h2 class="section-subtitle title">Comment <span class="section-subtitle-span">participer ?</span></h2>
+                        <p class="text">Avec son application universelle, la sonde S1 d'échopen offre un support simple pour plus de précision et pour un diagnostic plus rapide.</p>
+                    </div>
+                    <div class="slack-block">
+                        <div class="slack-block-content">
+                            <h3 class="slack-title title-small">Rejoignez la communauté sur slack.</h3>
+                            <p class="slack-paragraph text-2">Nous voulons aussi entendre votre avis. Communiquez autour d’idées et de concepts avec les autres contributeurs. </p>
+                            <a href="http://slack.echopen.org/" target="_blank">Rejoindre le slack</a>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section>
+        <section v-if="contributorType == 'maker'">
             <div class="main-wrapper">
-                <h2 class="section-subtitle title"><span class="section-subtitle-span">Github</span></h2>
-                <github-cards v-if="contributorType == 'maker'"></github-cards>
+                <h2 class="section-subtitle title"><span class="section-subtitle-span">Github issues</span></h2>
+                <ul class="github-cards-list">
+                    <github-cards></github-cards>
+                </ul>
             </div>
         </section>
 
         <section>
             <div class="main-wrapper">
                 <h2 class="section-subtitle title">Hackaton & <span class="section-subtitle-span">Rencontres</span></h2>
+                <hackaton-cards></hackaton-cards>
             </div>
         </section>
 
@@ -53,11 +58,13 @@
 <script>
     /* Import Components */
     import githubCardsList from './githubCardsList.vue'
+    import hackatonCardsList from './hackatonCardsList.vue'    
 
     export default {
         name: 'Details',
         components: {
-            'github-cards': githubCardsList
+            'github-cards': githubCardsList,
+            'hackaton-cards': hackatonCardsList
         },
         computed: {
             contributorType () {
@@ -84,7 +91,8 @@
     .participate-wrapper{
         display: flex;
         flex-direction: row;
-        justify-content: center;
+        flex-wrap: wrap;
+        justify-content: flex-start;
     }
 
     .participate-content{
@@ -126,6 +134,10 @@
     .slack-block-content{
         width: 50%;
         padding: 40px 0 40px 40px;
+    }
+
+    .github-cards-list{
+        text-align: left;
     }
 
 </style>
