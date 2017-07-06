@@ -48,12 +48,13 @@
             & .Home-contribution_item {
                 background: url(../../../assets/images/bg-contributor-1.png) no-repeat;
                 background-size: cover;
+                margin-left: 20px;
                 flex: 1;
                 position: relative;
 
                 &:last-child {
                     background: url(../../../assets/images/bg-contributor-2.png) no-repeat;
-
+                    background-size: cover;
                 }
 
                 .Home-contribution_item--text {
