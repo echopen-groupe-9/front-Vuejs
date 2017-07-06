@@ -1,10 +1,12 @@
 <template>
   <div id="app" class='app' :class='titlePage'>
-    <navigation :nameRoute='titlePage'></navigation>
-    <transition name="transition-page">
-      <router-view></router-view>
-    </transition>
-    <footer-block></footer-block>
+    <div class='app__pusher'>
+      <navigation :nameRoute='titlePage'></navigation>
+      <transition name="transition-page">
+        <router-view></router-view>
+      </transition>
+      <footer-block></footer-block>
+    </div>
   </div>
 </template>
 
@@ -38,6 +40,12 @@
 
 <style lang="scss">
   @import 'core.scss';
+
+  body {
+    &.overflow-none {
+      overflow: hidden;
+    }
+  }
 
   #app {
     position: relative;
