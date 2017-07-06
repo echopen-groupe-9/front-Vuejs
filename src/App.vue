@@ -10,7 +10,7 @@
 
 <script>
   /* Import components*/
-  import navigationList from './components/navigation/list.vue'
+  import navigation from './components/navigation/list.vue'
   import footer from './components/footer/index.vue'
   import Vuex from 'vuex'
 
@@ -22,8 +22,8 @@
       }
     },
     components: {
-      'navigation': navigationList,
-      'footer-block': footer,
+      'navigation': navigation,
+      'footer-block': footer
     },
     computed: {
       ...Vuex.mapGetters({
