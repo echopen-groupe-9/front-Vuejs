@@ -2,8 +2,12 @@
     <section class="Home-contribution">
         <ul class="Home-contribution_list">
             <li class="Home-contribution_item" v-for="contribution in contributions">
-                <p class="Home-contribution_item--nmb">{{contribution.title}}</p>
-                <p class="Home-contribution_item--desc">{{contribution.desc}}</p>
+                <a href="#" class="Home-contribution_link">
+                    <div class="Home-contribution_item--text">
+                        <h2 class="Home-contribution_item--title title">{{contribution.title}}</h2>
+                        <p class="Home-contribution_item--desc text">{{contribution.desc}}</p>
+                    </div>
+                </a>
             </li>
         </ul>
     </section>
@@ -26,16 +30,42 @@
                 ]
             }
         },
-        methods: {
-        }
+        methods: {}
     }
 </script>
 
 <style lang="scss">
+    @import '../../../core';
 
-    .Home-review_holder {
-        margin: 0 5vw;
+    .Home-contribution {
+        width: 100%;
+
+        &_list {
+            display: flex;
+            flex-flow: row nowrap;
+            height: 800px;
+
+            & .Home-contribution_item {
+                background: url(../../../assets/images/bg-contributor-1.png) no-repeat;
+                background-size: cover;
+                flex: 1;
+                position: relative;
+
+                &:last-child {
+                    background: url(../../../assets/images/bg-contributor-2.png) no-repeat;
+
+                }
+
+                .Home-contribution_item--text {
+                    position: absolute;
+                    left: 10%;
+                    bottom: 10%;
+                }
+            }
+        }
+        .Home-contribution_link {
+            text-decoration: none;
+            color: $grey-dark;
+        }
     }
-
-
 </style>

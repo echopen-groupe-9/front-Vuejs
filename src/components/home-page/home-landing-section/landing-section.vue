@@ -4,7 +4,7 @@
         <div class="Home-presentation_holder .main-wrapper">
             <h1 class="Home-presentation_title section-title title">{{title}}</h1>
             <p class="Home-presentation_desc .section-introduction"> {{desc}}</p>
-            <a href="/#" class="app-link Home-presentation_link"></a>
+            <a href="/#" class="link Home-presentation_link">Voir la demo</a>
         </div>
     </section>
 </template>
@@ -55,9 +55,15 @@
         }
         .Home-presentation_link {
             background: #FFFFFF;
-            padding: 10px 20px;
+            padding: 10px 30px;
             font-size: 14px;
-            color: #000;
+            color: $grey;
+            font-weight: bold;
+            border-radius: 100px;
+            text-transform: uppercase;
+        }
+        .Home-presentation_desc {
+            margin-bottom: 45px;
         }
     }
 </style>

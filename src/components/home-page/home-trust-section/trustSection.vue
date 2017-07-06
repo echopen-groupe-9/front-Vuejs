@@ -1,8 +1,11 @@
 <template>
     <section class="Home-trust">
+        <h1 class="Home-trust_title">
+            {{title}}
+        </h1>
         <ul class="Home-trust_list">
             <li class="Home-trust_item" v-for="trust in trusts">
-                <img v-bind:src="trust.url"  alt="">
+                <img src="../../../assets/logo.png"  alt="">
             </li>
         </ul>
     </section>
@@ -13,6 +16,8 @@
         name: 'home',
         data () {
             return {
+                title: 'Ils nous ont fait confiance',
+
                 trusts: [
                     {
                         url: "../../assets/logo.png"
@@ -41,10 +46,18 @@
 </script>
 
 <style lang="scss">
+    @import '../../../core';
 
-    .Home-review_holder {
-        margin: 0 5vw;
+    .Home-trust {
+        &_title {
+            font-size: 30px;
+            color: $grey-dark;
+        }
+        &_list {
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: space-around;
+        }
     }
-
 
 </style>
