@@ -2,7 +2,7 @@
     <nav class="nav">
         <ul class="navigation text-small">
             <li class="logo">
-                <router-link :to="{name: 'Home'}"><img src="../../assets/logo-echotech.jpg"></router-link>
+                <router-link :to="{name: 'Home'}"><img src="../../assets/Logo-Echopen.svg"></router-link>
             </li>
             <div class="link">
                 <li>
@@ -70,7 +70,7 @@
     .nav {
         position: relative;
         background-color: $blue-2;
-        padding: 1% 2%;
+        padding: 1% 4% 1% 2%;
     }
     a {
         color: $white;
@@ -115,6 +115,10 @@
     .logo {
         position: absolute;
         left: 0;
+    }
+    .logo img {
+        width: 70%;
+        float: left;
     }
     .hidden-box {
         display: flex;
