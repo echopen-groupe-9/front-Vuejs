@@ -14,3 +14,7 @@ export const latestNews = (state, number) => {
 export const latestEvents = (state, number) => {
   return state.allEvents.slice(0, (number + 1))
 }
+
+export const getImage = (state) => {
+  return state.base_url_image
+}

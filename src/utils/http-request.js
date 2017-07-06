@@ -1,7 +1,7 @@
 import axios from 'axios'
 import {getToken, dashboardUrl} from './authentication'
 
-const base_url = 'http://mft-test-preprod.esy.es/web/'
+export const base_url = 'http://mft-test-preprod.esy.es/web'
 
 const HTTP = axios.create({
   baseURL: base_url,

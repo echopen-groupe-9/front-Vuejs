@@ -1,12 +1,14 @@
 import * as types from './mutation-types'
-import HTTP from '../../utils/http-request'
+import axios from 'axios'
+import base_url from '../../utils/http-request'
 
 export const fetchNews = ({commit}) => {
-  HTTP.get('news')
+  axios.get('http://mft-test-preprod.esy.es/web/news')
   .then(response => {
-      let allNews;
-      let allEvents;
-      response.forEach(news => {
+      let allNews = [];
+      let allEvents = [];
+
+      response.data.forEach(news => {
         if (news.type === 'event') {
           allEvents.push(news)
         } else {
