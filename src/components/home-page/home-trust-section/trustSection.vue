@@ -6,6 +6,7 @@
         <ul class="Home-trust_list text">
                  <img class="Home-trust_item--image" src="../../../assets/Logo.svg"  alt="">
             <li class="Home-trust_item" v-for="trust in trusts">
+                 <img class="Home-trust_item--image" src=""  alt="">
             </li>
         </ul>
     </section>
