@@ -1,6 +1,5 @@
 <template>
     <section class="Home-presentation">
-        <navigation></navigation>
         <div class="Home-presentation_holder .main-wrapper">
             <h1 class="Home-presentation_title section-title title">{{title}}</h1>
             <p class="Home-presentation_desc .section-introduction"> {{desc}}</p>
@@ -14,7 +13,6 @@
 </template>
 
 <script>
-    import navigation from '../../navigation/list.vue'
     export default {
         name: 'home',
         data () {
@@ -22,9 +20,6 @@
                 title: 'Let’s make something good',
                 desc: 'Nulla vitae elit libero, a pharetra augue. Nullam id dolor id nibh ultricies ut id elit.'
             }
-        },
-        components: {
-            'navigation': navigation
         }
     }
 </script>

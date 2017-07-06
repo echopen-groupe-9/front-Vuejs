@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+    <navigation></navigation>
     <transition name="transition-page">
       <router-view></router-view>
     </transition>
@@ -9,6 +10,7 @@
 
 <script>
   /* Import components*/
+  import navigation from './components/navigation/list.vue'
   import footer from './components/footer/index.vue'
   import Vuex from 'vuex'
 
@@ -20,7 +22,8 @@
       }
     },
     components: {
-      'footer-block': footer,
+      'navigation': navigation,
+      'footer-block': footer
     },
     computed: {
       ...Vuex.mapGetters({
