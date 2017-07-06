@@ -86,13 +86,14 @@
     @import '../../core.scss';
 
     .nav {
-        min-height: 65px;
-        position: fixed;
-        top: 0;
-        width: 100%;
-        z-index: 1;
-        background-color: white;
-        padding: 0 20px;
+      min-height: 65px;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 1;
+      background-color: white;
+      box-shadow: 1.1px 1.7px 9px 0 rgba(0, 14, 21, 0.2);
+      padding: 0 20px;
     }
 
     .Home .nav {
@@ -112,6 +113,7 @@
       text-align: left;
       background: $blue-2;
       padding: 60px 20px 0 20px;
+      z-index: 50;
       &.active {
         transform: translate3d(-300px, 0, 0);
       }
