@@ -94,7 +94,7 @@
     .select-button:after {
        border-top: 4px solid $white;
      }
-    .link:before {
+    .nav-link:before {
       background-color: $white;
     }
   }
