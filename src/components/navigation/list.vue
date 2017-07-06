@@ -6,27 +6,27 @@
                     <router-link :to="{name: 'Home'}"></router-link>
                 </div>
             </li>
-            <div class="link">
+            <div class="nav-link">
                 <li>
                     <router-link :to="{name: 'Home'}">Wiki</router-link>
                 </li>
             </div>
-            <div class="link">
+            <div class="nav-link">
                 <li>
                     <router-link :to="{name: 'Contributor'}">Contributeurs</router-link>
                 </li>
             </div>
-            <div class="link">
+            <div class="nav-link">
                 <li>
                     <router-link :to="{name: 'Home'}">Echopen et vous</router-link>
                 </li>
             </div>
-            <div class="link">
+            <div class="nav-link">
                 <li>
                     <router-link :to="{name: 'Home'}">Contact</router-link>
                 </li>
             </div>
-            <div class="link">
+            <div class="nav-link">
                 <li>
                     <router-link :to="{name: 'News'}">Actualités</router-link>
                 </li>
@@ -89,13 +89,13 @@
     .navigation li {
         text-transform: uppercase;
     }
-    .link {
+    .nav-link {
         position: relative;
         display: inline-block;
         cursor: pointer;
         margin-right: 30px;
     }
-    .link:before {
+    .nav-link:before {
          content: "";
          position: absolute;
          display: block;
@@ -107,7 +107,7 @@
          transform-origin: 0 50%;
          transition: transform .3s cubic-bezier(.39,.575,.565,1);
      }
-    .link:hover {
+    .nav-link:hover {
         &:before {
              transform-origin: 0 50%;
              transform: scaleX(1);
