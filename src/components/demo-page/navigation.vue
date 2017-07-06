@@ -36,6 +36,7 @@
     left: 0;
     width: 100%;
     height: 4px;
+    z-index: 50;
     @include mq($from: 'desktop') {
       position: static;
       width: auto;
@@ -79,6 +80,7 @@
       height: 100%;
       background: white;
       opacity: 1;
+      z-index: 100;
     }
     &.active {
       .title {

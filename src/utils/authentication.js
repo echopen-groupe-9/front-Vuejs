@@ -2,7 +2,7 @@ import decode from 'jwt-decode'
 import Router from 'vue-router'
 
 const ID_TOKEN_KEY = 'idToken'
-const dashboardUrl = 'http://mft-test-preprod.esy.es/web/dashboard'
+export const dashboardUrl = 'http://mft-test-preprod.esy.es/web/dashboard'
 
 let router = new Router({
   mode: 'history'

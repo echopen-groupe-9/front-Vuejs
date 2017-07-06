@@ -5,37 +5,12 @@
                 Nos dernières <span class="section-subtitle-span">actualités</span>
             </h2>
             <ul class="Home-actu_list">
-                <li class="Home-actu_item">
-                    <img class="Home-actu_img" src="../../../assets/images/bg_donateur.jpg">
+                <li class="Home-actu_item" v-for='news in lastNews'>
+                    <img class="Home-actu_img" :src='news.imageFile'>
                     <div class="Home-actu_contain">
-                        <h3 class="Home-actu_title text">Nulla vitae elit libero, a pharetra augue</h3>
-                        <p class="Home-actu_text text-2">Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Donec ullamcorper nulla non
-                            metus auctor fringilla. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget
-                            lacinia odio semnec elit. Nulla vitae elit libero, a pharetra augue.
-                        </p><br>
-                        <a href="#">Lire la suite</a>
-                    </div>
-                </li>
-                <li class="Home-actu_item">
-                    <img class="Home-actu_img" src="../../../assets/images/bg_donateur.jpg">
-                    <div class="Home-actu_contain">
-                        <h3 class="Home-actu_title text">Nulla vitae elit libero, a pharetra augue</h3>
-                        <p class="Home-actu_text text-2">Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Donec ullamcorper nulla non
-                            metus auctor fringilla. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget
-                            lacinia odio semnec elit. Nulla vitae elit libero, a pharetra augue.
-                        </p><br>
-                        <a href="#">Lire la suite</a>
-                    </div>
-                </li>
-                <li class="Home-actu_item">
-                    <img class="Home-actu_img" src="../../../assets/images/bg_donateur.jpg">
-                    <div class="Home-actu_contain">
-                        <h3 class="Home-actu_title text">Nulla vitae elit libero, a pharetra augue</h3>
-                        <p class="Home-actu_text text-2">Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Donec ullamcorper nulla non
-                            metus auctor fringilla. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget
-                            lacinia odio semnec elit. Nulla vitae elit libero, a pharetra augue.
-                        </p><br>
-                        <a href="#">Lire la suite</a>
+                        <h3 class="Home-actu_title text">{{news.title}}</h3>
+                        <p class="Home-actu_text text-2">{{news.content}}</p><br>
+                        <a :href='news.url'>Lire la suite</a>
                     </div>
                 </li>
             </ul><br>
@@ -45,13 +20,32 @@
 </template>
 
 <script>
-    export default {
-        name: 'actu',
-        data () {
-            return {
-            }
+  import HTTP from '../../../utils/http-request'
+  import axios from 'axios'
+
+  export default {
+      name: 'actu',
+      data () {
+        return {
+          lastNews: {}
         }
-    }
+      },
+      mounted () {
+        axios.get('http://mft-test-preprod.esy.es/web/news')
+        .then((response) => {
+          let newNews = response.filter((news, index) => {
+            if (index < 3) {
+              return news
+            }
+          })
+
+          this.lastNews = newNews
+        })
+        .catch((error) =>{
+          console.log(error);
+        });
+      }
+  }
 </script>
 
 <style lang="scss">
