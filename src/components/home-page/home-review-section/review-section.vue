@@ -1,9 +1,9 @@
 <template>
-    <section class="Home-review">
+    <section class="Home-review main-wrapper">
         <ul class="Home-review_carousel">
             <li class="Home-review_holder" v-for="review in reviews">
                 <div class="Home-review_text">
-                    <h2 class="Home-review_title title">{{review.title}}</h2>
+                    <h2 class="Home-review_title section-subtitle title">Highly <span class="section-subtitle-span">Manipulable</span></h2>
                     <p class="Home-review_desc text">{{review.desc}}<span class="Home-review_desc--tiny"></span></p>
                     <div class="Home-review--author"></div>
                 </div>
@@ -23,11 +23,9 @@
             return {
                 reviews: [
                     {
-                        title: 'Highly Manipulable',
                         desc: 'Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Donec ullamcorper nulla non metus auctor fringilla. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Nulla vitae elit libero, a pharetra augue.'
                     },
                     {
-                        title: 'Highly Noobish',
                         desc: 'Vivamus sgittis lacus vel augue laoreet rutrum faucibus dolor auctor. Donec ullamcorper nulla non metus auctor fringilla. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Nulla vitae elit libero, a pharetra augue.'
                     }
                 ]
@@ -42,7 +40,7 @@
         width:100%;
         margin: 0 auto;
         .Home-review_holder {
-            width: 90%;
+            width: 100%;
             height: 800px;
             background: #FAFAFA;
             border-radius: 25px;
