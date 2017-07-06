@@ -1,20 +1,41 @@
 <template>
     <div id="home">
-        <h1>{{msg}}</h1>
+       <landing></landing>
+        <review></review>
+        <result></result>
+        <contribution></contribution>
+        <trust></trust>
     </div>
 </template>
 
 <script>
+    import landingSection from './home-landing-section/landing-section.vue'
+    import reviewSection from './home-review-section/review-section.vue'
+    import resultSection from './home-results-section/results-section.vue'
+    import contributionSection from './home-contribution-section/contribution-section.vue'
+    import trustSection from './home-trust-section/trustSection.vue'
+
     export default {
         name: 'Home',
         data () {
-            return {
-                msg: 'Je suis la Home'
-            }
+            return {}
+        },
+        components: {
+            'landing': landingSection,
+            'review': reviewSection,
+            'result': resultSection,
+            'contribution': contributionSection,
+            'trust': trustSection,
         }
     }
 </script>
 
 <style lang="scss">
 
+    section {
+        margin-bottom: 70px;
+    }
+    .Home-title {
+        font-size: 64px;
+    }
 </style>
