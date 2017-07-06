@@ -2,7 +2,7 @@
   <div class='section'>
     <div class="main-wrapper main-wrapper__xl">
       <div class="section-header">
-        <h1 class="section-title title section-title-underline">How <br>it works?</h1>
+        <h1 class="section-title title section-title-underline">Comment ça<br>fonctionne?</h1>
         <Navigation :sections='sections' :percent='percent'></Navigation>
       </div>
       <div class="section-content">
@@ -37,8 +37,8 @@
         sections: [
           {
             description: {
-              title: 'First section',
-              content: 'description first section description first section description first section ',
+              title: 'Facile à utiliser',
+              content: 'Avec son application universelle, la sonde S1 d\'échopen offre un support simple pour plus de précision et pour un diagnostic plus rapide.',
               visible: false
             },
             img: {
@@ -48,8 +48,8 @@
           },
           {
             description: {
-              title: 'Second section',
-              content: 'description second section description second section description second section ',
+              title: 'Petite et pratique',
+              content: 'Pensée pour épouser la forme d\'une main, la sonde S1 d\'échopen est confortable à l\'usage et peut se tenir dans une poche. Tellement légère qu\'elle s\'emporte partout et peut. Vous pourrez alors faire une image de vos patient en toute facilité.',
               visible: false
             },
             img: {
@@ -59,8 +59,8 @@
           },
           {
             description: {
-              title: 'Third section',
-              content: 'description third section description third section description third section ',
+              title: 'Connectée',
+              content: 'Connectée à un téléphone, la sonde peut stocker des images et les envoyer en toute sécurité par bluetooth.',
               visible: false
             },
             img: {
