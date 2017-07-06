@@ -1,14 +1,16 @@
 <template>
     <section class="Home-result">
-        <h2 class="Home-result_title title">
-            Nos chiffres clés
-        </h2>
-        <ul class="Home-result_list">
-            <li class="Home-result_item" v-for="result in results">
-                <p class="Home-result_item--nmb title">{{result.number}}</p>
-                <p class="Home-result_item--desc text2">{{result.desc}}</p>
-            </li>
-        </ul>
+        <div class="main-wrapper">
+            <h2 class="Home-result_title section-subtitle title">
+                Nos chiffres <span class="section-subtitle-span">clés</span>
+            </h2>
+            <ul class="Home-result_list">
+                <li class="Home-result_item" v-for="result in results">
+                    <p class="Home-result_item--nmb title">{{result.number}}</p>
+                    <p class="Home-result_item--desc text">{{result.desc}}</p>
+                </li>
+            </ul>
+        </div>
     </section>
 </template>
 
@@ -38,8 +40,8 @@
 
 <style lang="scss">
     .Home-result {
-        width:80%;
-        margin: 0 auto 70px auto;
+        width: 100%;
+        margin: 50px auto 70px auto;
     }
     .Home-result_list {
         display: flex;

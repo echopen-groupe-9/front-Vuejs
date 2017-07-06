@@ -1,5 +1,5 @@
 <template>
-    <section class="Home-trust">
+    <section class="Home-trust main-wrapper">
         <h1 class="Home-trust_title">
             {{title}}
         </h1>

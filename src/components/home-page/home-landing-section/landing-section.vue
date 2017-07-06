@@ -1,13 +1,11 @@
 <template>
     <section class="Home-presentation">
-        <div class="Home-presentation_holder .main-wrapper">
-            <h1 class="Home-presentation_title section-title title">{{title}}</h1>
-            <p class="Home-presentation_desc .section-introduction"> {{desc}}</p>
-<<<<<<< HEAD
-            <a href="/#" class="link Home-presentation_link">Voir la demo</a>
-=======
-            <a href="/#" class="app-link Home-presentation_link"></a>
->>>>>>> [ADD:components/homepage] css for components
+        <div class="Home-presentation_wrapper main-wrapper">
+            <div class="Home-presentation_holder section-introduction">
+                <h1 class="Home-presentation_title section-title title">Let’s make something good <span class="section-title-alt section-title-alt-span">together</span></h1>
+                <p class="Home-presentation_desc section-introduction text"> {{desc}}</p>
+                <a href="/#" class="link Home-presentation_link">Voir la demo</a>
+            </div>
         </div>
     </section>
 </template>
@@ -17,7 +15,6 @@
         name: 'home',
         data () {
             return {
-                title: 'Let’s make something good',
                 desc: 'Nulla vitae elit libero, a pharetra augue. Nullam id dolor id nibh ultricies ut id elit.'
             }
         }
@@ -38,6 +35,7 @@
         .Home-presentation_title {
             color: #FFF;
             font-weight: lighter;
+            text-align: left;
 
             &:after {
                 content: attr(title);
@@ -46,15 +44,20 @@
             }
         }
 
+        .Home-presentation_wrapper{
+            position: relative;
+            min-height: 100vh;
+        }
+
         .Home-presentation_holder {
             position: absolute;
-            width: 40vw;
-            left: 10vw;
-            top: 30%;
+            left: 0;
+            top: 50%;
+            text-align: left;
+            transform: translateY(-50%);
         }
         .Home-presentation_link {
             background: #FFFFFF;
-<<<<<<< HEAD
             padding: 10px 30px;
             font-size: 14px;
             color: $grey;
@@ -64,11 +67,6 @@
         }
         .Home-presentation_desc {
             margin-bottom: 45px;
-=======
-            padding: 10px 20px;
-            font-size: 14px;
-            color: #000;
->>>>>>> [ADD:components/homepage] css for components
         }
     }
 </style>
