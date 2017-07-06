@@ -58,6 +58,17 @@
             flex-flow: row wrap;
             justify-content: space-around;
             margin-top: 50px;
+
+            .Home-trust_item {
+                filter: grayscale(100%);
+                opacity: .4;
+                transition: ease .5s;
+
+                &:hover {
+                    filter: none;
+                    opacity: 1;
+                }
+            }
         }
     }
 
