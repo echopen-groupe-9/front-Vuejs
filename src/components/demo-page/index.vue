@@ -170,7 +170,7 @@
       top: 30vh;
       bottom: 0;
       left: 0;
-      padding: 0 0 16% 0;
+      padding: 40px 0;
     }
   }
 
