@@ -75,7 +75,7 @@
   @import "../../core.scss";
   .main-wrapper {
     position: relative;
-    margin-bottom: 50px;
+    margin-bottom: 140px;
     &:after{
       content: '';
       width: 3px;
@@ -94,22 +94,23 @@
       color: $blue-2;
       max-width: 850px;
       margin: 0 auto;
-      padding-top: 270px;
+      padding-top: 110px;
       background-color: $white;
       position: relative;
       z-index: 1;
       &:before{
         content: '';
         width: 3px;
-        height: 230px;
+        height: 100px;
         background-color: $blue-2;
         position: absolute;
-        top: 30px;
+        top: 0;
         left: 50%;
         transform: translate3d(-50%, 0, 0);
       }
     }
     .article-date {
+      @include font('Lato', 300);
       background-color: $white;
       padding: 10px 0 22px;
     }

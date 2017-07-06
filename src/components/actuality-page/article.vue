@@ -48,19 +48,31 @@
   .news{
     display: flex;
     flex-wrap: wrap;
-    flex-direction: row;
+    flex-direction: column-reverse;
     align-items: center;
     background-color: $white;
     opacity: 0;
     transform: translate3D(0 , 50px, 0);
     transition: opacity .4s ease-in, transform .4s ease-in-out;
     padding: 5%;
+
+    @include mq($from: tablet) {
+      flex-wrap: wrap;
+      flex-direction: row;
+      align-items: center;
+    }
+
     .block-text {
       height: 100%;
       display: inline-block;
-      width: 50%;
-      text-align: left;
+      width: 100%;
+      text-align: center;
       padding-right: 5%;
+
+      @include mq($from: tablet) {
+        width: 50%;
+        text-align: left;
+      }
 
       .title-news {
         padding-bottom: 40px;
@@ -79,11 +91,14 @@
     .block-img {
       height: 100%;
       display: inline-block;
-      width: 50%;
+      width: 100%;
       text-align: left;
       .img {
         width: 100%;
         height: 100%;
+      }
+      @include mq($from: tablet) {
+        width: 50%;
       }
     }
   }
@@ -93,10 +108,16 @@
     padding: 0 15%;
     transform: translate3D(0 , 50px, 0);
     transition: opacity .6s cubic-bezier(.4,0,0,1), transform .6s cubic-bezier(.4,0,0,1);
-    text-align: left;
+    text-align: center;
+    @include mq($from: tablet) {
+      text-align: left;
+    }
 
     &.right {
-      text-align: right;
+      text-align: center;
+      @include mq($from: tablet) {
+        text-align: right;
+      }
     }
     .card-event{
       position: relative;
@@ -189,7 +210,6 @@
   .is-active{
     opacity: 1;
     transform: translate3D(0 , 0, 0);
-
     transition: opacity .6s cubic-bezier(.4,0,0,1), transform .6s cubic-bezier(.4,0,0,1);
 
   }
