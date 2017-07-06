@@ -18,10 +18,15 @@
 </script>
 
 <style lang='scss'>
+  @import '../../core.scss';
+
   .demo__description {
-    position: absolute;
-    bottom: 50px;
-    margin: 0 35%;
+    margin: 0 5%;
+    @include mq($from: 'desktop') {
+      position: absolute;
+      bottom: 8%;
+      margin: 0 35%;
+    }
   }
 
   .demo_descriptionSubtitle {

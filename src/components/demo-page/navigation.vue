@@ -10,7 +10,7 @@
     </ul>
     <div class="progress">
       <div class="progress-bar bg-blue-2 hidden visible-desktop" :style='{height: percent + "%"}'></div>
-      <div class="progress-bar bg-blue-2 hidden-desktop" :style='{width: (percent * 1.15) + "%"}'></div>
+      <div class="progress-bar bg-blue-2 hidden-desktop" :style='{width: (percent * 1.3) + "%"}'></div>
     </div>
   </div>
 </template>
@@ -61,6 +61,10 @@
     position: relative;
     padding: 10px 0;
     color: $grey-light;
+    display: none;
+    @include mq($from: 'desktop') {
+      display: block;
+    }
     .title {
       transition: all 0.3s;
       color: $grey-light;

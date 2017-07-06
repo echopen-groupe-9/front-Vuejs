@@ -9,8 +9,8 @@
         <div class="demo__section" v-for='(section, index) in sections' :data-position='index' >
           <div class="demo__content">
             <transition name="fade" mode="out-in">
-              <div class="demo__thumbnail" v-show='section.img.visible'>
-                <img :src="section.img.source" alt="" class='img-responsive'>
+              <div class="demo__thumbnail text-center" v-show='section.img.visible'>
+                <img :src="section.img.source" alt="" class='img-responsive-height'>
               </div>
             </transition>
             <transition name="fade" mode="out-in">
@@ -26,7 +26,9 @@
 <script>
   import Description from './description.vue'
   import Navigation from './navigation.vue'
-  import viewme from '../../assets/images/viewme.jpg'
+  import android1 from '../../assets/images/android_phone_1.png'
+  import android2 from '../../assets/images/android_phone_2.png'
+  import android3 from '../../assets/images/android_phone_3.png'
 
   export default {
     name: 'demo',
@@ -40,7 +42,7 @@
               visible: false
             },
             img: {
-              source: viewme,
+              source: android1,
               visible: false
             }
           },
@@ -51,7 +53,7 @@
               visible: false
             },
             img: {
-              source: viewme,
+              source: android2,
               visible: false
             }
           },
@@ -62,18 +64,7 @@
               visible: false
             },
             img: {
-              source: viewme,
-              visible: false
-            }
-          },
-          {
-            description: {
-              title: 'Fourth section',
-              content: 'description fourth section description fourth section description fourth section ',
-              visible: false
-            },
-            img: {
-              source: viewme,
+              source: android3,
               visible: false
             }
           }
@@ -84,8 +75,9 @@
     methods: {
       handleScroll () {
         let posScrollWindow = window.scrollY
+        let offset = window.innerWidth < 1024 ? (window.innerHeight / 2) : 0
 
-        this.triggerVisibility('.demo__section', 0, posScrollWindow)
+        this.triggerVisibility('.demo__section', offset, posScrollWindow)
         this.triggerPercentage(posScrollWindow)
       },
       triggerVisibility (el, offset, ref) {
@@ -152,26 +144,53 @@
   }
 
   .demo__section {
-    height: 200vh;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     @include mq($from: 'desktop') {
       height: 400vh;
     }
   }
 
   .demo__content {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    flex-direction: column;
     @include mq($from: 'desktop') {
+      display: block;
+      height: auto;
       max-height: 100vh;
       width: 100%;
       position: fixed;
       top: 30vh;
       bottom: 0;
       left: 0;
+      padding: 0 0 16% 0;
     }
   }
 
   .demo__thumbnail {
-    width: 30%;
-    margin: auto;
+    width: 90%;
+    height: 60%;
+    margin: 60px auto;
+    flex-shrink: 0;
+    @include mq($from: 'desktop') {
+      width: 30%;
+      height: 100%;
+      max-height: 100%;
+      margin: 0 auto;
+      img {
+        width: auto;
+        max-width: none;
+        height: 100%;
+        max-height: 100%;
+      }
+    }
   }
 
   .footer {
