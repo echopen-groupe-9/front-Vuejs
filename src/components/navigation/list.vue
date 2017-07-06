@@ -4,24 +4,31 @@
             <li class="logo">
                 <router-link :to="{name: 'Home'}"><img src="../../assets/logo-echotech.jpg"></router-link>
             </li>
-            <li>
-                <router-link :to="{name: 'Home'}">Wiki</router-link>
-            </li>
-            <li>
-                <router-link :to="{name: 'Contributor'}">Contributeurs</router-link>
-            </li>
-            <li>
-                <router-link :to="{name: 'Home'}">Echopen et vous</router-link>
-            </li>
-            <li>
-                <router-link :to="{name: 'News'}">Actualités</router-link>
-            </li>
-            <li>
-                <router-link :to="{name: 'Home'}">Documentation</router-link>
-            </li>
-            <li>
-                <router-link :to="{name: 'Home'}">Contact</router-link>
-            </li>
+            <div class="link">
+                <li>
+                    <router-link :to="{name: 'Home'}">Wiki</router-link>
+                </li>
+            </div>
+            <div class="link">
+                <li>
+                    <router-link :to="{name: 'Contributor'}">Contributeurs</router-link>
+                </li>
+            </div>
+            <div class="link">
+                <li>
+                    <router-link :to="{name: 'Home'}">Echopen et vous</router-link>
+                </li>
+            </div>
+            <div class="link">
+                <li>
+                    <router-link :to="{name: 'Home'}">Contact</router-link>
+                </li>
+            </div>
+            <div class="link">
+                <li>
+                    <router-link :to="{name: 'News'}">Actualités</router-link>
+                </li>
+            </div>
             <div class="select_box">
                 <a class="select-button" href="#" @click="toggle">Je suis :</a>
                 <div class="hidden-box" v-show="active">
@@ -76,8 +83,31 @@
         align-items: center;
     }
     .navigation li {
-        margin-right: 30px;
         text-transform: uppercase;
+    }
+    .link {
+        position: relative;
+        display: inline-block;
+        cursor: pointer;
+        margin-right: 30px;
+    }
+    .link:before {
+         content: "";
+         position: absolute;
+         display: block;
+         bottom: 2px;
+         width: 100%;
+         height: 1px;
+         background-color: $white;
+         transform: scaleX(0);
+         transform-origin: 0 50%;
+         transition: transform .3s cubic-bezier(.39,.575,.565,1);
+     }
+    .link:hover {
+        &:before {
+             transform-origin: 0 50%;
+             transform: scaleX(1);
+         }
     }
     a {
         text-decoration: none;
