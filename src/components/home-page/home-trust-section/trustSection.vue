@@ -1,11 +1,11 @@
 <template>
     <section class="Home-trust main-wrapper">
-        <h1 class="Home-trust_title">
+        <h1 class="Home-trust_title text">
             {{title}}
         </h1>
-        <ul class="Home-trust_list">
+        <ul class="Home-trust_list text">
+                 <img class="Home-trust_item--image" src="../../../assets/Logo.svg"  alt="">
             <li class="Home-trust_item" v-for="trust in trusts">
-                <img src="../../../assets/Logo.svg"  alt="">
             </li>
         </ul>
     </section>
@@ -58,6 +58,17 @@
             flex-flow: row wrap;
             justify-content: space-around;
             margin-top: 50px;
+
+            .Home-trust_item {
+                filter: grayscale(100%);
+                transition: .3s ease;
+                opacity: .5;
+
+                &:hover {
+                    opacity: 1;
+                    filter: none;
+                }
+            }
         }
     }
 
