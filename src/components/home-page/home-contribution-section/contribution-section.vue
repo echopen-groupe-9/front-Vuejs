@@ -1,7 +1,7 @@
 <template>
     <section class="Home-contribution">
         <h2 class="Home-contribution_title section-subtitle white title">
-            Devenez <span class="section-white section-subtitleWhite-span">donateurs</span><br>
+            Devenez <span class="section-white section-subtitle-span white">donateurs</span><br>
             <p class="text">{{desc}}</p><br>
             <button class="Home-contribution-button">Participez</button>
         </h2>

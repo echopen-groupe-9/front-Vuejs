@@ -63,17 +63,29 @@
     }
     .Home-actu_list {
         display: flex;
-        flex-flow: row nowrap;
+        // flex-direction: column;
+        flex-wrap: wrap;
         justify-content: space-around;
         text-align: left;
+
+        @include mq($from: 'desktop') {
+          flex-flow: row;
+        }
     }
     .Home-actu_item {
-        max-width: 30%;
+        width: 100%;
         border: 1px solid #fff;
         box-shadow: 0px 7px 21px 0px rgba(0, 0, 0, 0.1);
         border-radius: 5px;
         position: relative;
         z-index: 1;
+        margin: 0 0 40px 0;
+        @include mq($from: 'tablet') {
+          width: 40%;
+        }
+        @include mq($from: 'desktop') {
+          width: 30%;
+        }
     }
     .Home-actu_contain {
         padding: 0 20px 20px 20px;
@@ -97,19 +109,18 @@
         width: 100%;
     }
     .Home-actu_button {
-        background-image: linear-gradient(to right, #00c6fb 0%, #005bea 100%);
-        padding: 10px 30px;
-        font-size: 14px;
-        color: $white;
-        border-radius: 100px;
-        border-color: $blue-2;
-        border-bottom: $blue-2;
-        border-right: $blue-2;
-        border-left: $blue-2;
-        border-top: $blue-2;
-        text-transform: uppercase;
-        outline: none;
-        cursor: pointer;
-        margin-top: 5%;
+      background-image: linear-gradient(to right, #00c6fb 0%, #005bea 100%);
+      font-size: 14px;
+      color: $white;
+      border-radius: 100px;
+      border-color: $blue-2;
+      border-bottom: $blue-2;
+      border-right: $blue-2;
+      border-left: $blue-2;
+      border-top: $blue-2;
+      text-transform: uppercase;
+      outline: none;
+      cursor: pointer;
+      padding: 10px 30px;
     }
 </style>
