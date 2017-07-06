@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div id="app" :class='titlePage'>
     <navigation></navigation>
     <transition name="transition-page">
       <router-view></router-view>
@@ -28,48 +28,74 @@
     computed: {
       ...Vuex.mapGetters({
         'isLoggedIn': ''
-      })
+      }),
+      titlePage () {
+          return this.$route.name
+      }
     }
   }
 </script>
 
 <style lang="scss">
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+  @import 'core.scss';
 
-h1, h2 {
-  font-weight: normal;
-}
+    #app {
+      position: relative;
+      text-align: center;
+      color: #2c3e50;
+  }
 
-ul {
-  list-style-type: none;
-  padding: 0;
-}
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
 
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
+  li {
+    display: inline-block;
+    margin: 0 10px;
+  }
 
-a {
-  color: #42b983;
-}
-.transition-page-enter-active {
-  transition: all .3s ease .4s;
-}
-.transition-page-leave-active {
-  transition: all .4s ease;
-}
-.transition-page-enter {
-  opacity: 0;
-}
-.transition-page-leave-to{
-  opacity: 0;
-}
+  .transition-page-enter-active {
+    transition: all .3s ease .4s;
+  }
+
+  .transition-page-leave-active {
+    transition: all .4s ease;
+  }
+
+  .transition-page-enter {
+    opacity: 0;
+  }
+
+  .transition-page-leave-to {
+    opacity: 0;
+  }
+  .Home {
+    .nav {
+      position: absolute;
+      top: 0%;
+      width: 100%;
+      z-index: 1;
+      background-color: transparent;
+      padding: 1% 4% 1% 2%;
+    }
+    .logo {
+      background-image: url("assets/Logo-Echopen.svg");
+    }
+    a {
+      color: $white;
+    }
+    .hidden-box {
+      background-color: $white;
+    }
+    .hidden-box a {
+      color: $blue-2;
+    }
+    .select-button:after {
+       border-top: 4px solid $white;
+     }
+    .nav-link:before {
+      background-color: $white;
+    }
+  }
 </style>
