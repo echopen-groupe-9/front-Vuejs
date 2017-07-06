@@ -20,15 +20,15 @@
                 <router-link :to="{name: 'Home'}">Contact</router-link>
             </li>
             <div class="select_box">
-                <select class="contributor text-small">
-                    <option value="" disabled selected>Je suis :</option>
-                    <option>
-                        <router-link :to="{name: 'Contributor', params: {contributor: 'maker'}}">Makers</router-link>
-                    </option>
-                    <option>
-                        <router-link :to="{name: 'Contributor', params: {contributor: 'linker'}}">Linkers</router-link>
-                    </option>
-                </select>
+                <a class="select-button" href="#" @click="toggle">Je suis :</a>
+                <div class="hidden-box" v-show="active">
+                    <li v-show="show" @click="close">
+                        <router-link :to="{name: 'Contributor.Details', params: {contributor: 'brainer'}}">Brainer</router-link>
+                    </li>
+                    <li v-show="show" @click="close">
+                        <router-link :to="{name: 'Contributor.Details', params: {contributor: 'maker'}}">Maker</router-link>
+                    </li>
+                </div>
             </div>
         </ul>
     </nav>
@@ -37,7 +37,20 @@
 <script>
     export default {
         data () {
-            return {}
+            return {
+                active : false,
+                show:false,
+            }
+        },
+        methods: {
+            toggle: function () {
+                this.active = true;
+                this.show = true;
+            },
+            close: function () {
+              this.active = false;
+              this.show = false;
+            }
         }
     }
 </script>
@@ -51,6 +64,7 @@
     }
     a {
         color: $white;
+        text-transform: uppercase;
     }
     .navigation {
         position: relative;
@@ -69,42 +83,30 @@
         position: absolute;
         left: 0;
     }
-    .select_box{
-        width: 75px;
-        height: 44px;
-        background-color: $white;
-        color: $blue-2;
-        border: 1px solid $white;
-        border-radius: 5px;
-        -moz-appearance:none;
-        -webkit-appearance: none;
-        outline: none;
+    .hidden-box {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 33px;
+        right: -26px;
+        padding: 0 20px 10px 20px;
+        text-align: center;
+        background-color: $blue-2;
     }
-    .select_box:after{
+    .hidden-box li {
+        margin-right: 0;
+    }
+    .select-button:after{
         width: 0;
         height: 0;
         border-left: 4px solid transparent;
         border-right: 4px solid transparent;
-        border-top: 4px solid $blue-2;
+        border-top: 4px solid $white;
         position: absolute;
         top: 40%;
-        right: 5px;
+        right: -15px;
         content: "";
         z-index: 98;
     }
-    .select_box select{
-        width: 75px;
-        height: 40px;
-        color: $blue-2;
-        text-transform: uppercase;
-        position: relative;
-        border: none;
-        outline: none;
-        z-index: 99;
-        background: none;
-        -moz-appearance:none;
-        -webkit-appearance: none;
-    }
-
 
 </style>
