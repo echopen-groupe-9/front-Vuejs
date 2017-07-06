@@ -3,7 +3,7 @@
     <div class="main-wrapper">
       <div class="section-header">
         <h1 class="section-title title section-title-underline">How <br>it works?</h1>
-        <Navigation :sections='sections'></Navigation>
+        <Navigation :sections='sections' :percent='percent'></Navigation>
       </div>
       <div class="section-content">
         <div class="demo__section" v-for='(section, index) in sections' :data-position='index' >
@@ -65,8 +65,20 @@
               source: viewme,
               visible: false
             }
+          },
+          {
+            description: {
+              title: 'Fourth section',
+              content: 'description fourth section description fourth section description fourth section ',
+              visible: false
+            },
+            img: {
+              source: viewme,
+              visible: false
+            }
           }
-        ]
+        ],
+        percent: 0
       }
     },
     methods: {
@@ -74,7 +86,7 @@
         let posScrollWindow = window.scrollY
 
         this.triggerVisibility('.demo__section', 0, posScrollWindow)
-        // console.log(posScrollWindow)
+        this.triggerPercentage(posScrollWindow)
       },
       triggerVisibility (el, offset, ref) {
         let container = document.querySelectorAll(el)
@@ -99,6 +111,11 @@
             this.sections[index].description.visible = false
           }
         })
+      },
+      triggerPercentage (posScrollWindow) {
+        let windowHeight = document.documentElement.offsetHeight
+
+        this.percent = posScrollWindow/(windowHeight) * 100
       }
     },
     created () {
