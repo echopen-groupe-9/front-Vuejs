@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div id="app" :class='titlePage'>
     <navigation></navigation>
     <transition name="transition-page">
       <router-view></router-view>
@@ -28,16 +28,21 @@
     computed: {
       ...Vuex.mapGetters({
         'isLoggedIn': ''
-      })
+      }),
+      titlePage () {
+          return this.$route.name
+      }
     }
   }
 </script>
 
 <style lang="scss">
+  @import 'core.scss';
 
     #app {
-    text-align: center;
-    color: #2c3e50;
+      position: relative;
+      text-align: center;
+      color: #2c3e50;
   }
 
   ul {
@@ -64,5 +69,33 @@
 
   .transition-page-leave-to {
     opacity: 0;
+  }
+  .Home {
+    .nav {
+      position: absolute;
+      top: 0%;
+      width: 100%;
+      z-index: 1;
+      background-color: transparent;
+      padding: 1% 4% 1% 2%;
+    }
+    .logo {
+      background-image: url("assets/Logo-Echopen.svg");
+    }
+    a {
+      color: $white;
+    }
+    .hidden-box {
+      background-color: $white;
+    }
+    .hidden-box a {
+      color: $blue-2;
+    }
+    .select-button:after {
+       border-top: 4px solid $white;
+     }
+    .link:before {
+      background-color: $white;
+    }
   }
 </style>
