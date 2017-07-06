@@ -1,6 +1,6 @@
 <template>
-  <div id="app" :class='titlePage'>
-    <navigation></navigation>
+  <div id="app" class='app' :class='titlePage'>
+    <navigation :nameRoute='titlePage'></navigation>
     <transition name="transition-page">
       <router-view></router-view>
     </transition>
@@ -39,10 +39,17 @@
 <style lang="scss">
   @import 'core.scss';
 
-    #app {
-      position: relative;
-      text-align: center;
-      color: #2c3e50;
+  #app {
+    position: relative;
+    text-align: center;
+    color: #2c3e50;
+  }
+
+  .app, .app .Home-presentation {
+    padding: 65px 0 0 0;
+    &.Home {
+      padding: 0;
+    }
   }
 
   ul {
@@ -72,30 +79,25 @@
   }
   .Home {
     .nav {
-      position: absolute;
-      top: 0%;
-      width: 100%;
-      z-index: 1;
       background-color: transparent;
-      padding: 1% 4% 1% 2%;
-    }
-    .logo {
-      background-image: url("assets/Logo-Echopen.svg");
-    }
-    a {
-      color: $white;
-    }
-    .hidden-box {
-      background-color: $white;
-    }
-    .hidden-box a {
-      color: $blue-2;
-    }
-    .select-button:after {
-       border-top: 4px solid $white;
-     }
-    .nav-link:before {
-      background-color: $white;
+      a {
+        color: $white;
+      }
+      // .logo {
+      //   background-image: url("assets/Logo-Echopen.svg");
+      // }
+      .hidden-box {
+        background-color: $white;
+      }
+      .hidden-box a {
+        color: $blue-2;
+      }
+      .select-button:after {
+         border-top: 4px solid $white;
+       }
+      .nav-link:before {
+        background-color: $white;
+      }
     }
   }
 </style>
