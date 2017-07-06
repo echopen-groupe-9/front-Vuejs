@@ -11,7 +11,7 @@
 
 <script>
     export default {
-        name: 'article',
+        name: 'News',
         props: ['news'],
         data () {
             return {
@@ -29,6 +29,7 @@
         color: #FFF;
         background-color: $purple-2;
         opacity: 0;
+        transition: opacity .4s ease-in;
     }
     
     .news{
