@@ -1,4 +1,14 @@
 <template>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    <section class="Home-review main-wrapper">
+        <ul class="Home-review_carousel">
+            <li class="Home-review_holder" v-for="review in reviews">
+                <div class="Home-review_text">
+                    <h2 class="Home-review_title section-subtitle title">Highly <span class="section-subtitle-span">Manipulable</span></h2>
+=======
+>>>>>>> [ADD:components/home-page/review+trust+contribution] css improvement and vue tabs for review's carousel
     <section class="Home-review">
         <div class="Home-review_carousel">
             <ul class="Home-review_carousel--list_tabs">
@@ -9,6 +19,10 @@
             <div class="Home-review_holder">
                 <div class="Home-review_text" v-for="(review, index) in reviews" :class="tabsIndex != index ? 'is-out' : 'is-active'" >
                     <h2 class="Home-review_title title">{{review.title}}</h2>
+<<<<<<< HEAD
+=======
+>>>>>>> [ADD:components/home-page/review+trust+contribution] css improvement and vue tabs for review's carousel
+>>>>>>> [ADD:components/home-page/review+trust+contribution] css improvement and vue tabs for review's carousel
                     <p class="Home-review_desc text">{{review.desc}}<span class="Home-review_desc--tiny"></span></p>
                     <div class="Home-review--author"></div>
                 </div>
@@ -30,6 +44,7 @@
                 descIndex: 0,
                 reviews: [
                     {
+<<<<<<< HEAD
                         tab: 'Highly Manipulable',
                         title: 'Highly Manipulable',
                         desc: 'Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Donec ullamcorper nulla non metus auctor fringilla. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Nulla vitae elit libero, a pharetra augue.'
@@ -37,6 +52,21 @@
                     {
                         tab: 'Highly Noobish',
                         title: 'Highly Noobish',
+=======
+<<<<<<< HEAD
+                        desc: 'Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Donec ullamcorper nulla non metus auctor fringilla. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Nulla vitae elit libero, a pharetra augue.'
+                    },
+                    {
+=======
+                        tab: 'Highly Manipulable',
+                        title: 'Highly Manipulable',
+                        desc: 'Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Donec ullamcorper nulla non metus auctor fringilla. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Nulla vitae elit libero, a pharetra augue.'
+                    },
+                    {
+                        tab: 'Highly Noobish',
+                        title: 'Highly Noobish',
+>>>>>>> [ADD:components/home-page/review+trust+contribution] css improvement and vue tabs for review's carousel
+>>>>>>> [ADD:components/home-page/review+trust+contribution] css improvement and vue tabs for review's carousel
                         desc: 'Vivamus sgittis lacus vel augue laoreet rutrum faucibus dolor auctor. Donec ullamcorper nulla non metus auctor fringilla. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Nulla vitae elit libero, a pharetra augue.'
                     }
                 ]
@@ -139,6 +169,9 @@
                 }
             }
         }
+<<<<<<< HEAD
 
+=======
+>>>>>>> [ADD:components/home-page/review+trust+contribution] css improvement and vue tabs for review's carousel
     }
 </style>

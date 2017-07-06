@@ -1,5 +1,4 @@
 <template>
-<<<<<<< HEAD
   <div id="app" class='app' :class='titlePage'>
     <navigation :nameRoute='titlePage'></navigation>
     <transition name="transition-page">
@@ -7,16 +6,6 @@
     </transition>
     <footer-block></footer-block>
   </div>
-=======
-<<<<<<< HEAD
-    <div id="app" class='app' :class='titlePage'>
-        <navigation :nameRoute='titlePage'></navigation>
-        <transition name="transition-page">
-            <router-view></router-view>
-        </transition>
-        <footer-block></footer-block>
-    </div>
->>>>>>> [ADD:components/homepage] css for components
 </template>
 
 <script>
@@ -25,8 +14,6 @@
   import footer from './components/footer/index.vue'
   import Vuex from 'vuex'
 
-<<<<<<< HEAD
-=======
     export default {
         name: 'app',
         data () {
@@ -46,50 +33,28 @@
                 return this.$route.name
             }
         }
-=======
-  <div id="app">
-    <transition name="transition-page">
-      <router-view></router-view>
-    </transition>
-    <footer-block></footer-block>
-  </div>
-</template>
 
-<script>
-  /* Import components*/
-  import footer from './components/footer/index.vue'
-  import Vuex from 'vuex'
-
->>>>>>> [ADD:components/homepage] css for components
-  export default {
-    name: 'app',
-    data () {
-      return {
-        msg: 'Welcome to Your Vue.js App'
-      }
-    },
-    components: {
-<<<<<<< HEAD
-      'navigation': navigation,
-      'footer-block': footer
-=======
-      'footer-block': footer,
->>>>>>> [ADD:components/homepage] css for components
-    },
-    computed: {
-      ...Vuex.mapGetters({
-        'isLoggedIn': ''
-<<<<<<< HEAD
-      }),
-      titlePage () {
-          return this.$route.name
-      }
-=======
-      })
->>>>>>> [ADD:components/homepage] css for components
->>>>>>> [ADD:components/homepage] css for components
+        export default {
+            name: 'app',
+            data () {
+                return {
+                    msg: 'Welcome to Your Vue.js App'
+                }
+            },
+            components: {
+                'navigation': navigation,
+                'footer-block': footer
+            },
+            computed: {
+                ...Vuex.mapGetters({
+                    'isLoggedIn': ''
+                }),
+                titlePage () {
+                    return this.$route.name
+                }
+            }
+        }
     }
-  }
 </script>
 
 <style lang="scss">
