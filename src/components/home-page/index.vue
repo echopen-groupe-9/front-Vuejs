@@ -5,6 +5,7 @@
         <result></result>
         <contribution></contribution>
         <trust></trust>
+        <actu></actu>
     </div>
 </template>
 
@@ -14,6 +15,7 @@
     import resultSection from './home-results-section/results-section.vue'
     import contributionSection from './home-contribution-section/contribution-section.vue'
     import trustSection from './home-trust-section/trustSection.vue'
+    import actuSection from './home-actu-section/actu-section.vue'
 
     export default {
         name: 'Home',
@@ -28,6 +30,7 @@
             'result': resultSection,
             'contribution': contributionSection,
             'trust': trustSection,
+            'actu': actuSection,
         }
     }
 </script>
