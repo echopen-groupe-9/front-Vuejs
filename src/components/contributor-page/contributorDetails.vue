@@ -1,22 +1,24 @@
 <template>
     <article class="details-contributor">
 
-        <header class="details-contributor-header">
+        <div class="details-contributor-header-wrapper">
             <div class="main-wrapper">
-                <h1>Maker</h1>
-                <p>Avez-vous l’esprit D.I.Y?</p>
+                <header class="details-contributor-header">  
+                    <h1 class="details-contributor-title title-contributor">{{title}}</h1>
+                    <p class="details-contributor-baseline text-contributor">Avez-vous l’esprit D.I.Y?</p>
 
-                <div>
-                    <h2>Votre rôle</h2>
-                    <p>Que vous soyez bricolo du dimanche ,  amateur ou militant, si vous avez l’âme d’un Maker et que vous  êtes  motivés par le fait de réaliser avec nous des prototypes qui changeront les pratiques de la médecine aujourd’hui et demain. Vous êtes içi au bon endroit!</p>
-                </div>
+                    <div class="details-contributor-introduction">
+                        <h2 class="text bold">Votre rôle</h2>
+                        <p class="text">Que vous soyez bricolo du dimanche ,  amateur ou militant, si vous avez l’âme d’un Maker et que vous  êtes  motivés par le fait de réaliser avec nous des prototypes qui changeront les pratiques de la médecine aujourd’hui et demain. Vous êtes içi au bon endroit!</p>
+                    </div>
 
-                <div>
-                    <h2>Votre mission:</h2>
-                    <p>Nous aider à emmener Echopen toujours plus loin.</p>
-                </div>
+                    <div class="details-contributor-introduction">
+                        <h2 class="text bold">Votre mission:</h2>
+                        <p class="text">Nous aider à emmener Echopen toujours plus loin.</p>
+                    </div>
+                </header>
             </div>
-        </header>
+        </div>
 
         <section class="participate-section">
             <div class="main-wrapper">
@@ -36,7 +38,7 @@
             </div>
         </section>
 
-        <section v-if="contributorType == 'maker'">
+        <section class="github-section" v-if="contributorType == 'maker'">
             <div class="main-wrapper">
                 <h2 class="section-subtitle title"><span class="section-subtitle-span">Github issues</span></h2>
                 <ul class="github-cards-list">
@@ -45,7 +47,7 @@
             </div>
         </section>
 
-        <section>
+        <section class="hackaton-section">
             <div class="main-wrapper">
                 <h2 class="section-subtitle title">Hackaton & <span class="section-subtitle-span">Rencontres</span></h2>
                 <hackaton-cards></hackaton-cards>
@@ -62,6 +64,11 @@
 
     export default {
         name: 'Details',
+        data () {
+            return {
+                title: this.$route.params.contributor
+            }
+        },
         components: {
             'github-cards': githubCardsList,
             'hackaton-cards': hackatonCardsList
@@ -77,11 +84,32 @@
 <style lang="scss">
     @import '../../core.scss';
 
-    .details-contributor-header{
-        padding: 7rem 0;
+    .details-contributor-header-wrapper{
+        padding: 70px 0;
         color: $white;
         text-align: left;
+        background-image: url('../../assets/images/details-bg.jpg');
+        background-size: cover;
+        background-position: center;
         background-color: #4784FF;
+    }
+
+    .details-contributor-header{
+        width: 100%;
+        max-width: 500px;
+    }
+
+    .details-contributor-introduction{
+        margin-bottom: 20px;
+    }
+
+    .details-contributor-title{
+        margin-bottom: 30px;
+        text-transform: uppercase;
+    }
+
+    .details-contributor-baseline{
+        margin-bottom: 20px;
     }
 
     .participate-section{
@@ -93,6 +121,7 @@
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: flex-start;
+        margin-top: 40px;
     }
 
     .participate-content{
@@ -136,8 +165,17 @@
         padding: 40px 0 40px 40px;
     }
 
+    .github-section{
+        margin-top: 40px;
+    }
+
     .github-cards-list{
         text-align: left;
+    }
+
+    .hackaton-section{
+        padding-top: 40px;
+        padding-bottom: 40px;
     }
 
 </style>

@@ -67,6 +67,10 @@
   &.white {
     color: $white;
   }
+
+  &.bold{
+    @include font('Lato', 700);
+  }
 }
 
 .text-primary {
