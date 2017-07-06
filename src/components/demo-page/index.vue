@@ -132,6 +132,11 @@
 </script>
 
 <style lang='scss'>
+  .footer {
+    position: relative;
+    z-index: 2;
+  }
+
   .section-header {
     width: 100%;
     position: fixed;
