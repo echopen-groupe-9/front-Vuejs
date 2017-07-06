@@ -127,6 +127,28 @@
   color: $grey-dark-2;
 }
 
+.title-small {
+  @include font('Lato', 300);
+  font-size: 24px;
+  line-height: 29px;
+  color: $blue;
+  &.grey {
+    color: $grey;
+  }
+  &.bold {
+    @include font('Lato', 400);
+  }
+}
+
+
+.link {
+  text-decoration: none;
+}
+
+section {
+  margin-bottom: 70px;
+}
+
 ////////////////////////
 /// Text align ////////
 ///////////////////////
