@@ -2,8 +2,8 @@
     <section class="Home-presentation">
         <div class="Home-presentation_wrapper main-wrapper">
             <div class="Home-presentation_holder section-introduction">
-                <h1 class="Home-presentation_title section-title title">Let’s make something good <span class="section-title-alt section-title-alt-span">together</span></h1>
-                <p class="Home-presentation_desc section-introduction text"> {{desc}}</p>
+                <h1 class="Home-presentation_title section-title title">Améliorons le monde <span class="section-title-alt section-title-alt-span">ensemble</span></h1>
+                <p class="Home-presentation_desc section-introduction text">Le premier échostéthoscope  connecté accessible à tous.</p>
                 <a href="/#" class="link Home-presentation_link">Voir la demo</a>
             </div>
         </div>
@@ -15,7 +15,6 @@
         name: 'home',
         data () {
             return {
-                desc: 'Nulla vitae elit libero, a pharetra augue. Nullam id dolor id nibh ultricies ut id elit.'
             }
         }
     }

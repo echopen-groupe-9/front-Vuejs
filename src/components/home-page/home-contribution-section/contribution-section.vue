@@ -13,7 +13,7 @@
         name: 'home',
         data () {
             return {
-                desc: 'Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Donec ullamcorper nulla non metus auctor fringilla. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio semnec elit. Nulla vitae elit libero, a pharetra augue.'
+                desc: 'Soutenir le projet Echopen c’est soutenir le progrès de la médecine à travers le monde. Rejoignez les membres qui nous aident à rendre ce projet réel.'
             }
         },
         methods: {}
