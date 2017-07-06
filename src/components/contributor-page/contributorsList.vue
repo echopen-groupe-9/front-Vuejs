@@ -1,7 +1,7 @@
 <template>
     <section class="section">
         <div class="main-wrapper">
-            <h1 class="section-title title">Let’s make <br>something good <span class="section-title-alt">together</span></h1>
+            <h1 class="section-title title">Let’s make <br>something good <span class="section-title-alt section-title-alt-white">together</span></h1>
             <p class="section-introduction text">Nulla vitae elit libero, a pharetra augue. Nullam id dolor id nibh ultricies ut id elit.</p>
             <ul class="cards-list">
                 <li class="cards-list-item">

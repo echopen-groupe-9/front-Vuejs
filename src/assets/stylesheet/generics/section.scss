@@ -1,5 +1,7 @@
 .section{
   text-align: left;
+
+  /*Title*/
   &-title {
     margin-bottom: 45px;
     &-alt{
@@ -12,6 +14,29 @@
         left: 5px;
         bottom: 10px;
         width: 70px;
+        height: 3px;
+        background-color: $grey-dark;
+      }
+      &-span{
+        &:before{
+          background-color: $white;
+        }
+      }
+    }
+  }
+
+  &-subtitle{
+    text-align: left;
+    padding-bottom: 60px;
+    &-span{
+      position: relative;
+      display: block;
+      &:before{
+        content:"";
+        position: absolute;
+        left: 10px;
+        bottom: -10px;
+        width: 60px;
         height: 3px;
         background-color: $grey-dark;
       }
