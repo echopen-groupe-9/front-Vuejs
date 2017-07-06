@@ -1,11 +1,12 @@
 import axios from 'axios'
 import {getToken, dashboardUrl} from './authentication'
 
+const base_url = 'http://mft-test-preprod.esy.es/web/'
+
 const HTTP = axios.create({
-  baseURL: dashboardUrl,
+  baseURL: base_url,
   headers: {
-    'Access-Control-Allow-Origin': 'http://localhost:8080/',
-    'Authorization': 'Bearer ${getToken}'
+    'Access-Control-Allow-Origin': 'http://localhost:8080/'
   }
 })
 
