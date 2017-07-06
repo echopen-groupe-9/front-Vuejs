@@ -2,6 +2,7 @@ import decode from 'jwt-decode'
 import Router from 'vue-router'
 
 const ID_TOKEN_KEY = 'idToken'
+const dashboardUrl = 'http://mft-test-preprod.esy.es/web/dashboard'
 
 let router = new Router({
   mode: 'history'
@@ -22,6 +23,10 @@ export function requireAuth (to, from, next) {
   } else {
     next()
   }
+}
+
+export function redirectDashboard (to, from, next) {
+  window.location.href = dashboardUrl
 }
 
 export function getToken () {

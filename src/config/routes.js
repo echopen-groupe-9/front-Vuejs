@@ -1,4 +1,4 @@
-import {requireAuth} from '../utils/authentication'
+import {requireAuth, redirectDashboard} from '../utils/authentication'
 
 const Home = r => require.ensure([], () => r(require('../components/home-page/index.vue')));
 const Demo = r => require.ensure([], () => r(require('../components/demo-page/index.vue')));
@@ -54,7 +54,11 @@ const routes = [
       },
     ]
   },
-  { name: 'News', path: '/news', component : ActualityItem}
+  { name: 'News', path: '/news', component : ActualityItem},
+  {
+    path: '/admin',
+    beforeEnter: redirectDashboard
+  }
 ];
 
 export default routes
