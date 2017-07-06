@@ -14,6 +14,11 @@
   }
 }
 
+.title-sm {
+  font-size: 32px;
+  line-height: 34px;
+}
+
 .title-contributor {
   @include font('Lato', 700);
   font-size: 18px;
@@ -39,6 +44,24 @@
     color: $white;
   }
 }
+
+.text-primary {
+  color: $blue
+}
+
+.text-primary-2 {
+  color: $blue-2
+}
+
+.text-primary-3 {
+  color: $blue-3
+}
+
+.text-base {
+  color: $grey-dark;
+}
+
+
 
 .text-2 {
   @include font('Lato', 400);
@@ -79,4 +102,36 @@
 
 section {
   margin-bottom: 70px;
+}
+
+////////////////////////
+/// Text align ////////
+///////////////////////
+
+.text-right {
+  text-align: right;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-center {
+  text-align: center;
+}
+
+////////////////////////
+/// Backgrounds ///////
+///////////////////////
+
+.bg-blue {
+  background-color: $blue;
+}
+
+.bg-blue-2 {
+  background-color: $blue-2;
+}
+
+.bg-blue-3 {
+  background-color: $blue-3;
 }

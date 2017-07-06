@@ -4,12 +4,24 @@
   /*Title*/
   &-title {
     margin-bottom: 45px;
+    &-underline {
+      position: relative;
+      &:after {
+        content: ' ';
+        width: 70px;
+        height: 3px;
+        position: absolute;
+        left: 5px;
+        bottom: -10px;
+        background-color: $grey-dark;
+      }
+    }
     &-alt{
       position: relative;
       display: block;
       padding-left: 100px;
       &:before{
-        content:"";
+        content: '';
         position: absolute;
         left: 5px;
         bottom: 10px;
