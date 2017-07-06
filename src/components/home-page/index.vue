@@ -18,7 +18,9 @@
     export default {
         name: 'Home',
         data () {
-            return {}
+            return {
+
+            }
         },
         components: {
             'landing': landingSection,

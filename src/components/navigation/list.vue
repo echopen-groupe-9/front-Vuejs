@@ -2,7 +2,9 @@
     <nav class="nav">
         <ul class="navigation text-small">
             <li class="logo">
-                <router-link :to="{name: 'Home'}"><img src="../../assets/Logo-Echopen.svg"></router-link>
+                <div class="logo-img">
+                    <router-link :to="{name: 'Home'}"></router-link>
+                </div>
             </li>
             <div class="link">
                 <li>
@@ -68,12 +70,14 @@
     @import '../../core.scss';
 
     .nav {
-        position: relative;
-        background-color: $blue-2;
+        background-color: transparent;
         padding: 1% 4% 1% 2%;
+        height: 100%;
+        max-height: 60px;
+        margin-bottom: 10%;
     }
     a {
-        color: $white;
+        color: $grey;
         text-transform: uppercase;
     }
     .navigation {
@@ -98,7 +102,7 @@
          bottom: 2px;
          width: 100%;
          height: 1px;
-         background-color: $white;
+         background-color: $grey;
          transform: scaleX(0);
          transform-origin: 0 50%;
          transition: transform .3s cubic-bezier(.39,.575,.565,1);
@@ -113,22 +117,32 @@
         text-decoration: none;
     }
     .logo {
+        display: block;
+        width: 12%;
+        height: 150%;
         position: absolute;
         left: 0;
+        background-image: url('../../assets/Logo.svg');
+        background-size: contain;
+        background-repeat: no-repeat;
     }
-    .logo img {
-        width: 70%;
-        float: left;
+    .logo-img, .logo-img a {
+        display: block;
+        height: 100%;
     }
     .hidden-box {
         display: flex;
         flex-direction: column;
+        border-radius: 5px;
         position: absolute;
         top: 32px;
         right: -26px;
-        padding: 0 20px 10px 20px;
+        padding: 10px 20px;
         text-align: center;
         background-color: $blue-2;
+    }
+    .hidden-box a {
+        color: $white;
     }
     .hidden-box li {
         margin-right: 0;
@@ -138,7 +152,7 @@
         height: 0;
         border-left: 4px solid transparent;
         border-right: 4px solid transparent;
-        border-top: 4px solid $white;
+        border-top: 4px solid $grey;
         position: absolute;
         top: 40%;
         right: -15px;
