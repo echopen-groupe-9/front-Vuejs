@@ -42,6 +42,9 @@
             date: function (date) {
                 return moment(date).format('L');
             }
+        },
+        mounted(){
+            window.scrollTo( 0, 0);
         }
     }
 </script>
