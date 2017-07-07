@@ -9,7 +9,9 @@ Vue.use(VueRouter);
 import App from './App.vue'
 import store from './store/index'
 import VeeValidate from 'vee-validate'
+import VueCarousel from 'vue-carousel';
 
+Vue.use(VueCarousel);
 Vue.use(VeeValidate)
 
 
