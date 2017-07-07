@@ -1,38 +1,38 @@
 <template>
     <section class="section">
         <div class="main-wrapper">
-            <h1 class="section-title title">Let’s make <br>something good <span class="section-title-alt section-title-alt-white">together</span></h1>
-            <p class="section-introduction text">Nulla vitae elit libero, a pharetra augue. Nullam id dolor id nibh ultricies ut id elit.</p>
+            <h1 class="section-title title">Devenez<span class="section-title-alt section-title-alt-white">contributeur</span></h1>
+            <p class="section-introduction text">Participez à votre façon, à la création de la sonde S1 d’Echopen en rejoignant notre communauté. Choisissez votre profil et apportez votre pierre à l’édifice.</p>
             <ul class="cards-list">
                 <li class="cards-list-item">
                     <router-link class="cards-list-link" :to="{name: 'Contributor', params: {contributor: 'brainer'}}">
                         <h2 class="title-contributor">Brainer</h2>
-                        <p class="cards-subtitle text-contributor">Risus Vulputate</p>
-                        <p class="cards-content text-small">Nulla vitae elit libero, a pharetra augue. Nullam id dolor id nibh ultricies ut id elit. Nullam id dolor id nibh.</p>
+                        <p class="cards-subtitle text-contributor">Pense le produit</p>
+                        <p class="cards-content text-small">Le bon candidat est capable d’avoir une vue d’ensemble du projet, en particulier sur la facette scientifique, pour trouver des solutions...</p>
                         <span class="cards-background">&nbsp;</span>
                     </router-link>
                 </li>
                 <li class="cards-list-item">
                     <router-link class="cards-list-link" :to="{name: 'Contributor', params: {contributor: 'builder'}}">
                         <h2 class="title-contributor">Builder</h2>
-                        <p class="cards-subtitle text-contributor">Risus Vulputate</p>
-                        <p class="cards-content text-small">Nulla vitae elit libero, a pharetra augue. Nullam id dolor id nibh ultricies ut id elit. Nullam id dolor id nibh.</p>
+                        <p class="cards-subtitle text-contributor">Développe et conçoit</p>
+                        <p class="cards-content text-small">Votre mission est de participer aux développement des logiciels Open Source qui contribuent à la conception opérationnelle de l'appareil...</p>
                         <span class="cards-background">&nbsp;</span>
                     </router-link>
                 </li>
                 <li class="cards-list-item">
                     <router-link class="cards-list-link" :to="{name: 'Contributor', params: {contributor: 'maker'}}">
                         <h2 class="title-contributor">Maker</h2>
-                        <p class="cards-subtitle text-contributor">Risus Vulputate</p>
-                        <p class="cards-content text-small">Nulla vitae elit libero, a pharetra augue. Nullam id dolor id nibh ultricies ut id elit. Nullam id dolor id nibh.</p>
+                        <p class="cards-subtitle text-contributor">Les petites mains</p>
+                        <p class="cards-content text-small">Que vous soyez bricolo du dimanche , amateur ou militant, si vous avez l’âme d’un Maker et que vous êtes motivé...</p>
                         <span class="cards-background">&nbsp;</span>
                     </router-link>
                 </li>
                 <li class="cards-list-item">
                     <router-link class="cards-list-link" :to="{name: 'Contributor', params: {contributor: 'linker'}}">
                         <h2 class="title-contributor">Linker</h2>
-                        <p class="cards-subtitle text-contributor">Risus Vulputate</p>
-                        <p class="cards-content text-small">Nulla vitae elit libero, a pharetra augue. Nullam id dolor id nibh ultricies ut id elit. Nullam id dolor id nibh.</p>
+                        <p class="cards-subtitle text-contributor">Transmets le message</p>
+                        <p class="cards-content text-small">Être linker, c’est rejoindre une communauté, il est l'acteur fondamental de notre organisation et il adhère à un ensemble de valeurs...</p>
                         <span class="cards-background">&nbsp;</span>
                     </router-link>
                 </li>
