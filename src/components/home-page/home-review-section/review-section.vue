@@ -2,23 +2,23 @@
     <section class="Home-review main-wrapper">
         <div class="Home-review_carousel">
             <ul class="Home-review_carousel--list_tabs">
-                <li class="Home-review_carousel--tabs text-2" v-on:click="checkIndex" :class="tabsIndex == 0 ? 'is-active' : ''">
-                    Highly Manipulable
+                <li class="Home-review_carousel--tabs text-2" v-on:click="checkIndex(0)" :class="tabsIndex === 0 ? 'is-active' : ''">
+                    Une présentation
                 </li>
-                <li class="Home-review_carousel--tabs text-2" v-on:click="checkIndex" :class="tabsIndex == 1 ? 'is-active' : ''">
-                    Highly pilou
+                <li class="Home-review_carousel--tabs text-2" v-on:click="checkIndex(1)" :class="tabsIndex === 1 ? 'is-active' : ''">
+                    Petit historique
                 </li>
             </ul>
             <div class="">
                 <div v-show='tabsIndex == 0' class='Home-review_holder'>
                     <div class="Home-review_text" >
-                        <h2 class="Home-review_title section-subtitle title">plpipipipi<span
-                                class="section-subtitle-span">jojojojoj</span></h2>
-                        <p class="Home-review_desc text">iugigigiug<span class="Home-review_desc--tiny"></span></p>
+                        <h2 class="Home-review_title section-subtitle title">La sonde<span
+                                class="section-subtitle-span">echopen</span></h2>
+                        <p class="Home-review_desc text">48 heures pour la connaître<span class="Home-review_desc--tiny"></span></p>
                         <div class="Home-review--author text-2">
-                            <p class="Home-review--author_quote text-small grey">igigigiugiug</p>
-                            <span class="Home-review--author_author text-small grey">khihihiugiugiug,
-                                <small class="Home-review--author_author--detail text-small grey">kjgkgkjgkjgkjgkjgkjg</small>
+                            <p class="Home-review--author_quote text-small grey">Dr Lips</p>
+                            <span class="Home-review--author_author text-small grey">C'est un vrai petit bijou,
+                                <small class="Home-review--author_author--detail text-small grey">j'ai apris à l'utiliser en deux jours</small>
                             </span>
                         </div>
                     </div>
@@ -26,7 +26,7 @@
                         <img src="../../../assets/images/android_phone_1.png" alt="" class="Home-review_image phone--image">
                     </div>
                 </div>
-                <div class="carousel Home-review_holder" v-show='tabsIndex == 1'>
+                <div class="carousel Home-review_holder" v-show='tabsIndex === 1'>
                     <div class="slide-carousel" v-for='(slide, index) in slides' :class='index == slideIndex ? "active" : ""'>
                         <div class="progress-bar"></div>
                         <div class="content dp-flex">
@@ -77,33 +77,53 @@
                 slides: [
                   {
                     title: 'Prochain Evenement',
-                    subtitle: 'Conférence sur les sondes Echopen',
+                    subtitle: 'L’étude des bruits générés par le corps humain est déjà décrite dans un papyrus de l’Egypte ancienne. Ce document décrit les signes audibles de la maladie dans le corps.',
                     content: 'Comment utiliser la sonde Echopen en toute simplicité.',
-                    date: '15ème',
-                    subtitleDate: 'Siècle'
+                    date: '17ème',
+                    subtitleDate: 'Siècle av J.C'
                   },
                   {
                     title: 'Prochain MeetUp',
-                    subtitle: 'CAPMed chez echopen avec les associés',
+                    subtitle: 'Par la suite, Hippocrate plaide pour le développement d’instruments destinés à améliorer la pratique médicale. Il secoue ses patients par les épaules afin d’écouter les sons générés par l’accumulation de fluides dans la poitrine.',
                     content: 'Définition du besoin médical pour la sonde echopen',
-                    date: '17ème',
+                    date: '350',
+                    subtitleDate: 'avant J.C'
+                  },
+                  {
+                    title: 'Prochain Evenement',
+                    subtitle: 'Le célèbre médecin Ambroise Paré écrit “s’il y a des matières ou d’autres humeurs dans le thorax, on peut entendre un bruit de gargouillis similaire à celui d’une bouteille à moitié pleine”',
+                    content: 'Comment récupérer les données transmises par la sonde.',
+                    date: '16ème',
                     subtitleDate: 'Siècle'
                   },
                   {
                     title: 'Prochain Evenement',
-                    subtitle: 'Workshop sur l\'API d\'Echopen sur git',
+                    subtitle: 'L’invention du stéthoscope doit aujourd’hui son existence au Docteur René Laënnec. Il est également à l’origine du tensiomètre créé peu de temps après le stéthoscope. Deux grandes inventions dans le développement de la recherche pour améliorer le diagnostic médical.',
                     content: 'Comment récupérer les données transmises par la sonde.',
-                    date: '40',
-                    subtitleDate: 'Avant J-C'
+                    date: '1816',
+                    subtitleDate: ''
+                  },
+                  {
+                    title: 'Prochain Evenement',
+                    subtitle: 'Workshop sur l\'API d\'Echopen sur git',
+                    content: 'Le monde médical connaît un réel succès concernant le stéthoscope électronique. Il est utilisé par presque tous les professionnels du corps médical.',
+                    date: '20ème',
+                    subtitleDate: 'siècle'
+                  },
+                  {
+                    title: 'Prochain Evenement',
+                    subtitle: 'Echopen vise à développer le premier Echo Stethoscope connecté accessible à tous, destiné aux professionnels de la santé et développé grâce à une communauté multidisplinaire qui partage la même vision.',
+                    content: 'Comment récupérer les données transmises par la sonde.',
+                    date: 'De nos jours',
+                    subtitleDate: ''
                   }
 
                 ]
             }
         },
         methods: {
-            checkIndex: function () {
-                this.tabIndex = this.tabIndex == 0 ? 1 : 0;
-                console.log(this.tabIndex)
+            checkIndex: function (index) {
+                this.tabsIndex = index
             },
             nextSlides: function () {
                 if (this.slideIndex === (this.slides.length - 1)) {
@@ -297,6 +317,10 @@
 
                 }
             }
+        }
+        .Home-review_carousel--list_tabs {
+            position: relative;
+            z-index: 2;
         }
         .Home-review_carousel--tabs {
             margin: 0 10px;
