@@ -9,7 +9,6 @@
     </div>
   </div>
 </template>
-
 <script>
   /* Import components*/
   import navigation from './components/navigation/list.vue'
