@@ -97,6 +97,7 @@
       background-color: white;
       box-shadow: 1.1px 1.7px 9px 0 rgba(0, 14, 21, 0.2);
       padding: 0 20px;
+      z-index: 20;
     }
 
     .Home .nav {
