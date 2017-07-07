@@ -38,7 +38,7 @@
             </div>
         </section>
 
-        <section class="github-section" v-if="filteredByPage.type == 'maker'">
+        <section class="github-section" v-if="filteredByPage.type == 'maker' || filteredByPage.type == 'builder'">
             <div class="main-wrapper">
                 <h2 class="section-subtitle title"><span class="section-subtitle-span">Github issues</span></h2>
                 <ul class="github-cards-list">

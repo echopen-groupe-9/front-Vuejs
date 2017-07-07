@@ -12,7 +12,7 @@ const contributors = {
       type: 'builder',
       content: {
         baseline: 'Avez-vous l’esprit D.I.Y?',
-        mission: 'Je suis une super mission de Builder',
+        mission: 'Vous aimez trouver des solutions et régler les questions rapidement et efficacement',
         role: "Votre mission est de participer aux développement des logiciels Open Source qui contribuent à la conception opérationnelle de l'appareil médical à ultrasons, au niveau des normes de qualité d'imagerie médicale. L'application mobile pour UX et les performances, le traitement du signal et de l'image, l'analyse des données et IA pour le diagnostic et l'assistance de l'opérateur relève de la mission Build Soft"
       }
     },
@@ -29,7 +29,7 @@ const contributors = {
       content: {
         baseline: "Voulez-vous être une tête pense d'Echopen",
         mission: 'Je suis une super mission de brainer',
-        role: 'Je suis un super rôle de brainer'
+        role: 'Le bon candidat est capable d’avoir une vue d’ensemble du projet, en particulier sur la facette scientifique, pour trouver des solutions aux problèmes techniques, dynamiser les actions des différents groupes de travail et coordonner une communauté, au sein d’une équipe centrale de 5 personnes et d’une communauté active d’une soixantaine de personnes (médecins, designers, techniciens…)'
       }
     }
   ]
