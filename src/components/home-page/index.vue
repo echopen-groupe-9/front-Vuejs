@@ -3,7 +3,7 @@
        <landing></landing>
         <review></review>
         <result></result>
-        <contribution></contribution>
+        <contributors></contributors>
         <trust></trust>
         <actu></actu>
     </div>
@@ -13,7 +13,7 @@
     import landingSection from './home-landing-section/landing-section.vue'
     import reviewSection from './home-review-section/review-section.vue'
     import resultSection from './home-results-section/results-section.vue'
-    import contributionSection from './home-contribution-section/contribution-section.vue'
+    import Contributors from './contributors.vue'
     import trustSection from './home-trust-section/trustSection.vue'
     import actuSection from './home-actu-section/actu-section.vue'
 
@@ -28,9 +28,9 @@
             'landing': landingSection,
             'review': reviewSection,
             'result': resultSection,
-            'contribution': contributionSection,
             'trust': trustSection,
-            'actu': actuSection,
+            'contributors' : Contributors,
+            'actu': actuSection
         }
     }
 </script>

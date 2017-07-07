@@ -1,13 +1,6 @@
 <template>
     <ul v-if="repos">
-        <li class="github__card" v-for="repo in filterRepos">
-            {{repo.repoName}}
-            <ul class="github__issues__list">
-                <li class="github__issues__list__item" v-for="issue in repo.issue">
-                    {{issue.title}}
-                </li>
-            </ul>
-        </li>
+        <github-card v-for="repo in filterRepos" :repo="repo" :key="repo.id"></github-card>
     </ul>
 </template>
 
@@ -18,6 +11,9 @@
     /* Import Config*/
     import githubApi from '../../config/githubApi.js';
 
+    /* Import Component */
+    import githubCard from './githubCard.vue';
+
     export default {
         data () {
             return {
@@ -25,25 +21,27 @@
                 repos: []
             }
         },
+        components: {
+            'github-card' : githubCard
+        },
         computed: {
             filterRepos(){
                 let filterArr = [];
                 this.repos.forEach((repo) =>{
-                    /* Limit to 5 */
-                    if (repo.issue.length > 5){
-                        /* If there are more than 5 issues create another block to see github page*/
-                        let issueObj = {
-                            title: "Voir plus d'issues",
-                            url: `${repo.repoUrl}/issues`
-                        };
+
+                    /* Set repo URL*/
+                    repo.issuesUrl = `${repo.repoUrl}/issues`;
+
+                    /* Limit */
+                    if (repo.issue.length > 2){
                         /* Splice */
-                        repo.issue = repo.issue.splice(0, 5);
-                        /* Push fake block*/
-                        repo.issue.push(issueObj);
+                        repo.issue = repo.issue.splice(0, 2);
                     }
                     /* Push in filter array*/
                     filterArr.push(repo);
                 });
+
+
                 return filterArr;
             }
         },
@@ -66,13 +64,5 @@
 </script>
 
 <style lang="scss">
-    .github__card {
-        display: block;
-        padding-bottom:3rem;
-        text-align: left;
-    }
 
-    .github__issues__list__item{
-        display: block;
-    }
 </style>

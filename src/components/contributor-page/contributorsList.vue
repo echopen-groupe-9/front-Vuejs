@@ -5,7 +5,7 @@
             <p class="section-introduction text">Nulla vitae elit libero, a pharetra augue. Nullam id dolor id nibh ultricies ut id elit.</p>
             <ul class="cards-list">
                 <li class="cards-list-item">
-                    <router-link class="cards-list-link" :to="{name: 'Contributor.Details', params: {contributor: 'brainer'}}">
+                    <router-link class="cards-list-link" :to="{name: 'Contributor', params: {contributor: 'brainer'}}">
                         <h2 class="title-contributor">Brainer</h2>
                         <p class="cards-subtitle text-contributor">Risus Vulputate</p>
                         <p class="cards-content text-small">Nulla vitae elit libero, a pharetra augue. Nullam id dolor id nibh ultricies ut id elit. Nullam id dolor id nibh.</p>
@@ -13,7 +13,7 @@
                     </router-link>
                 </li>
                 <li class="cards-list-item">
-                    <router-link class="cards-list-link" :to="{name: 'Contributor.Details', params: {contributor: 'builder'}}">
+                    <router-link class="cards-list-link" :to="{name: 'Contributor', params: {contributor: 'builder'}}">
                         <h2 class="title-contributor">Builder</h2>
                         <p class="cards-subtitle text-contributor">Risus Vulputate</p>
                         <p class="cards-content text-small">Nulla vitae elit libero, a pharetra augue. Nullam id dolor id nibh ultricies ut id elit. Nullam id dolor id nibh.</p>
@@ -21,7 +21,7 @@
                     </router-link>
                 </li>
                 <li class="cards-list-item">
-                    <router-link class="cards-list-link" :to="{name: 'Contributor.Details', params: {contributor: 'maker'}}">
+                    <router-link class="cards-list-link" :to="{name: 'Contributor', params: {contributor: 'maker'}}">
                         <h2 class="title-contributor">Maker</h2>
                         <p class="cards-subtitle text-contributor">Risus Vulputate</p>
                         <p class="cards-content text-small">Nulla vitae elit libero, a pharetra augue. Nullam id dolor id nibh ultricies ut id elit. Nullam id dolor id nibh.</p>
@@ -29,7 +29,7 @@
                     </router-link>
                 </li>
                 <li class="cards-list-item">
-                    <router-link class="cards-list-link" :to="{name: 'Contributor.Details', params: {contributor: 'linker'}}">
+                    <router-link class="cards-list-link" :to="{name: 'Contributor', params: {contributor: 'linker'}}">
                         <h2 class="title-contributor">Linker</h2>
                         <p class="cards-subtitle text-contributor">Risus Vulputate</p>
                         <p class="cards-content text-small">Nulla vitae elit libero, a pharetra augue. Nullam id dolor id nibh ultricies ut id elit. Nullam id dolor id nibh.</p>

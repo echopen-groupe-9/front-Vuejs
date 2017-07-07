@@ -7,7 +7,7 @@
     <div :id="newsList.year" v-for="newsList in datas.newsData" class="news-list-container">
       <h2 class="article-date">Date : {{newsList.year}}</h2>
       <ul>
-        <news-item v-for="news in newsList.news" :news="news"></news-item>
+        <news-item v-for="news in newsList.news" :news="news" :key="news.id"></news-item>
       </ul>
     </div>
   </section>
