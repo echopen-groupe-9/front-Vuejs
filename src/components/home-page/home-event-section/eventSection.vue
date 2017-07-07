@@ -1,30 +1,41 @@
 <template>
-    <section class="event-section">
-      <div class="previous">&nbsp;</div>
-      <div class="slide">
-        <div class="left-content">
-          <h3 class="title-top-title text-small">Prochain Evenement</h3>
-          <h2 class="slider-title text-contributor">CAPMed chez echopen</h2>
-          <p class="slider-text text white">Définition du besoin médical pour la sonde echopen</p>
-        </div>
-        <div class="right-content">
-          <p class="slider-date text-2">Samedi 18 Juin</p>
-          <a class="slider-link" href="javascript:;">
-          <span class="text">
-            Participer
-          </span>
-          </a>
-        </div>
-      </div>
-      <div class="next">&nbsp;</div>
-    </section>
+  <section class="event-section">
+    <div class="previous" @click.prevent='prevSlide'>&nbsp;</div>
+    <transition name='fade' v-for='(slide, index) in slides' mode="out-in">
+      <Slide v-show='index === indexSlide' :slide='slide'></Slide>
+    </transition>
+    <div class="next" @click.prevent='nextSlide'>&nbsp;</div>
+  </section>
 </template>
 
 <script>
+    import Slide from './slide.vue'
+
     export default {
         name: 'home',
         data () {
             return {
+                indexSlide: 0,
+                slides: [
+                  {
+                    title: 'Prochain Evenement',
+                    subtitle: 'Conférence sur les sondes Echopen',
+                    content: 'Comment utiliser la sonde Echopen en toute simplicité.',
+                    date: 'Samedi 18 Juin'
+                  },
+                  {
+                    title: 'Prochain MeetUp',
+                    subtitle: 'CAPMed chez echopen avec les associés',
+                    content: 'Définition du besoin médical pour la sonde echopen',
+                    date: 'Samedi 28 juillet'
+                  },
+                  {
+                    title: 'Prochain Evenement',
+                    subtitle: 'Workshop sur l\'API d\'Echopen sur git',
+                    content: 'Comment récupérer les données transmises par la sonde.',
+                    date: 'Samedi 30 Août'
+                  }
+                ],
                 contributions: [
                     {
                         title: 'Contributeur',
@@ -37,13 +48,32 @@
                 ]
             }
         },
-        methods: {}
+        methods: {
+          nextSlide () {
+            if (this.indexSlide === (this.slides.length - 1)) {
+              this.indexSlide = 0;
+            } else {
+              this.indexSlide ++
+            }
+          },
+          prevSlide () {
+            if (this.indexSlide === 0) {
+              this.indexSlide = (this.slides.length - 1);
+            } else {
+              this.indexSlide --
+            }
+          }
+        },
+        components: {
+          Slide
+        }
     }
 </script>
 
 <style lang="scss" scoped="">
     @import '../../../core.scss';
   .event-section {
+    position: relative;
     width:100%;
     min-height: 250px;
     background-color: #1F2C46;
@@ -103,57 +133,23 @@
         left: 0;
       }
     }
-    .slide {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      justify-content: space-around;
+  }
 
-      .left-content{
-        max-width: 455px;
-        display: inline-block;
+  .fade-enter-active {
+    transition: all .2s ease .3s;
+    position: absolute;
+  }
 
-        .title-top-title{
-          text-transform: uppercase;
-        }
-        .slider-title{
-          @include font('Lato', 700);
-        }
-      }
-      .right-content{
-        display: inline-block;
-        padding-left: 100px;
-        .slider-date{
-          color: $white;
-          text-transform: uppercase;
-          letter-spacing: 2px;
-          display: inline-block;
-          margin-right: 40px;
-          position: relative;
-          &:before {
-            content: '';
-            width: 38px;
-            height: 82px;
-            background: url('../../../assets/images/cal_icon.png') center;
-            background-size: contain;
-            position: absolute;
-            top: -27px;
-            left: -60px;
-          }
-        }
-        .slider-link{
-          display: inline-block;
-          min-width: 185px;
-          height: 50px;
-          line-height: 54px;
-          border-radius: 25px;
-          background-color: $white;
-          text-align: center;
-          .text {
-            color: $blue-2;
-          }
-        }
-      }
-    }
+  .fade-leave-active {
+    transition: all .3s ease;
+    opacity: 0;
+  }
+
+  .fade-enter {
+    opacity: 0;
+  }
+
+  .fade-leave-to {
+    opacity: 0;
   }
 </style>
