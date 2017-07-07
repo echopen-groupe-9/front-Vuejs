@@ -105,7 +105,7 @@
                   },
                   {
                     title: 'Prochain Evenement',
-                    subtitle: 'Workshop sur l\'API d\'Echopen sur git',
+                    subtitle: 'Le célèbre médecin Ambroise Paré écrit “s’il y a des matières ou d’autres humeurs dans le thorax, on peut entendre un bruit de gargouillis similaire à celui d’une bouteille à moitié pleine”',
                     content: 'Le monde médical connaît un réel succès concernant le stéthoscope électronique. Il est utilisé par presque tous les professionnels du corps médical.',
                     date: '20ème',
                     subtitleDate: 'siècle'
@@ -219,6 +219,10 @@
                     min-height: 100%;
                     align-items: center;
                     justify-content: flex-start;
+                    .content__title {
+                        margin: 50px 0 0 0;
+                    }
+
                     .content__title,
                     .content__description {
                         padding: 40px;
@@ -228,10 +232,13 @@
                         flex-direction: row;
                         .content__title {
                             width: 40%;
+                            margin: 0;
                         }
 
                         .content__description {
                             width: 60%;
+                            font-size: 30px;
+                            line-height: 39px;
                         }
                         .content__title,
                         .content__description {
