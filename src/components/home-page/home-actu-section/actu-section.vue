@@ -20,6 +20,7 @@
       name: 'actu',
       data () {
         return {
+
         }
       },
       methods: {
@@ -49,15 +50,58 @@
         width: 100%;
         margin: 50px auto 70px auto;
     }
+
     .Home-actu_list {
         display: flex;
-        // flex-direction: column;
-        flex-wrap: wrap;
+        flex-flow: row wrap;
         justify-content: space-around;
         text-align: left;
+    }
+
+    .Home-actu_item {
+        max-width: 100%;
+        border: 1px solid #fff;
+        box-shadow: 0px 7px 21px 0px rgba(0, 0, 0, 0.1);
+        border-radius: 5px;
+        position: relative;
+        z-index: 1;
+        margin-bottom: 20px;
+
+        @include mq($from: tablet){
+            max-width: 30%;
+        }
+    }
+
+    .Home-actu_contain {
+        padding: 0 20px 20px 20px;
 
         @include mq($from: 'desktop') {
           flex-flow: row;
         }
+    }
+
+    .Home-actu_text {
+        color: $grey-light;
+    }
+
+    .Home-actu_img {
+        width: 100%;
+    }
+
+    .Home-actu_button {
+        background-image: linear-gradient(to right, #00c6fb 0%, #005bea 100%);
+        padding: 10px 30px;
+        font-size: 14px;
+        color: $white;
+        border-radius: 100px;
+        border-color: $blue-2;
+        border-bottom: $blue-2;
+        border-right: $blue-2;
+        border-left: $blue-2;
+        border-top: $blue-2;
+        text-transform: uppercase;
+        outline: none;
+        cursor: pointer;
+        margin-top: 5%;
     }
 </style>

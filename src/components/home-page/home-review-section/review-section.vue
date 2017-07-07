@@ -13,10 +13,15 @@
                     <h2 class="Home-review_title section-subtitle title">{{review.title}}<span
                             class="section-subtitle-span">{{review.span}}</span></h2>
                     <p class="Home-review_desc text">{{review.desc}}<span class="Home-review_desc--tiny"></span></p>
-                    <div class="Home-review--author text-2">{{review.quote}}</div>
+                    <div class="Home-review--author text-2">
+                        <p class="Home-review--author_quote text-small grey">{{review.quote.quote}}</p>
+                        <span class="Home-review--author_author text-small grey">{{review.quote.author}},
+                            <small class="Home-review--author_author--detail text-small grey">{{review.quote.detail}}</small>
+                        </span>
+                    </div>
                 </div>
                 <div class="Home-review_holder--image">
-                    <img src="../../../assets/images/phone-graph.png" alt="" class="Home-review_image phone--image">
+                    <img src="../../../assets/images/android_phone_1.png" alt="" class="Home-review_image phone--image">
                 </div>
             </div>
         </div>
@@ -36,21 +41,28 @@
                         title: 'Highly ',
                         span: 'Manipulate',
                         desc: 'Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Donec ullamcorper nulla non metus auctor fringilla. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Nulla vitae elit libero, a pharetra augue.',
-                        quote: 'Nulla vitae elit libero, a pharetra augue. Nullam id dolor id nibh ultricies vehicula ut id elit. Ju vitae elit libero, a pharetra augue. '
+                        quote: {
+                            author: 'Martin',
+                            detail: 'Étudiant en médecine',
+                            quote: 'Nulla vitae elit libero, a pharetra augue. Nullam id dolor id nibh ultricies vehicula ut id elit. Ju vitae elit libero, a pharetra augue. '
+                        }
                     },
                     {
                         tab: 'Highly Noobish',
                         title: 'Highly ',
                         span: 'Noobish',
                         desc: 'Vivamus sgittis lacus vel augue laoreet rutrum faucibus dolor auctor. Donec ullamcorper nulla non metus auctor fringilla. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Nulla vitae elit libero, a pharetra augue.',
-                        quote: 'Nulla vitae elit libero, a pharetra augue. Nullam id dolor id nibh ultricies vehicula ut id elit. Ju vitae elit libero, a pharetra augue. '
+                        quote: {
+                            author: 'Martin',
+                            detail: 'Étudiant en médecine',
+                            quote: 'Nulla vitae elit libero, a pharetra augue. Nullam id dolor id nibh ultricies vehicula ut id elit. Ju vitae elit libero, a pharetra augue. '
+                        }
                     }
                 ]
             }
         },
         methods: {
-            checkIndex: function (index) {
-                console.log(index)
+            checkIndex: function () {
                 this.tabIndex = this.index
                 this.descIndex = this.index
             }
@@ -67,14 +79,18 @@
         margin: 0 auto;
         .Home-review_holder {
             width: 100%;
-            height: 800px;
             border-radius: 25px;
             display: flex;
             align-items: center;
             justify-content: space-around;
-            padding: 10px 5%;
+            padding: 15% 5%;
             margin: 0 auto;
             box-shadow: 0 6px 25px 0 rgba(0, 0, 0, .1);
+
+            @include mq($from: tablet){
+                min-height: 800px;
+                padding: 10px 5%;
+            }
 
             .Home-review_text {
                 display: flex;
@@ -82,19 +98,46 @@
                 flex: 1;
                 text-align: left;
                 align-items: flex-end;
-
                 .Home-review--author {
                     margin-top: 10%;
                     width: 60%;
-                    position: relative;
 
-                    &:before {
-                        content: '"';
-                        font-size: 90px;
-                        color: $blue-2;
-                        position: absolute;
-                        left: -40px;
-                        top: 20px;
+                    .Home-review--author_quote {
+                        position: relative;
+
+                        &:before {
+                            content: '"';
+                            font-size: 90px;
+                            color: $blue-2;
+                            position: absolute;
+                            left: -40px;
+                            top: 20px;
+                        }
+
+                        &:after {
+                            content: '';
+                            display: block;
+                            position: absolute;
+                            background: #E6E6E6;
+                            height: 1px;
+                            width: 100%;
+                            bottom: -10px;
+                            left: 0;
+                        }
+
+                    }
+
+                    &_author {
+                        opacity:.5;
+                        margin-top: 45px;
+                        display: block;
+                        font-weight: bold;
+
+                        &--detail {
+                            display: block;
+                            font-weight: bold;
+
+                        }
                     }
                 }
 
@@ -119,6 +162,10 @@
             .Home-review_holder--image {
                 flex: 1;
                 position: relative;
+                display: none;
+                @include mq($from: tablet){
+                    display: block;
+                }
 
                 .phone--image {
                     width: 80%;
@@ -127,7 +174,7 @@
             }
         }
         .Home-review_carousel--tabs {
-            margin: 0 1%;
+            margin: 0 10px;
             position: relative;
             transition: ease .3s;
 

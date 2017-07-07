@@ -37,9 +37,7 @@
 
 <style lang="scss">
 
-    section {
-        margin-bottom: 70px;
-    }
+
     .Home-title {
         font-size: 64px;
     }
