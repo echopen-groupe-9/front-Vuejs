@@ -200,6 +200,9 @@
       height: 100%;
         display: inline-block;
     }
+    .logo img {
+        width: 75%;
+    }
     .hidden-box {
         display: flex;
         flex-direction: column;
