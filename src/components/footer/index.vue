@@ -75,15 +75,14 @@
   @import '../../core.scss';
 
   .footer {
-    padding-top: 60px;
-    padding-bottom: 130px;
+    padding: 60px 20px 130px 20px;
     background-color: $blue;
-
 
     .footer-nav {
       display: flex;
       max-width: 800px;
       margin: 0 auto;
+      flex-wrap: wrap;
       justify-content: space-around;
       .footer-element {
         text-align: left;
@@ -95,7 +94,10 @@
           display: flex;
           flex-wrap: wrap;
           flex-direction: column;
-          padding-top: 25px;
+          padding-top: 10px;
+          @include mq($from:'desktop'){
+            padding-top: 25px;
+          }
           &.newsletter {
             flex-direction: row;
             .input {
@@ -105,7 +107,7 @@
               border: none;
               height: 38px;
               line-height: 38px;
-              width: 260px;
+              max-width: 260px;
               background-color: $blue-3;
               border-radius: 4px;
               padding-left: 20px;
