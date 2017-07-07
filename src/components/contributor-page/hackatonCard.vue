@@ -3,7 +3,7 @@
         <span class="hackaton-cover" :style="{ 'background-image' : 'url(' + cover + ')' }">&nbsp;</span>    
         <h3 class="hackaton-card-title">Création d’une sonde</h3>
         <p class="text">Le lien entre l’ergonomie et la technologie.</p>
-        <ul class="hackaton-tag-list">
+        <ul class="hackaton-tag-list text-small">
             <li>Builder</li>
             <li>Maker</li>
             <li>Brainer</li>

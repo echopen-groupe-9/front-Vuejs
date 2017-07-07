@@ -20,8 +20,8 @@ const contributors = {
       type: 'maker',
       content: {
       baseline: 'Avez-vous l’esprit D.I.Y?',
-        mission: 'Je suis une super mission de maker',
-        role: 'Je suis un super rôle de maker'
+        mission: 'Nous aider à emmener Echopen toujours plus loin.',
+        role: 'Que vous soyez bricolo du dimanche ,  amateur ou militant, si vous avez l’âme d’un Maker et que vous  êtes  motivé par le fait de réaliser avec nous des prototypes qui changeront les pratiques de la médecine aujourd’hui et demain. Vous êtes içi au bon endroit!'
       }
     },
     {
