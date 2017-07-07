@@ -4,7 +4,8 @@
             <div class="Home-presentation_holder section-introduction">
                 <h1 class="Home-presentation_title section-title title">Améliorons le monde <span class="section-title-alt section-title-alt-span">ensemble</span></h1>
                 <p class="Home-presentation_desc section-introduction text">Le premier échostéthoscope  connecté accessible à tous.</p>
-                <a href="/#" class="link Home-presentation_link">Voir la demo</a>
+                <router-link :to="{name: 'Demo'}" class='link Home-presentation_link'>Voir la demo</router-link>
+                <!-- <a href="/#" class="link Home-presentation_link">Voir la demo</a> -->
             </div>
         </div>
     </section>

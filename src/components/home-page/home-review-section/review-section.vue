@@ -28,7 +28,7 @@
                 </div>
                 <div class="carousel Home-review_holder" v-show='tabsIndex === 1'>
                     <div class="slide-carousel" v-for='(slide, index) in slides' :class='index == slideIndex ? "active" : ""'>
-                        <div class="progress-bar"></div>
+                        <div class="progress-bar-review"></div>
                         <div class="content dp-flex">
                             <h3 class='content__title title'>
                                 {{slide.date}}<br>
@@ -157,7 +157,7 @@
             min-height: 100%;
             position: relative;
             opacity: 1;
-            .progress-bar {
+            .progress-bar-review {
                 &:after {
                     width: 100%;
                 }
@@ -165,7 +165,7 @@
         }
     }
 
-    .progress-bar {
+    .progress-bar-review {
         width: 100%;
         position: absolute;
         top: 0;
