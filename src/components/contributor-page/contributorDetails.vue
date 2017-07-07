@@ -93,18 +93,39 @@
 <style lang="scss">
     @import '../../core.scss';
 
+    .Contributor{
+        padding: 0;
+        .nav{
+            display: none;
+        }
+    }
+
     .details-contributor-header-wrapper{
         padding: 70px 0;
         color: $white;
         text-align: left;
-        background-image: url('../../assets/images/details-bg.jpg');
         background-size: cover;
         background-position: center;
         background-color: #4784FF;
 
-    .main-wrapper{
-        position: relative;
-    }
+        .linker &{
+            background-image: url('../../assets/images/linker-bg.jpg');
+        }
+
+        .maker &{
+            background-image: url('../../assets/images/maker-bg.jpg');
+        }
+
+        .brainer &{
+            background-image: url('../../assets/images/brainer-bg.jpg');
+        }
+
+        .builder &{
+            background-image: url('../../assets/images/builder-bg.jpg');
+        }
+        .main-wrapper{
+            position: relative;
+        }
     }
 
     .details-contributor-header{
