@@ -24,8 +24,8 @@
 
 .title-sm {
   @include font('Lato', 700);
-  font-size: 16px;
-  line-height: 18px;
+  font-size: 18px;
+  line-height: 20px;
 
   @include mq($from: tablet){
     font-size: 22px;
@@ -129,8 +129,8 @@
 
 .text-2 {
   @include font('Lato', 400);
-  font-size: 10px;
-  line-height: 14px;
+  font-size: 12px;
+  line-height: 18px;
   &.purple {
     color: $purple;
   }
@@ -149,8 +149,8 @@
 
 .text-small {
   @include font('Lato', 400);
-  font-size: 8px;
-  line-height: 17px;
+  font-size: 12px;
+  line-height: 21px;
   color: $white;
   &.grey {
     color: $grey;
@@ -159,7 +159,7 @@
     @include font('Lato', 700);
   }
   @include mq($from: tablet){
-    font-size: 10px;
+    font-size: 12px;
     line-height: 21px;
   }
   @include mq($from: desktop){
@@ -196,7 +196,7 @@
     @include font('Lato', 400);
   }
   .text-btn {
-    font-size: 10px;
+    font-size: 12px;
     @include mq($from: tablet) {
       font-size: 12px;
     }

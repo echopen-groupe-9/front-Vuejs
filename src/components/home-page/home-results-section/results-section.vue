@@ -57,14 +57,14 @@
 
         .Home-result_item--nmb {
             margin-top: 30px;
-            font-size: 90px;
             position: relative;
+            height:35%;
 
             &:before {
                 content: url(../../../assets/images/bg-result-1.png);
                 position: absolute;
                 display: block;
-                left:calc(35%);
+                left:calc(30%);
                 bottom:-20px;
                 z-index: -1;
             }

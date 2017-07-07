@@ -256,8 +256,6 @@
     ////////////
     .navMenuIcon {
         position: relative;
-        width: 54px;
-        height: 54px;
         transition: transform 0.5s;
         span {
           position: absolute;

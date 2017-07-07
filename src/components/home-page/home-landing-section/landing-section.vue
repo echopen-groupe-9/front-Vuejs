@@ -51,10 +51,10 @@
 
         .Home-presentation_holder {
             position: absolute;
-            left:  0 10px;
             top: 50%;
             text-align: left;
             transform: translateY(-50%);
+            padding: 0 10px;
         }
         .Home-presentation_link {
             background: #FFFFFF;
