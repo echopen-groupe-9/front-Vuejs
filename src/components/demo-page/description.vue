@@ -23,9 +23,13 @@
   .demo__description {
     margin: 0 5%;
     @include mq($from: 'desktop') {
+      width: 35%;
       position: absolute;
-      bottom: 8%;
-      margin: 0 35%;
+      top: 50%;
+      right: 0;
+      transform: translateY(-50%);
+      margin: 0;
+      padding: 0 40px;
     }
   }
 
