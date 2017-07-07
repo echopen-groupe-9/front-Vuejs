@@ -120,12 +120,9 @@
                 flex: 1;
                 position: relative;
 
-                .echo--image {
-                    max-height: 180px;
-                    max-width: 200px;
-                    position: absolute;
-                    bottom: -20%;
-                    right: 0;
+                .phone--image {
+                    width: 80%;
+
                 }
             }
         }
