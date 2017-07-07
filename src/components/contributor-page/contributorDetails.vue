@@ -38,6 +38,54 @@
             </div>
         </section>
 
+        <section class="news-card-section">
+           <div class="main-wrapper">
+             <h2 class="section-subtitle title">Programme des<span class="section-subtitle-span">évènements</span></h2>
+
+             <div class="row">
+               <span class="date text">
+                 <span class="number">
+                   15
+                 </span>
+                 Juillet
+               </span>
+               <div class="event">
+                 <h3 class="title-small">Cap Med chez Echopen</h3>
+                 <p class="text">
+                   Workshop pour discuter de nouvelles technologies, Hôtel Dieu Paris.
+                 </p>
+               </div>
+             </div>
+             <div class="row">
+                <span class="date text">
+                  <span class="number">
+                    02
+                  </span>
+                  Juin
+                </span>
+               <div class="event">
+                 <h3 class="title-small">Cap Med chez Echopen</h3>
+                 <p class="text">
+                   Workshop pour discuter de nouvelles technologies, Hôpital Saint-Louis Paris.
+                 </p>
+               </div>
+             </div>
+             <div class="row">
+                <span class="date text">
+                  <span class="number">
+                    21
+                  </span>
+                  Mai
+                </span>
+               <div class="event">
+                 <h3 class="title-small">Cap Med chez Echopen</h3>
+                 <p class="text">
+                   Workshop pour étudiants, HETIC Montreuil.
+                 </p>
+               </div>
+             </div>
+           </div>
+        </section>
         <section class="github-section" v-if="filteredByPage.type == 'maker' || filteredByPage.type == 'builder'">
             <div class="main-wrapper">
                 <h2 class="section-subtitle title"><span class="section-subtitle-span">Github issues</span></h2>
@@ -183,6 +231,61 @@
         max-width: 450px;
         padding-right: 40px;
         padding-bottom: 40px;
+    }
+
+    .news-card-section {
+      .main-wrapper {
+        padding: 40px;
+        background-color: $white-2;
+        position: relative;
+        border-radius: 16px;
+        text-align: center;
+        @include mq($from: 'tablet'){
+          text-align: left;
+        }
+
+        .row {
+          margin-top: 15px;
+          &:first-of-type {
+            margin-top: 0;
+          }
+          .date{
+            display: block;
+            margin-bottom: 10px;
+            text-align: center;
+            min-width: 95px;
+            position: relative;
+
+            @include mq($from: 'tablet'){
+              display: inline-block;
+              &:after {
+                content: '';
+                height: 40px;
+                width: 1px;
+                background-color: $grey-light;
+                position: absolute;
+                top: 15px;
+                right: 0;
+              }
+            }
+
+
+            .number{
+              display: block;
+            }
+          }
+          .event {
+            display: inline-block;
+            margin-left: 40px;
+            .title-small {
+               @include font('Lato', 400);
+             }
+            .text {
+              @include font('Lato', 300);
+            }
+          }
+        }
+      }
     }
 
     .slack-title{
