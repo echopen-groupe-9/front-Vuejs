@@ -1,0 +1,246 @@
+//// TITLES /////
+
+.title {
+  @include font('Lato', 300);
+  font-size: 34px;
+  line-height: 38px;
+  color: $grey-dark;
+  letter-spacing: 1.5;
+  &.white {
+    color: $white;
+  }
+  .bold {
+    @include font('Lato', 700);
+  }
+  @include mq($from: tablet){
+    font-size: 44px;
+    line-height: 48px;
+  }
+  @include mq($from: desktop){
+    font-size: 64px;
+    line-height: 68px;
+  }
+}
+
+.title-sm {
+  @include font('Lato', 700);
+  font-size: 16px;
+  line-height: 18px;
+
+  @include mq($from: tablet){
+    font-size: 22px;
+    line-height: 24px;
+  }
+  @include mq($from: desktop){
+    font-size: 32px;
+    line-height: 34px;
+  }
+}
+
+.title-contributor {
+  @include font('Lato', 700);
+  font-size: 14px;
+  line-height: 18px;
+  color: $white;
+  letter-spacing: 2;
+
+  @include mq($from: tablet){
+    font-size: 16px;
+    line-height: 22px;
+  }
+  @include mq($from: desktop){
+    font-size: 18px;
+    line-height: 24px;
+  }
+}
+.title-news {
+  @include font('Lato', 700);
+  font-size: 48px;
+  line-height: 48px;
+  color: $blue-2;
+  letter-spacing: 2;
+  text-align: left;
+}
+.title-event {
+  @include font('Lato', 400);
+  font-size: 18px;
+  line-height: 30px;
+  color: $blue-2;
+  letter-spacing: 2;
+  text-transform: uppercase;
+}
+.title-event-card {
+  @include font('Lato', 300);
+  font-size: 30px;
+  line-height: 30px;
+  color: $grey-dark-2;
+  letter-spacing: 2;
+  text-align: left;
+}
+
+//// TEXTS /////
+.text {
+  @include font('Lato', 400);
+  font-size: 12px;
+  line-height: 18px;
+
+  &.purple {
+    color: $purple;
+  }
+
+  &.grey {
+    color: $grey;
+  }
+  &.white {
+    color: $white;
+  }
+
+
+  &.bold {
+    @include font('Lato', 700);
+  }
+  @include mq($from: tablet){
+    font-size: 16px;
+    line-height: 24px;
+  }
+  @include mq($from: desktop){
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
+
+.text-primary {
+  color: $blue
+}
+
+.text-primary-2 {
+  color: $blue-2
+}
+
+.text-primary-3 {
+  color: $blue-3
+}
+
+.text-base {
+  color: $grey-dark;
+}
+
+
+
+.text-2 {
+  @include font('Lato', 400);
+  font-size: 10px;
+  line-height: 14px;
+  &.purple {
+    color: $purple;
+  }
+  &.grey {
+    color: $grey;
+  }
+  @include mq($from: tablet){
+    font-size: 12px;
+    line-height: 18px;
+  }
+  @include mq($from: desktop){
+    font-size: 14px;
+    line-height: 26px;
+  }
+}
+
+.text-small {
+  @include font('Lato', 400);
+  font-size: 8px;
+  line-height: 17px;
+  color: $white;
+  &.grey {
+    color: $grey;
+  }
+  &.bold {
+    @include font('Lato', 700);
+  }
+  @include mq($from: tablet){
+    font-size: 10px;
+    line-height: 21px;
+  }
+  @include mq($from: desktop){
+    font-size: 14px;
+    line-height: 25px;
+  }
+}
+
+.text-contributor {
+  @include font('Lato', 300);
+  font-size: 36px;
+  line-height: 46px;
+  letter-spacing: 2;
+  color: $white;
+}
+
+
+.text-event {
+  @include font('Lato', 300);
+  font-size: 16px;
+  line-height: 20px;
+  color: $grey-dark-2;
+}
+
+.title-small {
+  @include font('Lato', 300);
+  font-size: 24px;
+  line-height: 29px;
+  color: $blue;
+  &.grey {
+    color: $grey;
+  }
+  &.bold {
+    @include font('Lato', 400);
+  }
+  .text-btn {
+    font-size: 10px;
+    @include mq($from: tablet) {
+      font-size: 12px;
+    }
+    @include mq($from: desktop) {
+      font-size: 14px;
+
+    }
+  }
+}
+
+
+.link {
+  text-decoration: none;
+}
+
+
+////////////////////////
+/// Text align ////////
+///////////////////////
+
+.text-right {
+  text-align: right;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-center {
+  text-align: center;
+}
+
+////////////////////////
+/// Backgrounds ///////
+///////////////////////
+
+.bg-blue {
+  background-color: $blue;
+}
+
+.bg-blue-2 {
+  background-color: $blue-2;
+}
+
+.bg-blue-3 {
+  background-color: $blue-3;
+}
