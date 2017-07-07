@@ -153,6 +153,7 @@
         width: 100%;
         max-width: 450px;
         padding-right: 40px;
+        padding-bottom: 40px;
     }
 
     .slack-title{

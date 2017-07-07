@@ -35,10 +35,13 @@
     @import '../../core.scss';
 
     .github__card {
+        position: relative;
         display: block;
         text-align: left;
         border-radius: 16px;
         background-color: $grey-light2;
+        padding-bottom: 70px;
+        margin-bottom: 30px;
     }
 
     @include mq($from:'tablet'){
@@ -48,6 +51,7 @@
             border: 10px solid $white;
             vertical-align: top;
             width: 50%;
+            margin-bottom: 0;
         }
     }
 
@@ -80,6 +84,14 @@
 
     .github__issues__list__item{
         display: block;
+
+        &:last-child{
+            .issue__link{
+                &:after{
+                    display: none;
+                 }
+            }
+         }
     }
 
     .issue__link{
@@ -148,10 +160,14 @@
     }
 
     .repo_link{
+        position: absolute;
+        bottom: 0;
+        left: 0;
         display: flex;
         flex-direction: row;
         justify-content: center;
         text-decoration: none;
+        width: 100%;
         color: $blue;
         padding: 20px;
         transition: background-color .4s ease-out;
@@ -159,6 +175,7 @@
         border-top-right-radius: 0;
         border-bottom-right-radius: 6px 6px;
         border-bottom-left-radius: 6px 6px;
+        background-color: darken($grey-light2, 4%);
         &:hover{
             background-color: lighten($turquoise, 10%);
             transition: background-color .4s ease-out;
