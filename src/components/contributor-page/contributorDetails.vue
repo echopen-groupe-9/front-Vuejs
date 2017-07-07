@@ -38,7 +38,7 @@
             </div>
         </section>
 
-        <section class="news-card-section">
+        <section class="news-card-section" v-if="filteredByPage.type == 'linker' || filteredByPage.type == 'brainer'">
            <div class="main-wrapper">
              <h2 class="section-subtitle title">Programme des<span class="section-subtitle-span">évènements</span></h2>
 

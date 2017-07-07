@@ -78,6 +78,15 @@
         @include mq($from: 'desktop') {
           flex-flow: row;
         }
+
+        a{
+            @include font('Lato', 700);
+            width: 100%!important;
+            font-size: 16px!important;
+            line-height: 18px;
+            text-decoration: none!important;
+            color: $blue;
+        }
     }
 
     .Home-actu_text {
@@ -87,6 +96,7 @@
     .Home-actu_img {
         width: 100%;
     }
+
 
     .Home-actu_button {
         background-image: linear-gradient(to right, #00c6fb 0%, #005bea 100%);
@@ -103,5 +113,6 @@
         outline: none;
         cursor: pointer;
         margin-top: 5%;
+        text-decoration: none;
     }
 </style>
