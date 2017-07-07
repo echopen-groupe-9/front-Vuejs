@@ -14,11 +14,11 @@
                     <div class="Home-review_text" >
                         <h2 class="Home-review_title section-subtitle title">La sonde<span
                                 class="section-subtitle-span">echopen</span></h2>
-                        <p class="Home-review_desc text">48 heures pour la connaître<span class="Home-review_desc--tiny"></span></p>
+                        <p class="Home-review_desc text">Echopen vise à développer un échostéthoscope connecté, développé grâce à une communauté multidisciplinaire. La sonde S1 d’Echopen permets d’effectuer un diagnostic fiable et rapide, dans les hôpitaux, la médecine générale et les zones médicalement mal desservies.<span class="Home-review_desc--tiny"></span></p>
                         <div class="Home-review--author text-2">
-                            <p class="Home-review--author_quote text-small grey">Dr Lips</p>
-                            <span class="Home-review--author_author text-small grey">C'est un vrai petit bijou,
-                                <small class="Home-review--author_author--detail text-small grey">j'ai apris à l'utiliser en deux jours</small>
+                            <p class="Home-review--author_quote text-small grey">Martin Dumoulin, Etudiant en médecine générale</p>
+                            <span class="Home-review--author_author text-small grey">Je soutiens Echopen,
+                                <small class="Home-review--author_author--detail text-small grey">car c’est le projet le plus disruptif que je connaisse en santé numérique</small>
                             </span>
                         </div>
                     </div>
