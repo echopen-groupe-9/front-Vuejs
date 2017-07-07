@@ -1,7 +1,6 @@
 import {requireAuth, redirectDashboard} from '../utils/authentication'
 
 const Home = r => require.ensure([], () => r(require('../components/home-page/index.vue')));
-const Contributor = r => require.ensure([], () => r(require('../components/home-page/contributors.vue')));
 const Demo = r => require.ensure([], () => r(require('../components/demo-page/index.vue')));
 const ContributorDetails = r => require.ensure([], () => r(require('../components/contributor-page/contributorDetails.vue')));
 const Authentication = r => require.ensure([], () => r(require('../components/authentication-page/index.vue')));

@@ -16,9 +16,6 @@
                 <router-link :to="{name: 'Home'}">Wiki</router-link>
             </li>
             <li class="nav-link">
-                <router-link :to="{name: 'Contributor'}">Contributeurs</router-link>
-            </li>
-            <li class="nav-link">
                 <router-link :to="{name: 'Home'}">Echopen et vous</router-link>
             </li>
             <li class="nav-link">
@@ -34,10 +31,10 @@
                 <a class="select-button" href="#" @click="toggle">Je suis :</a>
                 <div class="hidden-box" v-show="active">
                     <li v-show="show" @click="close">
-                        <router-link :to="{name: 'Contributor.Details', params: {contributor: 'brainer'}}">Brainer</router-link>
+                        <router-link :to="{name: 'Contributor', params: {contributor: 'brainer'}}">Brainer</router-link>
                     </li>
                     <li v-show="show" @click="close">
-                        <router-link :to="{name: 'Contributor.Details', params: {contributor: 'maker'}}">Maker</router-link>
+                        <router-link :to="{name: 'Contributor', params: {contributor: 'maker'}}">Maker</router-link>
                     </li>
                 </div>
             </li>

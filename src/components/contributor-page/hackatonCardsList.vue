@@ -1,6 +1,6 @@
 <template>
-    <ul class="hackaton-card-list" v-if="repos">
-        <hackaton-card v-for="repo in 3"></hackaton-card>
+    <ul class="hackaton-card-list">
+        <hackaton-card v-for="hackaton in 3" :key="hackaton.id"></hackaton-card>
     </ul>
 </template>
 
@@ -9,12 +9,6 @@
     import hackatonCard from './hackatonCard.vue';
 
     export default {
-        data () {
-            return {
-                pending: true,
-                repos: []
-            }
-        },
         components: {
             'hackaton-card' : hackatonCard
         },

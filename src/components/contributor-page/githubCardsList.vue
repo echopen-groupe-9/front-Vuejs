@@ -1,6 +1,6 @@
 <template>
     <ul v-if="repos">
-        <github-card v-for="repo in filterRepos" :repo="repo" ></github-card>
+        <github-card v-for="repo in filterRepos" :repo="repo" :key="repo.id"></github-card>
     </ul>
 </template>
 
