@@ -1,20 +1,19 @@
 <template>
-    <article class="details-contributor">
-
+    <article class="details-contributor" :class="title">
         <div class="details-contributor-header-wrapper">
             <div class="main-wrapper">
                 <header class="details-contributor-header">  
-                    <h1 class="details-contributor-title title-contributor">{{title}}</h1>
-                    <p class="details-contributor-baseline text-contributor">Avez-vous l’esprit D.I.Y?</p>
+                    <h1 class="details-contributor-title title-contributor">{{filteredByPage.type}}</h1>
+                    <p class="details-contributor-baseline text-contributor">{{filteredByPage.content.baseline}}</p>
 
                     <div class="details-contributor-introduction">
                         <h2 class="text bold">Votre rôle</h2>
-                        <p class="text">Que vous soyez bricolo du dimanche ,  amateur ou militant, si vous avez l’âme d’un Maker et que vous  êtes  motivés par le fait de réaliser avec nous des prototypes qui changeront les pratiques de la médecine aujourd’hui et demain. Vous êtes içi au bon endroit!</p>
+                        <p class="text">{{filteredByPage.content.role}}</p>
                     </div>
 
                     <div class="details-contributor-introduction">
                         <h2 class="text bold">Votre mission:</h2>
-                        <p class="text">Nous aider à emmener Echopen toujours plus loin.</p>
+                        <p class="text">{{filteredByPage.content.mission}}</p>
                     </div>
                 </header>
                 <router-link class="back-link text" :to="{name: 'Home'}">Retour</router-link>
@@ -39,7 +38,7 @@
             </div>
         </section>
 
-        <section class="github-section" v-if="contributorType == 'maker'">
+        <section class="github-section" v-if="filteredByPage.type == 'maker'">
             <div class="main-wrapper">
                 <h2 class="section-subtitle title"><span class="section-subtitle-span">Github issues</span></h2>
                 <ul class="github-cards-list">
@@ -59,6 +58,9 @@
 </template>
 
 <script>
+    /* Import Datas */
+    import contributors from '../../datas/contributors'
+
     /* Import Components */
     import githubCardsList from './githubCardsList.vue'
     import hackatonCardsList from './hackatonCardsList.vue'    
@@ -67,6 +69,7 @@
         name: 'Details',
         data () {
             return {
+                datas: contributors,
                 title: this.$route.params.contributor
             }
         },
@@ -77,6 +80,11 @@
         computed: {
             contributorType () {
                 return this.$route.params.contributor
+            },
+            filteredByPage() {
+                return this.datas.contributorsDatas.filter(contributor => {
+                    return contributor.type === this.$route.params.contributor;
+                })[0]
             }
         }
     }
@@ -145,7 +153,7 @@
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
-        justify-content: flex-start;
+        justify-content: space-between;
         margin-top: 40px;
     }
 
