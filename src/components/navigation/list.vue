@@ -201,7 +201,7 @@
         display: inline-block;
     }
     .logo img {
-        width: 75%;
+        width: 50%;
     }
     .hidden-box {
         display: flex;
