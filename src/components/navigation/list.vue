@@ -34,7 +34,13 @@
                         <router-link :to="{name: 'Contributor', params: {contributor: 'brainer'}}">Brainer</router-link>
                     </li>
                     <li v-show="show" @click="close">
+                        <router-link :to="{name: 'Contributor', params: {contributor: 'builder'}}">Builder</router-link>
+                    </li>
+                    <li v-show="show" @click="close">
                         <router-link :to="{name: 'Contributor', params: {contributor: 'maker'}}">Maker</router-link>
+                    </li>
+                    <li v-show="show" @click="close">
+                        <router-link :to="{name: 'Contributor', params: {contributor: 'linker'}}">Linker</router-link>
                     </li>
                 </div>
             </li>
