@@ -58,6 +58,10 @@ const routes = [
   {
     path: '/admin',
     beforeEnter: redirectDashboard
+  },
+  {
+    path: '*',
+    redirect: '/'
   }
 ];
 
