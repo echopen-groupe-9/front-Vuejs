@@ -44,6 +44,9 @@
   body {
     &.overflow-none {
       overflow: hidden;
+      @include mq($from: 'desktop') {
+        overflow: visible;
+      }
     }
   }
 
