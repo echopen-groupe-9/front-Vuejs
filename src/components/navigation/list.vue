@@ -16,7 +16,7 @@
                 <router-link :to="{name: 'Home'}">Wiki</router-link>
             </li>
             <li class="nav-link">
-                <router-link :to="{name: 'Home'}">Echopen et vous</router-link>
+                <router-link :to="{name: 'Home'}">Donation</router-link>
             </li>
             <li class="nav-link">
                 <router-link :to="{name: 'Home'}">Contact</router-link>
@@ -154,6 +154,7 @@
           display: inline-block;
           text-transform: uppercase;
           padding: 20px 0;
+          font-size: 18px;
           @include mq($from: 'desktop') {
             color: $grey;
           }
