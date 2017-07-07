@@ -17,6 +17,7 @@
                         <p class="text">Nous aider à emmener Echopen toujours plus loin.</p>
                     </div>
                 </header>
+                <router-link class="back-link text" :to="{name: 'Home'}">Retour</router-link>
             </div>
         </div>
 
@@ -92,11 +93,35 @@
         background-size: cover;
         background-position: center;
         background-color: #4784FF;
+
+        .main-wrapper{
+            position: relative;
+        }
     }
 
     .details-contributor-header{
         width: 100%;
         max-width: 500px;
+    }
+
+    .back-link{
+        position: absolute;
+        right: 1rem;
+        top: 0;
+        text-decoration: none;
+        color: $white;
+
+        &:before{
+            content:'';
+            display: inline-block;
+            vertical-align: middle;
+            margin-right: 10px;
+            width: 10px;
+            height: 16px;
+            background-image: url('../../assets/images/icons/arrow-back.svg');
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
     }
 
     .details-contributor-introduction{
