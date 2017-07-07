@@ -51,7 +51,7 @@
 
         .Home-presentation_holder {
             position: absolute;
-            left: 0;
+            left:  0 10px;
             top: 50%;
             text-align: left;
             transform: translateY(-50%);

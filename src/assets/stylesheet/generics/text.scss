@@ -2,8 +2,8 @@
 
 .title {
   @include font('Lato', 300);
-  font-size: 64px;
-  line-height: 68px;
+  font-size: 34px;
+  line-height: 38px;
   color: $grey-dark;
   letter-spacing: 1.5;
   &.white {
@@ -12,19 +12,46 @@
   .bold {
     @include font('Lato', 700);
   }
+  @include mq($from: tablet){
+    font-size: 44px;
+    line-height: 48px;
+  }
+  @include mq($from: desktop){
+    font-size: 64px;
+    line-height: 68px;
+  }
 }
 
 .title-sm {
-  font-size: 32px;
-  line-height: 34px;
+  @include font('Lato', 700);
+  font-size: 16px;
+  line-height: 18px;
+
+  @include mq($from: tablet){
+    font-size: 22px;
+    line-height: 24px;
+  }
+  @include mq($from: desktop){
+    font-size: 32px;
+    line-height: 34px;
+  }
 }
 
 .title-contributor {
   @include font('Lato', 700);
-  font-size: 18px;
-  line-height: 30px;
+  font-size: 14px;
+  line-height: 18px;
   color: $white;
   letter-spacing: 2;
+
+  @include mq($from: tablet){
+    font-size: 16px;
+    line-height: 22px;
+  }
+  @include mq($from: desktop){
+    font-size: 18px;
+    line-height: 24px;
+  }
 }
 .title-news {
   @include font('Lato', 700);
@@ -54,8 +81,8 @@
 //// TEXTS /////
 .text {
   @include font('Lato', 400);
-  font-size: 20px;
-  line-height: 30px;
+  font-size: 12px;
+  line-height: 18px;
 
   &.purple {
     color: $purple;
@@ -68,8 +95,17 @@
     color: $white;
   }
 
-  &.bold{
+
+  &.bold {
     @include font('Lato', 700);
+  }
+  @include mq($from: tablet){
+    font-size: 16px;
+    line-height: 24px;
+  }
+  @include mq($from: desktop){
+    font-size: 20px;
+    line-height: 30px;
   }
 }
 
@@ -93,26 +129,42 @@
 
 .text-2 {
   @include font('Lato', 400);
-  font-size: 16px;
-  line-height: 26px;
+  font-size: 10px;
+  line-height: 14px;
   &.purple {
     color: $purple;
   }
   &.grey {
     color: $grey;
   }
+  @include mq($from: tablet){
+    font-size: 12px;
+    line-height: 18px;
+  }
+  @include mq($from: desktop){
+    font-size: 14px;
+    line-height: 26px;
+  }
 }
 
 .text-small {
   @include font('Lato', 400);
-  font-size: 14px;
-  line-height: 25px;
+  font-size: 8px;
+  line-height: 17px;
   color: $white;
   &.grey {
     color: $grey;
   }
   &.bold {
     @include font('Lato', 700);
+  }
+  @include mq($from: tablet){
+    font-size: 10px;
+    line-height: 21px;
+  }
+  @include mq($from: desktop){
+    font-size: 14px;
+    line-height: 25px;
   }
 }
 
@@ -123,6 +175,7 @@
   letter-spacing: 2;
   color: $white;
 }
+
 
 .text-event {
   @include font('Lato', 300);
@@ -141,6 +194,16 @@
   }
   &.bold {
     @include font('Lato', 400);
+  }
+  .text-btn {
+    font-size: 10px;
+    @include mq($from: tablet) {
+      font-size: 12px;
+    }
+    @include mq($from: desktop) {
+      font-size: 14px;
+
+    }
   }
 }
 

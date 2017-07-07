@@ -25,25 +25,34 @@
 
     .Home-contribution {
         width: 100%;
-        background-image: url("../../../assets/images/bg_donateur.jpg");
-        background-size: cover;
-        background-repeat: no-repeat;
-        padding: 100px 180px;
-    }
-    .Home-contribution_title {
-        color: $white;
-    }
-    .Home-contribution-button {
-        background: $white;
-        padding: 10px 30px;
-        font-size: 14px;
-        color: $blue-2;
-        border-radius: 100px;
-        border-color: white;
-        border-bottom: white;
-        border-right: white;
-        text-transform: uppercase;
-        outline: none;
-        cursor: pointer;
+
+        &_list {
+            display: flex;
+            flex-flow: row nowrap;
+            height: 800px;
+
+            & .Home-contribution_item {
+                background: url(../../../assets/images/bg-contributor-1.png) no-repeat;
+                background-size: cover;
+                flex: 1;
+                position: relative;
+
+                &:last-child {
+                    background: url(../../../assets/images/bg-contributor-2.png) no-repeat;
+                    background-size: cover;
+                    margin-left: 20px;
+                }
+
+                .Home-contribution_item--text {
+                    position: absolute;
+                    left: 10%;
+                    bottom: 10%;
+                }
+            }
+        }
+        .Home-contribution_link {
+            text-decoration: none;
+            color: $grey-dark;
+        }
     }
 </style>
