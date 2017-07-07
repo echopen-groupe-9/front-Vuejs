@@ -26,6 +26,30 @@
   color: $white;
   letter-spacing: 2;
 }
+.title-news {
+  @include font('Lato', 700);
+  font-size: 48px;
+  line-height: 48px;
+  color: $blue-2;
+  letter-spacing: 2;
+  text-align: left;
+}
+.title-event {
+  @include font('Lato', 400);
+  font-size: 18px;
+  line-height: 30px;
+  color: $blue-2;
+  letter-spacing: 2;
+  text-transform: uppercase;
+}
+.title-event-card {
+  @include font('Lato', 300);
+  font-size: 30px;
+  line-height: 30px;
+  color: $grey-dark-2;
+  letter-spacing: 2;
+  text-align: left;
+}
 
 //// TEXTS /////
 .text {
@@ -96,12 +120,11 @@
   color: $white;
 }
 
-.link {
-  text-decoration: none;
-}
-
-section {
-  margin-bottom: 70px;
+.text-event {
+  @include font('Lato', 300);
+  font-size: 16px;
+  line-height: 20px;
+  color: $grey-dark-2;
 }
 
 ////////////////////////
