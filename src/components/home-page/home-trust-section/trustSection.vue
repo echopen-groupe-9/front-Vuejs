@@ -5,7 +5,7 @@
         </h1>
         <ul class="Home-trust_list text">
             <li class="Home-trust_item" v-for="trust in trusts">
-                 <img class="Home-trust_item--image" src="../../../assets/Logo.svg"  alt="">
+                 <img class="Home-trust_item--image" src="/static/images/Logo.svg"  alt="">
             </li>
         </ul>
     </section>
@@ -20,22 +20,22 @@
 
                 trusts: [
                     {
-                        url: "../../assets/logo.png"
+                        url: "/static/images/logo.png"
                     },
                    {
-                        url: "../../assets/logo.png"
+                        url: "/static/images/logo.png"
                     },
                    {
-                        url: "../../assets/logo.png"
+                        url: "/static/images/logo.png"
                     },
                    {
-                        url: "../../assets/logo.png"
+                        url: "/static/images/logo.png"
                     },
                    {
-                        url: "../../assets/logo.png"
+                        url: "/static/images/logo.png"
                     },
                    {
-                        url: "../../assets/logo.png"
+                        url: "/static/images/logo.png"
                     },
                 ]
             }

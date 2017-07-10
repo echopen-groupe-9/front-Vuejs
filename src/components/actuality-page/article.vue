@@ -26,7 +26,7 @@
       </div>
     </div>
     <div class="block-img" v-if="news.images">
-      <img class="img" src="../../assets/images/news-img.jpg" alt="" v-for="image in news.images">
+      <img class="img" src="/static/images/news-img.jpg" alt="" v-for="image in news.images">
     </div>
   </li>
 </template>
@@ -43,7 +43,10 @@
 </script>
 
 <style lang="scss" scoped>
-  @import '../../core.scss';
+
+  @import '~styles/_plugins/sass-mq/_mq';
+  @import '~styles/generics/variable.scss';
+@import '~styles/generics/mixin.scss';
 
   .news{
     display: flex;
@@ -131,7 +134,7 @@
         content: '';
         width: 100%;
         height: 51px;
-        background: url('../../assets/images/event_card_shape.png') no-repeat bottom;
+        background: url('/static/images/event_card_shape.png') no-repeat bottom;
         background-size: contain;
         position: absolute;
         bottom: 0px;
@@ -180,7 +183,7 @@
             content: '';
             width: 7px;
             height: 12px;
-            background: url('../../assets/images/pin.png') no-repeat center;
+            background: url('/static/images/pin.png') no-repeat center;
             background-size: contain;
             position: absolute;
             top: 4px;
@@ -195,7 +198,7 @@
             content: '';
             width: 11px;
             height: 11px;
-            background: url('../../assets/images/calendar.png') no-repeat center;
+            background: url('/static/images/calendar.png') no-repeat center;
             background-size: contain;
             position: absolute;
             top: 4px;

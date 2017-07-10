@@ -139,7 +139,10 @@
 </script>
 
 <style lang="scss">
-    @import '../../core.scss';
+
+    @import '~styles/_plugins/sass-mq/_mq';
+    @import '~styles/generics/variable.scss';
+@import '~styles/generics/mixin.scss';
 
     .Contributor{
         padding: 0;
@@ -157,19 +160,19 @@
         background-color: #4784FF;
 
         .linker &{
-            background-image: url('../../assets/images/linker-bg.jpg');
+            background-image: url('/static/images/linker-bg.jpg');
         }
 
         .maker &{
-            background-image: url('../../assets/images/maker-bg.jpg');
+            background-image: url('/static/images/maker-bg.jpg');
         }
 
         .brainer &{
-            background-image: url('../../assets/images/brainer-bg.jpg');
+            background-image: url('/static/images/brainer-bg.jpg');
         }
 
         .builder &{
-            background-image: url('../../assets/images/builder-bg.jpg');
+            background-image: url('/static/images/builder-bg.jpg');
         }
         .main-wrapper{
             position: relative;
@@ -195,7 +198,7 @@
          margin-right: 10px;
          width: 10px;
          height: 16px;
-         background-image: url('../../assets/images/icons/arrow-back.svg');
+         background-image: url('/static/images/icons/arrow-back.svg');
          background-size: contain;
          background-repeat: no-repeat;
      }
@@ -321,7 +324,7 @@
          width: 50%;
          max-width: 250px;
          height: 100%;
-         background-image: url('../../assets/images/slack.png');
+         background-image: url('/static/images/slack.png');
          background-size: contain;
          background-repeat: no-repeat;
          background-position: center bottom;

@@ -72,7 +72,10 @@
 </script>
 
 <style lang="scss">
-  @import '../../core.scss';
+
+  @import '~styles/_plugins/sass-mq/_mq';
+  @import '~styles/generics/variable.scss';
+@import '~styles/generics/mixin.scss';
 
   .footer {
     padding: 60px 20px 130px 20px;

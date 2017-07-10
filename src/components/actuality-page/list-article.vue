@@ -72,7 +72,11 @@
 </script>
 
 <style lang="scss" scoped>
-  @import "../../core.scss";
+
+  @import '~styles/_plugins/sass-mq/_mq';
+  @import '~styles/generics/variable.scss';
+@import '~styles/generics/mixin.scss';
+
   .main-wrapper {
     position: relative;
     margin-bottom: 140px;

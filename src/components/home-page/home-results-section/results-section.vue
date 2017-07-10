@@ -61,7 +61,7 @@
             position: relative;
 
             &:before {
-                content: url(../../../assets/images/bg-result-1.png);
+                content: url(/static/images/bg-result-1.png);
                 position: absolute;
                 display: block;
                 left:calc(35%);
@@ -74,12 +74,12 @@
         }
         &:nth-child(2) {
             .Home-result_item--nmb:before {
-                content: url(../../../assets/images/bg-result-2.png);
+                content: url(/static/images/bg-result-2.png);
             }
         }
         &:nth-child(3) {
             .Home-result_item--nmb:before {
-                content: url(../../../assets/images/bg-result-3.png);
+                content: url(/static/images/bg-result-3.png);
             }
         }
     }

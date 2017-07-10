@@ -32,7 +32,9 @@
 
 <style lang="scss">
 
-    @import '../../core.scss';
+    @import '~styles/_plugins/sass-mq/_mq';
+    @import '~styles/generics/variable.scss';
+@import '~styles/generics/mixin.scss';
 
     .github__card {
         position: relative;
@@ -68,7 +70,7 @@
         letter-spacing: 2;
         padding: 30px;
         color: $white;
-        
+
         a{
             text-decoration: none;
             color: $white;
@@ -107,7 +109,7 @@
             background-color: lighten($grey-light2, 10%);
             transition: background-color .4s ease-out;
         }
-        
+
         &:after{
             content:'';
             display: block;
@@ -138,7 +140,7 @@
             vertical-align: middle;
             width: 16px;
             height: 16px;
-            margin-right: 10px; 
+            margin-right: 10px;
             background-repeat: no-repeat;
             background-size: contain;
         }
@@ -149,13 +151,13 @@
 
     .issue__date{
         &:before{
-            background-image:url('../../assets/images/icons/calendar.svg');
+            background-image:url('/static/images/icons/calendar.svg');
         }
     }
 
     .issue__user{
         &:before{
-            background-image:url('../../assets/images/icons/user.svg');
+            background-image:url('/static/images/icons/user.svg');
         }
     }
 

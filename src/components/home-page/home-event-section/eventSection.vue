@@ -71,7 +71,11 @@
 </script>
 
 <style lang="scss" scoped="">
-    @import '../../../core.scss';
+
+  @import '~styles/_plugins/sass-mq/_mq';
+  @import '~styles/generics/variable.scss';
+@import '~styles/generics/mixin.scss';
+
   .event-section {
     position: relative;
     width:100%;

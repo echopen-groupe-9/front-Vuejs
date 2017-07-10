@@ -23,7 +23,7 @@
                         </div>
                     </div>
                     <div class="Home-review_holder--image">
-                        <img src="../../../assets/images/android_phone_1.png" alt="" class="Home-review_image phone--image">
+                        <img src="/static/images/android_phone_1.png" alt="" class="Home-review_image phone--image">
                     </div>
                 </div>
                 <div class="carousel Home-review_holder" v-show='tabsIndex === 1'>
@@ -143,7 +143,10 @@
 
 
 <style lang="scss">
-    @import '../../../core.scss';
+
+    @import '~styles/_plugins/sass-mq/_mq';
+    @import '~styles/generics/variable.scss';
+@import '~styles/generics/mixin.scss';
 
     .slide-carousel {
         min-height: 100%;
