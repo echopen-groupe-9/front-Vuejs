@@ -26,9 +26,6 @@
 <script>
   import Description from './description.vue'
   import Navigation from './navigation.vue'
-  import android1 from '../../assets/images/android_phone_1.png'
-  import android2 from '../../assets/images/android_phone_2.png'
-  import android3 from '../../assets/images/android_phone_3.png'
 
   export default {
     name: 'demo',
@@ -42,7 +39,7 @@
               visible: false
             },
             img: {
-              source: android1,
+              source: '/static/images/android_phone_1.png',
               visible: false
             }
           },
@@ -53,7 +50,7 @@
               visible: false
             },
             img: {
-              source: android2,
+              source: '/static/images/android_phone_2.png',
               visible: false
             }
           },
@@ -64,7 +61,7 @@
               visible: false
             },
             img: {
-              source: android3,
+              source: '/static/images/android_phone_3.png',
               visible: false
             }
           }
@@ -124,7 +121,10 @@
 </script>
 
 <style lang='scss'>
-  @import '../../core.scss';
+
+  @import '~styles/_plugins/sass-mq/_mq';
+  @import '~styles/generics/variable.scss';
+@import '~styles/generics/mixin.scss';
 
   .section {
     position: relative;

@@ -27,7 +27,7 @@
     .Home-presentation {
         @include font('Lato', normal);
         color: #FFF;
-        background: url(../../../assets/images/home-bg.png) no-repeat;
+        background: url(/static/images/home-bg.png) no-repeat;
         background-size: cover;
         height: 780px;
         position: relative;

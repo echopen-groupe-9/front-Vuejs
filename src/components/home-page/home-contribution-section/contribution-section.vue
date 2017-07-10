@@ -21,7 +21,10 @@
 </script>
 
 <style lang="scss">
-    @import '../../../core.scss';
+
+    @import '~styles/_plugins/sass-mq/_mq';
+    @import '~styles/generics/variable.scss';
+@import '~styles/generics/mixin.scss';
 
     .Home-contribution {
         width: 100%;
@@ -32,13 +35,13 @@
             height: 800px;
 
             & .Home-contribution_item {
-                background: url(../../../assets/images/bg-contributor-1.png) no-repeat;
+                background: url(/static/images/bg-contributor-1.png) no-repeat;
                 background-size: cover;
                 flex: 1;
                 position: relative;
 
                 &:last-child {
-                    background: url(../../../assets/images/bg-contributor-2.png) no-repeat;
+                    background: url(/static/images/bg-contributor-2.png) no-repeat;
                     background-size: cover;
                     margin-left: 20px;
                 }

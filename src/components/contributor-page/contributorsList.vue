@@ -47,7 +47,10 @@
 </script>
 
 <style lang="scss">
-    @import '../../core.scss';
+
+    @import '~styles/_plugins/sass-mq/_mq';
+    @import '~styles/generics/variable.scss';
+@import '~styles/generics/mixin.scss';
 
     .cards-list{
 
@@ -83,28 +86,28 @@
         &:nth-child(1){
              background-color: #00ADFE;
             &:after{
-                 background-image: url("../../assets/images/brainer_card_bg.png")
+                 background-image: url("/static/images/brainer_card_bg.png")
              }
         }
 
         &:nth-child(2){
              background-color: #4E76F2;
             &:after{
-                 background-image: url("../../assets/images/builder_card_bg.png")
+                 background-image: url("/static/images/builder_card_bg.png")
              }
         }
 
         &:nth-child(3){
              background-color: #444CB2;
             &:after{
-                 background-image: url("../../assets/images/maker_card_bg.png")
+                 background-image: url("/static/images/maker_card_bg.png")
              }
         }
 
         &:nth-child(4){
              background-color: #3740B0;
             &:after{
-                 background-image: url("../../assets/images/linker_card_bg.png");
+                 background-image: url("/static/images/linker_card_bg.png");
              }
         }
 

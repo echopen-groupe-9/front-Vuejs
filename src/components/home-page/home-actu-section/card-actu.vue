@@ -27,7 +27,10 @@
 </script>
 
 <style lang='scss'>
-  @import '../../../core.scss';
+
+  @import '~styles/_plugins/sass-mq/_mq';
+  @import '~styles/generics/variable.scss';
+@import '~styles/generics/mixin.scss';
 
   .Home-actu_item {
     width: 100%;

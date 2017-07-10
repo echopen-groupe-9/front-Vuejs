@@ -49,9 +49,6 @@
 </template>
 
 <script>
-    import homeLogo from '../../assets/Logo-Echopen.svg'
-    import defaultLogo from '../../assets/Logo.svg'
-
     export default {
         props: ['nameRoute'],
         data () {
@@ -59,8 +56,8 @@
                 active : false,
                 show:false,
                 logoImg: {
-                  home: homeLogo,
-                  default: defaultLogo
+                  home: '/static/images/Logo-Echopen.svg',
+                  default: '/static/images/Logo.svg'
                 },
                 menuOpened: false
             }
@@ -86,7 +83,10 @@
     }
 </script>
 <style lang="scss">
-    @import '../../core.scss';
+
+    @import '~styles/_plugins/sass-mq/_mq';
+    @import '~styles/generics/variable.scss';
+@import '~styles/generics/mixin.scss';
 
     .nav {
       min-height: 65px;

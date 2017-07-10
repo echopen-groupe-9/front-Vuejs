@@ -1,6 +1,6 @@
 <template>
     <li class="hackaton-card">
-        <span class="hackaton-cover" :style="{ 'background-image' : 'url(' + cover + ')' }">&nbsp;</span>    
+        <span class="hackaton-cover" :style="{ 'background-image' : 'url(' + cover + ')' }">&nbsp;</span>
         <h3 class="hackaton-card-title">Création d’une sonde</h3>
         <p class="text">Le lien entre l’ergonomie et la technologie.</p>
         <ul class="hackaton-tag-list text-small">
@@ -23,7 +23,7 @@
                     </li>
                 </ul>
             </li>
-            
+
         </ul>
     </li>
 </template>
@@ -35,7 +35,7 @@
     export default {
         data () {
             return {
-                cover: "../src/assets/images/home-bg.png"
+                cover: "/static/images/home-bg.png"
             }
         },
         methods:{
@@ -51,7 +51,9 @@
 
 <style lang="scss">
 
-    @import '../../core.scss';
+    @import '~styles/_plugins/sass-mq/_mq';
+    @import '~styles/generics/variable.scss';
+@import '~styles/generics/mixin.scss';
 
     .hackaton-card{
         position: relative;
@@ -80,7 +82,7 @@
             width: 33.33%;
         }
     }
-    
+
     .hackaton-cover{
         position: absolute;
         top: 0;
@@ -170,7 +172,7 @@
             vertical-align: middle;
             width: 16px;
             height: 16px;
-            margin-right: 10px; 
+            margin-right: 10px;
             background-repeat: no-repeat;
             background-size: contain;
         }
@@ -178,14 +180,14 @@
 
     .hackaton-date{
         &:before{
-            background-image:url('../../assets/images/icons/calendar.svg');
+            background-image:url('/static/images/icons/calendar.svg');
         }
     }
 
     .hackaton-place{
         padding-bottom: 10px;
         &:before{
-            background-image:url('../../assets/images/icons/place.svg');
+            background-image:url('/static/images/icons/place.svg');
         }
     }
 </style>

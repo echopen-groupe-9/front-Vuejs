@@ -28,7 +28,11 @@
 </script>
 
 <style lang="scss" scoped="">
-    @import '../../../core.scss';
+
+  @import '~styles/_plugins/sass-mq/_mq';
+  @import '~styles/generics/variable.scss';
+@import '~styles/generics/mixin.scss';
+
   .event-section {
     .slide {
       display: flex;
@@ -61,7 +65,7 @@
             content: '';
             width: 38px;
             height: 82px;
-            background: url('../../../assets/images/cal_icon.png') center;
+            background: url('/static/images/cal_icon.png') center;
             background-size: contain;
             position: absolute;
             top: -27px;
